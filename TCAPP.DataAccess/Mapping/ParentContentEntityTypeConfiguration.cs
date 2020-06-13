@@ -14,8 +14,8 @@ namespace TCAPP.DataAccess.Mapping
             builder.Property(x => x.IdContent).HasColumnName("IdContent").HasColumnType("decimal").IsRequired();
             builder.Property(x => x.IdParentContent).HasColumnName("IdParentContent").HasColumnType("decimal").IsRequired();
 
-            builder.HasOne(x => x.Content).WithMany(x => x.ParentContents).HasForeignKey(x => x.IdContent);
-            builder.HasOne(x => x.Parent).WithMany(x => x.ParentContents).HasForeignKey(x => x.IdParentContent).HasConstraintName("FK_ParentContent_Content2");
+            builder.HasOne(x => x.Content).WithMany(x => x.ParentContents).HasForeignKey(x => x.IdContent).HasConstraintName("FK_ParentContent_Content");
+            builder.HasOne(x => x.Parent).WithMany(x => x.ChildrenContents).HasForeignKey(x => x.IdParentContent).HasConstraintName("FK_ParentContent_ChildrenContent");
         }
     }
 }

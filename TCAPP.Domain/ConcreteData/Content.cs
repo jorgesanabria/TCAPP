@@ -10,6 +10,7 @@ namespace TCAPP.Domain.ConcreteData
         public Content()
         {
             ParentContents = new HashSet<ParentContent>();
+            ChildrenContents = new HashSet<ParentContent>();
             UserContents = new HashSet<UserContent>();
             ContentFloatMetaValues = new HashSet<ContentFloatMetaValue>();
             ContentStringMetaValues = new HashSet<ContentStringMetaValue>();
@@ -26,6 +27,7 @@ namespace TCAPP.Domain.ConcreteData
         public ContentType ContentType { get; set; }
         public Image Image { get; set; }
         public ICollection<ParentContent> ParentContents { get; set; }
+        public ICollection<ParentContent> ChildrenContents { get; set; }
         public ICollection<UserContent> UserContents { get; set; }
         public ICollection<ContentTaxonomy> ContentTaxonomies { get; set; }
         public ICollection<ContentFloatMetaValue> ContentFloatMetaValues { get; set; }

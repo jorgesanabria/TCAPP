@@ -18,7 +18,8 @@ namespace TCAPP.DataAccess.Mapping
             builder.Property(x => x.Enabled).HasColumnName("Enabled").HasColumnType("bool").IsRequired();
             builder.Property(x => x.Multiple).HasColumnName("Multiple").HasColumnType("bool").IsRequired();
 
-            builder.HasMany(x => x.ParentTaxonomies).WithOne(x => x.Taxonomy).HasForeignKey(x => x.IdTaxonomy).HasConstraintName("FK_ParentTaxonomy_Taxonomy");
+            builder.HasMany(x => x.ParentTaxonomies).WithOne(x => x.Taxonomy).HasForeignKey(x => x.IdTaxonomy);
+            builder.HasMany(x => x.ChildrenTaxonomies).WithOne(x => x.Parent).HasForeignKey(x => x.IdParentTaxonomy);
             builder.HasMany(x => x.ContentTaxonomies).WithOne(x => x.Taxonomy).HasForeignKey(x => x.IdTaxonomy).HasConstraintName("FK_ContentTaxonomy_Taxonomy");
         }
     }

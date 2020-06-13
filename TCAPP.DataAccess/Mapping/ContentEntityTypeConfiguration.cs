@@ -23,8 +23,10 @@ namespace TCAPP.DataAccess.Mapping
             builder.HasOne(x => x.ContentType).WithMany(x => x.Contents).HasForeignKey(x => x.IdContentType).HasConstraintName("FK_Content_ContentType");
             builder.HasOne(x => x.Image).WithMany(x => x.Contents).HasForeignKey(x => x.IdImage).HasConstraintName("FK_Content_Image");
 
+            builder.HasMany(x => x.ParentContents).WithOne(x => x.Content).HasForeignKey(x => x.IdContent);
+            builder.HasMany(x => x.ChildrenContents).WithOne(x => x.Parent).HasForeignKey(x => x.IdParentContent);
+
             builder.HasMany(x => x.ContentTaxonomies).WithOne(x => x.Content).HasForeignKey(x => x.IdContent).HasConstraintName("FK_ContentTaxonomy_Content");
-            builder.HasMany(x => x.ParentContents).WithOne(x => x.Content).HasForeignKey(x => x.IdContent).HasConstraintName("FK_ParentContent_Content");
             builder.HasMany(x => x.UserContents).WithOne(x => x.Content).HasForeignKey(x => x.IdContent).HasConstraintName("FK_UserContent_Content");
             builder.HasMany(x => x.ContentFloatMetaValues).WithOne(x => x.Content).HasForeignKey(x => x.IdContent).HasConstraintName("FK_ContentFloatMetaValue_Content");
             builder.HasMany(x => x.ContentBoolMetaValues).WithOne(x => x.Content).HasForeignKey(x => x.IdContent).HasConstraintName("FK_ContentBoolMetaValue_Content");
