@@ -10,7 +10,7 @@ using TCAPP.DataAccess.Context;
 namespace TCAPP.DataAccess.Migrations
 {
     [DbContext(typeof(TCAPPContext))]
-    [Migration("20200614203351_InitialCreate")]
+    [Migration("20200614211541_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
