@@ -16,10 +16,10 @@ namespace TCAPP.DataAccess.Mapping
             builder.Property(x => x.IdContentRelationType).HasColumnName("IdContentRelationType").HasColumnType("decimal").IsRequired();
             builder.Property(x => x.IdCollection).HasColumnName("IdCollection").HasColumnType("decimal").IsRequired(false);
 
-            builder.HasOne(x => x.User).WithMany(x => x.UserContents).HasForeignKey(x => x.IdUser);
-            builder.HasOne(x => x.Content).WithMany(x => x.UserContents).HasForeignKey(x => x.IdContent);
-            builder.HasOne(x => x.ContentRelationType).WithMany(x => x.UserContents).HasForeignKey(x => x.IdContentRelationType);
-            builder.HasOne(x => x.Collection).WithMany(x => x.UserContents).HasForeignKey(x => x.IdCollection);
+            builder.HasOne(x => x.User).WithMany(x => x.UserContents).HasForeignKey(x => x.IdUser).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.Content).WithMany(x => x.UserContents).HasForeignKey(x => x.IdContent).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.ContentRelationType).WithMany(x => x.UserContents).HasForeignKey(x => x.IdContentRelationType).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.Collection).WithMany(x => x.UserContents).HasForeignKey(x => x.IdCollection).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

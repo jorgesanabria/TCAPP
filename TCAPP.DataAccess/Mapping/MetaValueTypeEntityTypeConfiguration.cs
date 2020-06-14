@@ -11,15 +11,15 @@ namespace TCAPP.DataAccess.Mapping
             builder.ToTable(nameof(MetaValueType));
             builder.HasKey(x => x.Id).HasName("PK_MetaValueType");
 
-            builder.Property(x => x.Id).HasColumnName("Id").HasColumnType("decimal").ValueGeneratedOnAdd();
+            builder.Property(x => x.Id).HasColumnName("Id").HasColumnType("decimal").UseMySqlIdentityColumn();
             builder.Property(x => x.Title).HasColumnName("Title").HasColumnType("varchar(128)").IsRequired();
             builder.Property(x => x.Created).HasColumnName("Created").HasColumnType("datetime").ValueGeneratedOnAdd();
             builder.Property(x => x.Updated).HasColumnName("Updated").HasColumnType("datetime").ValueGeneratedOnAddOrUpdate();
             builder.Property(x => x.Enabled).HasColumnName("Enabled").HasColumnType("bool").IsRequired();
 
-            builder.HasMany(x => x.ContentFloatMetaValues).WithOne(x => x.MetaValueType).HasForeignKey(x => x.IdMetaValueType).HasConstraintName("FK_ContentFloatMetaValueType_MetaValueType");
-            builder.HasMany(x => x.ContentStringMetaValues).WithOne(x => x.MetaValueType).HasForeignKey(x => x.IdMetaValueType).HasConstraintName("FK_ContentStringMetaValueType_MetaValueType");
-            builder.HasMany(x => x.ContentBoolMetaValues).WithOne(x => x.MetaValueType).HasForeignKey(x => x.IdMetaValueType).HasConstraintName("FK_ContentBoolMetaValueType_MetaValueType");
+            builder.HasMany(x => x.ContentFloatMetaValues).WithOne(x => x.MetaValueType).HasForeignKey(x => x.IdMetaValueType).HasConstraintName("FK_ContentFloatMetaValueType_MetaValueType").OnDelete(DeleteBehavior.NoAction);
+            builder.HasMany(x => x.ContentStringMetaValues).WithOne(x => x.MetaValueType).HasForeignKey(x => x.IdMetaValueType).HasConstraintName("FK_ContentStringMetaValueType_MetaValueType").OnDelete(DeleteBehavior.NoAction);
+            builder.HasMany(x => x.ContentBoolMetaValues).WithOne(x => x.MetaValueType).HasForeignKey(x => x.IdMetaValueType).HasConstraintName("FK_ContentBoolMetaValueType_MetaValueType").OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

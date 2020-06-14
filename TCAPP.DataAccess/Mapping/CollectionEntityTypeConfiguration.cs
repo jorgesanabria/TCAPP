@@ -11,16 +11,16 @@ namespace TCAPP.DataAccess.Mapping
             builder.ToTable(nameof(Collection));
             builder.HasKey(x => x.Id).HasName("PK_Collecton");
 
-            builder.Property(x => x.Id).HasColumnName("Id").HasColumnType("decimal").ValueGeneratedOnAdd();
+            builder.Property(x => x.Id).HasColumnName("Id").HasColumnType("decimal").UseMySqlIdentityColumn();
             builder.Property(x => x.Title).HasColumnName("Title").HasColumnType("varchar(128)").IsRequired();
             builder.Property(x => x.Created).HasColumnName("Created").HasColumnType("datetime").ValueGeneratedOnAdd();
             builder.Property(x => x.Updated).HasColumnName("Updated").HasColumnType("datetime").ValueGeneratedOnAddOrUpdate();
             builder.Property(x => x.Enabled).HasColumnName("Enabled").HasColumnType("bool").IsRequired();
             builder.Property(x => x.IdUser).HasColumnName("IdUser").HasColumnType("decimal").IsRequired();
 
-            builder.HasOne(x => x.User).WithMany(x => x.Collections).HasForeignKey(x => x.IdUser).HasConstraintName("FK_Collection_User");
+            builder.HasOne(x => x.User).WithMany(x => x.Collections).HasForeignKey(x => x.IdUser).HasConstraintName("FK_Collection_User").OnDelete(DeleteBehavior.NoAction);
 
-            builder.HasMany(x => x.UserContents).WithOne(x => x.Collection).HasForeignKey(x => x.IdCollection).HasConstraintName("FK_UserContent_Collection");
+            builder.HasMany(x => x.UserContents).WithOne(x => x.Collection).HasForeignKey(x => x.IdCollection).HasConstraintName("FK_UserContent_Collection").OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

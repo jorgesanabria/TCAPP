@@ -18,8 +18,8 @@ namespace TCAPP.DataAccess.Mapping
             builder.Property(x => x.Updated).HasColumnName("Updated").HasColumnType("datetime").ValueGeneratedOnAddOrUpdate();
             builder.Property(x => x.Enabled).HasColumnName("Enabled").HasColumnType("bool").IsRequired();
 
-            builder.HasOne(x => x.Content).WithMany(x => x.ContentBoolMetaValues).HasForeignKey(x => x.IdContent);
-            builder.HasOne(x => x.MetaValueType).WithMany(x => x.ContentBoolMetaValues).HasForeignKey(x => x.IdMetaValueType);
+            builder.HasOne(x => x.Content).WithMany(x => x.ContentBoolMetaValues).HasForeignKey(x => x.IdContent).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.MetaValueType).WithMany(x => x.ContentBoolMetaValues).HasForeignKey(x => x.IdMetaValueType).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

@@ -143,14 +143,12 @@ namespace TCAPP.DataAccess.Migrations
                         name: "FK_Content_ContentType",
                         column: x => x.IdContentType,
                         principalTable: "ContentType",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Content_Image",
                         column: x => x.IdImage,
                         principalTable: "Image",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -167,14 +165,12 @@ namespace TCAPP.DataAccess.Migrations
                         name: "FK_ParentTaxonomy_ChildrenTaxonomy",
                         column: x => x.IdParentTaxonomy,
                         principalTable: "Taxonomy",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_ParentTaxonomy_Taxonomy",
                         column: x => x.IdTaxonomy,
                         principalTable: "Taxonomy",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -198,8 +194,7 @@ namespace TCAPP.DataAccess.Migrations
                         name: "FK_Collection_User",
                         column: x => x.IdUser,
                         principalTable: "User",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -222,14 +217,12 @@ namespace TCAPP.DataAccess.Migrations
                         name: "FK_ContentBoolMetaValue_Content",
                         column: x => x.IdContent,
                         principalTable: "Content",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_ContentBoolMetaValueType_MetaValueType",
                         column: x => x.IdMetaValueType,
                         principalTable: "MetaValueType",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -252,14 +245,12 @@ namespace TCAPP.DataAccess.Migrations
                         name: "FK_ContentFloatMetaValue_Content",
                         column: x => x.IdContent,
                         principalTable: "Content",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_ContentFloatMetaValueType_MetaValueType",
                         column: x => x.IdMetaValueType,
                         principalTable: "MetaValueType",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -282,14 +273,12 @@ namespace TCAPP.DataAccess.Migrations
                         name: "FK_ContentStringMetaValue_Content",
                         column: x => x.IdContent,
                         principalTable: "Content",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_ContentStringMetaValueType_MetaValueType",
                         column: x => x.IdMetaValueType,
                         principalTable: "MetaValueType",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -306,14 +295,12 @@ namespace TCAPP.DataAccess.Migrations
                         name: "FK_ContentTaxonomy_Content",
                         column: x => x.IdContent,
                         principalTable: "Content",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_ContentTaxonomy_Taxonomy",
                         column: x => x.IdTaxonomy,
                         principalTable: "Taxonomy",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -330,14 +317,12 @@ namespace TCAPP.DataAccess.Migrations
                         name: "FK_ParentContent_Content",
                         column: x => x.IdContent,
                         principalTable: "Content",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_ParentContent_ChildrenContent",
                         column: x => x.IdParentContent,
                         principalTable: "Content",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -356,26 +341,22 @@ namespace TCAPP.DataAccess.Migrations
                         name: "FK_UserContent_Collection",
                         column: x => x.IdCollection,
                         principalTable: "Collection",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_UserContent_Content",
                         column: x => x.IdContent,
                         principalTable: "Content",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_UserContent_ContentRelationType",
                         column: x => x.IdContentRelationType,
                         principalTable: "ContentRelationType",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_UserContent_User",
                         column: x => x.IdUser,
                         principalTable: "User",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(

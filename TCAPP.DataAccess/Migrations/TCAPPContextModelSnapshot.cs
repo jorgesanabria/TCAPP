@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TCAPP.DataAccess.Context;
 
@@ -22,7 +23,8 @@ namespace TCAPP.DataAccess.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Id")
-                        .HasColumnType("decimal");
+                        .HasColumnType("decimal")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("Created")
                         .ValueGeneratedOnAdd()
@@ -60,7 +62,8 @@ namespace TCAPP.DataAccess.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Id")
-                        .HasColumnType("decimal");
+                        .HasColumnType("decimal")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("Created")
                         .ValueGeneratedOnAdd()
@@ -108,7 +111,8 @@ namespace TCAPP.DataAccess.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Id")
-                        .HasColumnType("decimal");
+                        .HasColumnType("decimal")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("Created")
                         .ValueGeneratedOnAdd()
@@ -140,7 +144,8 @@ namespace TCAPP.DataAccess.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Id")
-                        .HasColumnType("decimal");
+                        .HasColumnType("decimal")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("Created")
                         .ValueGeneratedOnAdd()
@@ -375,7 +380,8 @@ namespace TCAPP.DataAccess.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Id")
-                        .HasColumnType("decimal");
+                        .HasColumnType("decimal")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("Created")
                         .ValueGeneratedOnAdd()
@@ -407,7 +413,8 @@ namespace TCAPP.DataAccess.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Id")
-                        .HasColumnType("decimal");
+                        .HasColumnType("decimal")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("Created")
                         .ValueGeneratedOnAdd()
@@ -442,7 +449,8 @@ namespace TCAPP.DataAccess.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Id")
-                        .HasColumnType("decimal");
+                        .HasColumnType("decimal")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("Created")
                         .ValueGeneratedOnAdd()
@@ -474,7 +482,8 @@ namespace TCAPP.DataAccess.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Id")
-                        .HasColumnType("decimal");
+                        .HasColumnType("decimal")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("Created")
                         .ValueGeneratedOnAdd()
@@ -511,7 +520,7 @@ namespace TCAPP.DataAccess.Migrations
                         .WithMany("Collections")
                         .HasForeignKey("IdUser")
                         .HasConstraintName("FK_Collection_User")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -521,13 +530,14 @@ namespace TCAPP.DataAccess.Migrations
                         .WithMany("Contents")
                         .HasForeignKey("IdContentType")
                         .HasConstraintName("FK_Content_ContentType")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("TCAPP.Domain.ConcreteData.Image", "Image")
                         .WithMany("Contents")
                         .HasForeignKey("IdImage")
-                        .HasConstraintName("FK_Content_Image");
+                        .HasConstraintName("FK_Content_Image")
+                        .OnDelete(DeleteBehavior.NoAction);
                 });
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.ContentBoolMetaValue", b =>
@@ -536,14 +546,14 @@ namespace TCAPP.DataAccess.Migrations
                         .WithMany("ContentBoolMetaValues")
                         .HasForeignKey("IdContent")
                         .HasConstraintName("FK_ContentBoolMetaValue_Content")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("TCAPP.Domain.TypeData.MetaValueType", "MetaValueType")
                         .WithMany("ContentBoolMetaValues")
                         .HasForeignKey("IdMetaValueType")
                         .HasConstraintName("FK_ContentBoolMetaValueType_MetaValueType")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -553,14 +563,14 @@ namespace TCAPP.DataAccess.Migrations
                         .WithMany("ContentFloatMetaValues")
                         .HasForeignKey("IdContent")
                         .HasConstraintName("FK_ContentFloatMetaValue_Content")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("TCAPP.Domain.TypeData.MetaValueType", "MetaValueType")
                         .WithMany("ContentFloatMetaValues")
                         .HasForeignKey("IdMetaValueType")
                         .HasConstraintName("FK_ContentFloatMetaValueType_MetaValueType")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -570,14 +580,14 @@ namespace TCAPP.DataAccess.Migrations
                         .WithMany("ContentStringMetaValues")
                         .HasForeignKey("IdContent")
                         .HasConstraintName("FK_ContentStringMetaValue_Content")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("TCAPP.Domain.TypeData.MetaValueType", "MetaValueType")
                         .WithMany("ContentStringMetaValues")
                         .HasForeignKey("IdMetaValueType")
                         .HasConstraintName("FK_ContentStringMetaValueType_MetaValueType")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -587,14 +597,14 @@ namespace TCAPP.DataAccess.Migrations
                         .WithMany("ContentTaxonomies")
                         .HasForeignKey("IdContent")
                         .HasConstraintName("FK_ContentTaxonomy_Content")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("TCAPP.Domain.TypeData.Taxonomy", "Taxonomy")
                         .WithMany("ContentTaxonomies")
                         .HasForeignKey("IdTaxonomy")
                         .HasConstraintName("FK_ContentTaxonomy_Taxonomy")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -604,14 +614,14 @@ namespace TCAPP.DataAccess.Migrations
                         .WithMany("ParentContents")
                         .HasForeignKey("IdContent")
                         .HasConstraintName("FK_ParentContent_Content")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("TCAPP.Domain.ConcreteData.Content", "Parent")
                         .WithMany("ChildrenContents")
                         .HasForeignKey("IdParentContent")
                         .HasConstraintName("FK_ParentContent_ChildrenContent")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -621,14 +631,14 @@ namespace TCAPP.DataAccess.Migrations
                         .WithMany("ChildrenTaxonomies")
                         .HasForeignKey("IdParentTaxonomy")
                         .HasConstraintName("FK_ParentTaxonomy_ChildrenTaxonomy")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("TCAPP.Domain.TypeData.Taxonomy", "Taxonomy")
                         .WithMany("ParentTaxonomies")
                         .HasForeignKey("IdTaxonomy")
                         .HasConstraintName("FK_ParentTaxonomy_Taxonomy")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -637,27 +647,28 @@ namespace TCAPP.DataAccess.Migrations
                     b.HasOne("TCAPP.Domain.ConcreteData.Collection", "Collection")
                         .WithMany("UserContents")
                         .HasForeignKey("IdCollection")
-                        .HasConstraintName("FK_UserContent_Collection");
+                        .HasConstraintName("FK_UserContent_Collection")
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.HasOne("TCAPP.Domain.ConcreteData.Content", "Content")
                         .WithMany("UserContents")
                         .HasForeignKey("IdContent")
                         .HasConstraintName("FK_UserContent_Content")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("TCAPP.Domain.TypeData.ContentRelationType", "ContentRelationType")
                         .WithMany("UserContents")
                         .HasForeignKey("IdContentRelationType")
                         .HasConstraintName("FK_UserContent_ContentRelationType")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("TCAPP.Domain.ConcreteData.User", "User")
                         .WithMany("UserContents")
                         .HasForeignKey("IdUser")
                         .HasConstraintName("FK_UserContent_User")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

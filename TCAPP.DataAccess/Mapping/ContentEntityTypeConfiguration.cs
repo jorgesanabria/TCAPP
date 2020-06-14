@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TCAPP.Domain.ConcreteData;
+using Pomelo.EntityFrameworkCore;
 
 namespace TCAPP.DataAccess.Mapping
 {
@@ -11,7 +12,7 @@ namespace TCAPP.DataAccess.Mapping
             builder.ToTable(nameof(Content));
             builder.HasKey(x => x.Id).HasName("Content_PK");
 
-            builder.Property(x => x.Id).HasColumnName("Id").HasColumnType("decimal").ValueGeneratedOnAdd();
+            builder.Property(x => x.Id).HasColumnName("Id").HasColumnType("decimal").UseMySqlIdentityColumn();
             builder.Property(x => x.Title).HasColumnName("Title").HasColumnType("varchar(128)").IsRequired();
             builder.Property(x => x.Description).HasColumnName("Description").HasColumnType("varchar(1024)").IsRequired(false);
             builder.Property(x => x.IdContentType).HasColumnName("IdContentType").HasColumnType("decimal").IsRequired();
@@ -26,11 +27,11 @@ namespace TCAPP.DataAccess.Mapping
             builder.HasMany(x => x.ParentContents).WithOne(x => x.Content).HasForeignKey(x => x.IdContent);
             builder.HasMany(x => x.ChildrenContents).WithOne(x => x.Parent).HasForeignKey(x => x.IdParentContent);
 
-            builder.HasMany(x => x.ContentTaxonomies).WithOne(x => x.Content).HasForeignKey(x => x.IdContent).HasConstraintName("FK_ContentTaxonomy_Content");
-            builder.HasMany(x => x.UserContents).WithOne(x => x.Content).HasForeignKey(x => x.IdContent).HasConstraintName("FK_UserContent_Content");
-            builder.HasMany(x => x.ContentFloatMetaValues).WithOne(x => x.Content).HasForeignKey(x => x.IdContent).HasConstraintName("FK_ContentFloatMetaValue_Content");
-            builder.HasMany(x => x.ContentBoolMetaValues).WithOne(x => x.Content).HasForeignKey(x => x.IdContent).HasConstraintName("FK_ContentBoolMetaValue_Content");
-            builder.HasMany(x => x.ContentStringMetaValues).WithOne(x => x.Content).HasForeignKey(x => x.IdContent).HasConstraintName("FK_ContentStringMetaValue_Content");
+            builder.HasMany(x => x.ContentTaxonomies).WithOne(x => x.Content).HasForeignKey(x => x.IdContent).HasConstraintName("FK_ContentTaxonomy_Content").OnDelete(DeleteBehavior.NoAction);
+            builder.HasMany(x => x.UserContents).WithOne(x => x.Content).HasForeignKey(x => x.IdContent).HasConstraintName("FK_UserContent_Content").OnDelete(DeleteBehavior.NoAction);
+            builder.HasMany(x => x.ContentFloatMetaValues).WithOne(x => x.Content).HasForeignKey(x => x.IdContent).HasConstraintName("FK_ContentFloatMetaValue_Content").OnDelete(DeleteBehavior.NoAction);
+            builder.HasMany(x => x.ContentBoolMetaValues).WithOne(x => x.Content).HasForeignKey(x => x.IdContent).HasConstraintName("FK_ContentBoolMetaValue_Content").OnDelete(DeleteBehavior.NoAction);
+            builder.HasMany(x => x.ContentStringMetaValues).WithOne(x => x.Content).HasForeignKey(x => x.IdContent).HasConstraintName("FK_ContentStringMetaValue_Content").OnDelete(DeleteBehavior.NoAction);
         }
     }
 }
