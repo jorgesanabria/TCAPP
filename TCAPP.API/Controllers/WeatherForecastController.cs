@@ -44,12 +44,12 @@ namespace TCAPP.API.Controllers
         [HttpPost("generar")]
         public async Task<IActionResult> GenerarContenido([FromBody] Content content)
         {
-            var result = await _contenxt.Contents.AddAsync(content);
+            _contenxt.Contents.Add(content);
             await _contenxt.SaveChangesAsync();
-            return Ok(result.Entity);
+            return Ok(content);
         }
         [HttpPost("generate-child/{id}")]
-        public async Task<IActionResult> GenerateRel(decimal id, [FromBody] Content content)
+        public async Task<IActionResult> GenerateRel(long id, [FromBody] Content content)
         {
             var r = _contenxt.Contents.Add(content);
             await _contenxt.SaveChangesAsync();
@@ -59,7 +59,7 @@ namespace TCAPP.API.Controllers
             return Ok(r.Entity);
         }
         [HttpGet("get-item/{id}")]
-        public async Task<IActionResult> GetItem(decimal id)
+        public async Task<IActionResult> GetItem(long id)
         {
             var result = await _contenxt.Contents.Select(x => new {
                 x.Id,
@@ -74,7 +74,7 @@ namespace TCAPP.API.Controllers
             return Ok(result);
         }
         [HttpGet("get-parent/{id}")]
-        public async Task<IActionResult> GeteParent(decimal id)
+        public async Task<IActionResult> GeteParent(long id)
         {
             var result = await _contenxt.Contents.Select(x => new
             {

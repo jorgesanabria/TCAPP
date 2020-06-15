@@ -1,5 +1,4 @@
 ﻿using System;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TCAPP.DataAccess.Migrations
@@ -12,13 +11,10 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ContentRelationType",
                 columns: table => new
                 {
-                    Id = table.Column<decimal>(type: "decimal", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<int>(type: "integer(11) AUTO_INCREMENT", nullable: false),
                     Title = table.Column<string>(type: "varchar(128)", nullable: false),
-                    Created = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Updated = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn),
+                    Created = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Updated = table.Column<DateTime>(type: "datetime", nullable: false),
                     Enabled = table.Column<bool>(type: "bool", nullable: false)
                 },
                 constraints: table =>
@@ -30,14 +26,11 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ContentType",
                 columns: table => new
                 {
-                    Id = table.Column<decimal>(type: "decimal", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<int>(type: "integer(11) AUTO_INCREMENT", nullable: false),
                     Title = table.Column<string>(type: "varchar(128)", nullable: false),
                     Description = table.Column<string>(nullable: true),
-                    Created = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Updated = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn),
+                    Created = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Updated = table.Column<DateTime>(type: "datetime", nullable: false),
                     Enabled = table.Column<bool>(type: "bool", nullable: false)
                 },
                 constraints: table =>
@@ -49,13 +42,10 @@ namespace TCAPP.DataAccess.Migrations
                 name: "Image",
                 columns: table => new
                 {
-                    Id = table.Column<decimal>(type: "decimal", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<int>(type: "integer(11) AUTO_INCREMENT", nullable: false),
                     Url = table.Column<string>(type: "varchar(1024)", nullable: false),
-                    Created = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Updated = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn),
+                    Created = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Updated = table.Column<DateTime>(type: "datetime", nullable: false),
                     Enabled = table.Column<bool>(type: "bool", nullable: false)
                 },
                 constraints: table =>
@@ -67,13 +57,10 @@ namespace TCAPP.DataAccess.Migrations
                 name: "MetaValueType",
                 columns: table => new
                 {
-                    Id = table.Column<decimal>(type: "decimal", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<int>(type: "integer(11) AUTO_INCREMENT", nullable: false),
                     Title = table.Column<string>(type: "varchar(128)", nullable: false),
-                    Created = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Updated = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn),
+                    Created = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Updated = table.Column<DateTime>(type: "datetime", nullable: false),
                     Enabled = table.Column<bool>(type: "bool", nullable: false)
                 },
                 constraints: table =>
@@ -85,13 +72,10 @@ namespace TCAPP.DataAccess.Migrations
                 name: "Taxonomy",
                 columns: table => new
                 {
-                    Id = table.Column<decimal>(type: "decimal", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<int>(type: "integer(11) AUTO_INCREMENT", nullable: false),
                     Title = table.Column<string>(type: "varchar(128)", nullable: false),
-                    Created = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Updated = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn),
+                    Created = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Updated = table.Column<DateTime>(type: "datetime", nullable: false),
                     Enabled = table.Column<bool>(type: "bool", nullable: false),
                     Multiple = table.Column<bool>(type: "bool", nullable: false)
                 },
@@ -104,15 +88,12 @@ namespace TCAPP.DataAccess.Migrations
                 name: "User",
                 columns: table => new
                 {
-                    Id = table.Column<decimal>(type: "decimal", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<int>(type: "integer(11) AUTO_INCREMENT", nullable: false),
                     Name = table.Column<string>(type: "varchar(64)", nullable: false),
                     Email = table.Column<string>(type: "varchar(512)", nullable: false),
                     Password = table.Column<string>(type: "varchar(512)", nullable: false),
-                    Created = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Updated = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn),
+                    Created = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Updated = table.Column<DateTime>(type: "datetime", nullable: false),
                     Enabled = table.Column<bool>(type: "bool", nullable: false)
                 },
                 constraints: table =>
@@ -124,16 +105,13 @@ namespace TCAPP.DataAccess.Migrations
                 name: "Content",
                 columns: table => new
                 {
-                    Id = table.Column<decimal>(type: "decimal", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<int>(type: "integer(11) AUTO_INCREMENT", nullable: false),
                     Title = table.Column<string>(type: "varchar(128)", nullable: false),
                     Description = table.Column<string>(type: "varchar(1024)", nullable: true),
-                    IdContentType = table.Column<decimal>(type: "decimal", nullable: false),
-                    Created = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Updated = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn),
-                    IdImage = table.Column<decimal>(type: "decimal", nullable: true),
+                    IdContentType = table.Column<int>(type: "integer(11)", nullable: false),
+                    Created = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Updated = table.Column<DateTime>(type: "datetime", nullable: false),
+                    IdImage = table.Column<int>(type: "integer(11)", nullable: true),
                     Enabled = table.Column<bool>(type: "bool", nullable: false)
                 },
                 constraints: table =>
@@ -155,8 +133,8 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ParentTaxonomy",
                 columns: table => new
                 {
-                    IdTaxonomy = table.Column<decimal>(type: "decimal", nullable: false),
-                    IdParentTaxonomy = table.Column<decimal>(type: "decimal", nullable: false)
+                    IdTaxonomy = table.Column<int>(type: "integer(11)", nullable: false),
+                    IdParentTaxonomy = table.Column<int>(type: "integer(11)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -177,14 +155,11 @@ namespace TCAPP.DataAccess.Migrations
                 name: "Collection",
                 columns: table => new
                 {
-                    Id = table.Column<decimal>(type: "decimal", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    IdUser = table.Column<decimal>(type: "decimal", nullable: false),
+                    Id = table.Column<int>(type: "integer(11) AUTO_INCREMENT", nullable: false),
+                    IdUser = table.Column<int>(type: "integer(11)", nullable: false),
                     Title = table.Column<string>(type: "varchar(128)", nullable: false),
-                    Created = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Updated = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn),
+                    Created = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Updated = table.Column<DateTime>(type: "datetime", nullable: false),
                     Enabled = table.Column<bool>(type: "bool", nullable: false)
                 },
                 constraints: table =>
@@ -201,18 +176,16 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ContentBoolMetaValue",
                 columns: table => new
                 {
-                    IdContent = table.Column<decimal>(type: "decimal", nullable: false),
-                    IdMetaValueType = table.Column<decimal>(type: "decimal", nullable: false),
+                    IdContent = table.Column<int>(type: "integer(11)", nullable: false),
+                    IdMetaValueType = table.Column<int>(type: "integer(11)", nullable: false),
                     Value = table.Column<bool>(type: "bool", nullable: false),
-                    Created = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Updated = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn),
+                    Created = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Updated = table.Column<DateTime>(type: "datetime", nullable: false),
                     Enabled = table.Column<bool>(type: "bool", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("FK_ContentBoolMetaValue", x => new { x.IdContent, x.IdMetaValueType });
+                    table.PrimaryKey("PK_ContentBoolMetaValue", x => new { x.IdContent, x.IdMetaValueType });
                     table.ForeignKey(
                         name: "FK_ContentBoolMetaValue_Content",
                         column: x => x.IdContent,
@@ -229,18 +202,16 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ContentFloatMetaValue",
                 columns: table => new
                 {
-                    IdContent = table.Column<decimal>(type: "decimal", nullable: false),
-                    IdMetaValueType = table.Column<decimal>(type: "decimal", nullable: false),
-                    Value = table.Column<decimal>(type: "decimal", nullable: false),
-                    Created = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Updated = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn),
+                    IdContent = table.Column<int>(type: "integer(11)", nullable: false),
+                    IdMetaValueType = table.Column<int>(type: "integer(11)", nullable: false),
+                    Value = table.Column<int>(type: "integer(11)", nullable: false),
+                    Created = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Updated = table.Column<DateTime>(type: "datetime", nullable: false),
                     Enabled = table.Column<bool>(type: "bool", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("FK_ContentFloatMetaValue", x => new { x.IdContent, x.IdMetaValueType });
+                    table.PrimaryKey("PK_ContentFloatMetaValue", x => new { x.IdContent, x.IdMetaValueType });
                     table.ForeignKey(
                         name: "FK_ContentFloatMetaValue_Content",
                         column: x => x.IdContent,
@@ -257,18 +228,16 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ContentStringMetaValue",
                 columns: table => new
                 {
-                    IdContent = table.Column<decimal>(type: "decimal", nullable: false),
-                    IdMetaValueType = table.Column<decimal>(type: "decimal", nullable: false),
+                    IdContent = table.Column<int>(type: "integer(11)", nullable: false),
+                    IdMetaValueType = table.Column<int>(type: "integer(11)", nullable: false),
                     Value = table.Column<string>(type: "varchar(512)", nullable: false),
-                    Created = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Updated = table.Column<DateTime>(type: "datetime", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn),
+                    Created = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Updated = table.Column<DateTime>(type: "datetime", nullable: false),
                     Enabled = table.Column<bool>(type: "bool", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("FK_ContentFloatMetaValue", x => new { x.IdContent, x.IdMetaValueType });
+                    table.PrimaryKey("PK_ContentFloatMetaValue", x => new { x.IdContent, x.IdMetaValueType });
                     table.ForeignKey(
                         name: "FK_ContentStringMetaValue_Content",
                         column: x => x.IdContent,
@@ -285,12 +254,12 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ContentTaxonomy",
                 columns: table => new
                 {
-                    IdContent = table.Column<decimal>(type: "decimal", nullable: false),
-                    IdTaxonomy = table.Column<decimal>(type: "decimal", nullable: false)
+                    IdContent = table.Column<int>(type: "integer(11)", nullable: false),
+                    IdTaxonomy = table.Column<int>(type: "integer(11)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("FK_ContentTaxonomy", x => new { x.IdContent, x.IdTaxonomy });
+                    table.PrimaryKey("PK_ContentTaxonomy", x => new { x.IdContent, x.IdTaxonomy });
                     table.ForeignKey(
                         name: "FK_ContentTaxonomy_Content",
                         column: x => x.IdContent,
@@ -307,8 +276,8 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ParentContent",
                 columns: table => new
                 {
-                    IdContent = table.Column<decimal>(type: "decimal", nullable: false),
-                    IdParentContent = table.Column<decimal>(type: "decimal", nullable: false)
+                    IdContent = table.Column<int>(type: "integer(11)", nullable: false),
+                    IdParentContent = table.Column<int>(type: "integer(11)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -329,10 +298,10 @@ namespace TCAPP.DataAccess.Migrations
                 name: "UserContent",
                 columns: table => new
                 {
-                    IdUser = table.Column<decimal>(type: "decimal", nullable: false),
-                    IdContent = table.Column<decimal>(type: "decimal", nullable: false),
-                    IdContentRelationType = table.Column<decimal>(type: "decimal", nullable: false),
-                    IdCollection = table.Column<decimal>(type: "decimal", nullable: true)
+                    IdUser = table.Column<int>(type: "integer(11)", nullable: false),
+                    IdContent = table.Column<int>(type: "integer(11)", nullable: false),
+                    IdContentRelationType = table.Column<int>(type: "integer(11)", nullable: false),
+                    IdCollection = table.Column<int>(type: "integer(11)", nullable: true)
                 },
                 constraints: table =>
                 {

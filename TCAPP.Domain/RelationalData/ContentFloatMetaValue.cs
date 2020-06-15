@@ -6,8 +6,8 @@ namespace TCAPP.Domain.RelationalData
 {
     public class ContentFloatMetaValue
     {
-        public decimal IdContent { get; set; }
-        public decimal IdMetaValueType { get; set; }
+        public long IdContent { get; set; }
+        public long IdMetaValueType { get; set; }
         public float Value { get; set; }
         public DateTime Created { get; set; }
         public DateTime Updated { get; set; }

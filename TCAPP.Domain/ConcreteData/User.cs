@@ -11,7 +11,7 @@ namespace TCAPP.Domain.ConcreteData
             UserContents = new HashSet<UserContent>();
             Collections = new HashSet<Collection>();
         }
-        public decimal Id { get; set; }
+        public long Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }

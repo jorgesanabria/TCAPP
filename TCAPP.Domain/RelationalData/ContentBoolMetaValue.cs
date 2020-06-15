@@ -6,8 +6,8 @@ namespace TCAPP.Domain.RelationalData
 {
     public class ContentBoolMetaValue
     {
-        public decimal IdContent { get; set; }
-        public decimal IdMetaValueType { get; set; }
+        public long IdContent { get; set; }
+        public long IdMetaValueType { get; set; }
         public bool Value { get; set; }
         public DateTime Created { get; set; }
         public DateTime Updated { get; set; }

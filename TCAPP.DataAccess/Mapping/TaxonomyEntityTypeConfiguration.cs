@@ -11,10 +11,10 @@ namespace TCAPP.DataAccess.Mapping
             builder.ToTable(nameof(Taxonomy));
             builder.HasKey(x => x.Id).HasName("PK_Taxonomy");
 
-            builder.Property(x => x.Id).HasColumnName("Id").HasColumnType("decimal").UseMySqlIdentityColumn();
+            builder.Property(x => x.Id).HasColumnName("Id").HasColumnType("integer(11) AUTO_INCREMENT").ValueGeneratedNever();
             builder.Property(x => x.Title).HasColumnName("Title").HasColumnType("varchar(128)").IsRequired();
-            builder.Property(x => x.Created).HasColumnName("Created").HasColumnType("datetime").ValueGeneratedOnAdd();
-            builder.Property(x => x.Updated).HasColumnName("Updated").HasColumnType("datetime").ValueGeneratedOnAddOrUpdate();
+            builder.Property(x => x.Created).HasColumnName("Created").HasColumnType("datetime").IsRequired();
+            builder.Property(x => x.Updated).HasColumnName("Updated").HasColumnType("datetime").IsRequired();
             builder.Property(x => x.Enabled).HasColumnName("Enabled").HasColumnType("bool").IsRequired();
             builder.Property(x => x.Multiple).HasColumnName("Multiple").HasColumnType("bool").IsRequired();
 

@@ -12,7 +12,7 @@ namespace TCAPP.Domain.TypeData
             ContentStringMetaValues = new HashSet<ContentStringMetaValue>();
             ContentBoolMetaValues = new HashSet<ContentBoolMetaValue>();
         }
-        public decimal Id { get; set; }
+        public long Id { get; set; }
         public string Title { get; set; }
         public DateTime Created { get; set; }
         public DateTime Updated { get; set; }

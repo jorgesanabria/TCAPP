@@ -10,7 +10,7 @@ namespace TCAPP.Domain.TypeData
         {
             Contents = new HashSet<Content>();
         }
-        public decimal Id { get; set; }
+        public long Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime Created { get; set; }

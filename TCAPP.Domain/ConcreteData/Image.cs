@@ -9,7 +9,7 @@ namespace TCAPP.Domain.ConcreteData
         {
             Contents = new HashSet<Content>();
         }
-        public decimal Id { get; set; }
+        public long Id { get; set; }
         public string Url { get; set; }
         public DateTime Created { get; set; }
         public DateTime Updated { get; set; }

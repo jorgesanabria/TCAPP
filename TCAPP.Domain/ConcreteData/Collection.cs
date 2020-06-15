@@ -10,8 +10,8 @@ namespace TCAPP.Domain.ConcreteData
         {
             UserContents = new HashSet<UserContent>();
         }
-        public decimal Id { get; set; }
-        public decimal IdUser { get; set; }
+        public long Id { get; set; }
+        public long IdUser { get; set; }
         public string Title { get; set; }
         public DateTime Created { get; set; }
         public DateTime Updated { get; set; }

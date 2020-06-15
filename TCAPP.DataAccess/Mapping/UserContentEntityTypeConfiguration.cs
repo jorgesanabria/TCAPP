@@ -11,10 +11,10 @@ namespace TCAPP.DataAccess.Mapping
             builder.ToTable(nameof(UserContent));
             builder.HasKey(x => new { x.IdUser, x.IdContent, x.IdContentRelationType }).HasName("PK_UserContent");
 
-            builder.Property(x => x.IdUser).HasColumnName("IdUser").HasColumnType("decimal").IsRequired();
-            builder.Property(x => x.IdContent).HasColumnName("IdContent").HasColumnType("decimal").IsRequired();
-            builder.Property(x => x.IdContentRelationType).HasColumnName("IdContentRelationType").HasColumnType("decimal").IsRequired();
-            builder.Property(x => x.IdCollection).HasColumnName("IdCollection").HasColumnType("decimal").IsRequired(false);
+            builder.Property(x => x.IdUser).HasColumnName("IdUser").HasColumnType("integer(11)").IsRequired();
+            builder.Property(x => x.IdContent).HasColumnName("IdContent").HasColumnType("integer(11)").IsRequired();
+            builder.Property(x => x.IdContentRelationType).HasColumnName("IdContentRelationType").HasColumnType("integer(11)").IsRequired();
+            builder.Property(x => x.IdCollection).HasColumnName("IdCollection").HasColumnType("integer(11)").IsRequired(false);
 
             builder.HasOne(x => x.User).WithMany(x => x.UserContents).HasForeignKey(x => x.IdUser).OnDelete(DeleteBehavior.NoAction);
             builder.HasOne(x => x.Content).WithMany(x => x.UserContents).HasForeignKey(x => x.IdContent).OnDelete(DeleteBehavior.NoAction);

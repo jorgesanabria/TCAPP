@@ -16,13 +16,13 @@ namespace TCAPP.Domain.ConcreteData
             ContentStringMetaValues = new HashSet<ContentStringMetaValue>();
             ContentBoolMetaValues = new HashSet<ContentBoolMetaValue>();
         }
-        public decimal Id { get; set; }
+        public long Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public decimal IdContentType { get; set; }
+        public long IdContentType { get; set; }
         public DateTime Created { get; set; }
         public DateTime Updated { get; set; }
-        public decimal? IdImage { get; set; }
+        public long? IdImage { get; set; }
         public bool Enabled { get; set; }
         public ContentType ContentType { get; set; }
         public Image Image { get; set; }

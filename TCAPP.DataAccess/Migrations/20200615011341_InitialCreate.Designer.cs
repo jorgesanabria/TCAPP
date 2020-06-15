@@ -2,7 +2,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TCAPP.DataAccess.Context;
@@ -10,7 +9,7 @@ using TCAPP.DataAccess.Context;
 namespace TCAPP.DataAccess.Migrations
 {
     [DbContext(typeof(TCAPPContext))]
-    [Migration("20200614211541_InitialCreate")]
+    [Migration("20200615011341_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,14 +21,11 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.ConcreteData.Collection", b =>
                 {
-                    b.Property<decimal>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("Id")
                         .HasColumnName("Id")
-                        .HasColumnType("decimal")
-                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("integer(11) AUTO_INCREMENT");
 
                     b.Property<DateTime>("Created")
-                        .ValueGeneratedOnAdd()
                         .HasColumnName("Created")
                         .HasColumnType("datetime");
 
@@ -37,9 +33,9 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnName("Enabled")
                         .HasColumnType("bool");
 
-                    b.Property<decimal>("IdUser")
+                    b.Property<int>("IdUser")
                         .HasColumnName("IdUser")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -47,7 +43,6 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnType("varchar(128)");
 
                     b.Property<DateTime>("Updated")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnName("Updated")
                         .HasColumnType("datetime");
 
@@ -61,14 +56,11 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.ConcreteData.Content", b =>
                 {
-                    b.Property<decimal>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("Id")
                         .HasColumnName("Id")
-                        .HasColumnType("decimal")
-                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("integer(11) AUTO_INCREMENT");
 
                     b.Property<DateTime>("Created")
-                        .ValueGeneratedOnAdd()
                         .HasColumnName("Created")
                         .HasColumnType("datetime");
 
@@ -80,13 +72,13 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnName("Enabled")
                         .HasColumnType("bool");
 
-                    b.Property<decimal>("IdContentType")
+                    b.Property<int>("IdContentType")
                         .HasColumnName("IdContentType")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
-                    b.Property<decimal?>("IdImage")
+                    b.Property<int?>("IdImage")
                         .HasColumnName("IdImage")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -94,7 +86,6 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnType("varchar(128)");
 
                     b.Property<DateTime>("Updated")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnName("Updated")
                         .HasColumnType("datetime");
 
@@ -110,14 +101,11 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.ConcreteData.Image", b =>
                 {
-                    b.Property<decimal>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("Id")
                         .HasColumnName("Id")
-                        .HasColumnType("decimal")
-                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("integer(11) AUTO_INCREMENT");
 
                     b.Property<DateTime>("Created")
-                        .ValueGeneratedOnAdd()
                         .HasColumnName("Created")
                         .HasColumnType("datetime");
 
@@ -126,7 +114,6 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnType("bool");
 
                     b.Property<DateTime>("Updated")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnName("Updated")
                         .HasColumnType("datetime");
 
@@ -143,14 +130,11 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.ConcreteData.User", b =>
                 {
-                    b.Property<decimal>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("Id")
                         .HasColumnName("Id")
-                        .HasColumnType("decimal")
-                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("integer(11) AUTO_INCREMENT");
 
                     b.Property<DateTime>("Created")
-                        .ValueGeneratedOnAdd()
                         .HasColumnName("Created")
                         .HasColumnType("datetime");
 
@@ -174,7 +158,6 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnType("varchar(512)");
 
                     b.Property<DateTime>("Updated")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnName("Updated")
                         .HasColumnType("datetime");
 
@@ -186,16 +169,15 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.ContentBoolMetaValue", b =>
                 {
-                    b.Property<decimal>("IdContent")
+                    b.Property<int>("IdContent")
                         .HasColumnName("IdContent")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
-                    b.Property<decimal>("IdMetaValueType")
+                    b.Property<int>("IdMetaValueType")
                         .HasColumnName("IdMetaValueType")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
                     b.Property<DateTime>("Created")
-                        .ValueGeneratedOnAdd()
                         .HasColumnName("Created")
                         .HasColumnType("datetime");
 
@@ -204,7 +186,6 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnType("bool");
 
                     b.Property<DateTime>("Updated")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnName("Updated")
                         .HasColumnType("datetime");
 
@@ -213,7 +194,7 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnType("bool");
 
                     b.HasKey("IdContent", "IdMetaValueType")
-                        .HasName("FK_ContentBoolMetaValue");
+                        .HasName("PK_ContentBoolMetaValue");
 
                     b.HasIndex("IdMetaValueType");
 
@@ -222,16 +203,15 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.ContentFloatMetaValue", b =>
                 {
-                    b.Property<decimal>("IdContent")
+                    b.Property<int>("IdContent")
                         .HasColumnName("IdContent")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
-                    b.Property<decimal>("IdMetaValueType")
+                    b.Property<int>("IdMetaValueType")
                         .HasColumnName("IdMetaValueType")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
                     b.Property<DateTime>("Created")
-                        .ValueGeneratedOnAdd()
                         .HasColumnName("Created")
                         .HasColumnType("datetime");
 
@@ -240,16 +220,15 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnType("bool");
 
                     b.Property<DateTime>("Updated")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnName("Updated")
                         .HasColumnType("datetime");
 
-                    b.Property<decimal>("Value")
+                    b.Property<int>("Value")
                         .HasColumnName("Value")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
                     b.HasKey("IdContent", "IdMetaValueType")
-                        .HasName("FK_ContentFloatMetaValue");
+                        .HasName("PK_ContentFloatMetaValue");
 
                     b.HasIndex("IdMetaValueType");
 
@@ -258,16 +237,15 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.ContentStringMetaValue", b =>
                 {
-                    b.Property<decimal>("IdContent")
+                    b.Property<int>("IdContent")
                         .HasColumnName("IdContent")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
-                    b.Property<decimal>("IdMetaValueType")
+                    b.Property<int>("IdMetaValueType")
                         .HasColumnName("IdMetaValueType")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
                     b.Property<DateTime>("Created")
-                        .ValueGeneratedOnAdd()
                         .HasColumnName("Created")
                         .HasColumnType("datetime");
 
@@ -276,7 +254,6 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnType("bool");
 
                     b.Property<DateTime>("Updated")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnName("Updated")
                         .HasColumnType("datetime");
 
@@ -286,7 +263,7 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnType("varchar(512)");
 
                     b.HasKey("IdContent", "IdMetaValueType")
-                        .HasName("FK_ContentFloatMetaValue");
+                        .HasName("PK_ContentFloatMetaValue");
 
                     b.HasIndex("IdMetaValueType");
 
@@ -295,16 +272,16 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.ContentTaxonomy", b =>
                 {
-                    b.Property<decimal>("IdContent")
+                    b.Property<int>("IdContent")
                         .HasColumnName("IdContent")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
-                    b.Property<decimal>("IdTaxonomy")
+                    b.Property<int>("IdTaxonomy")
                         .HasColumnName("IdTaxonomy")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
                     b.HasKey("IdContent", "IdTaxonomy")
-                        .HasName("FK_ContentTaxonomy");
+                        .HasName("PK_ContentTaxonomy");
 
                     b.HasIndex("IdTaxonomy");
 
@@ -313,13 +290,13 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.ParentContent", b =>
                 {
-                    b.Property<decimal>("IdContent")
+                    b.Property<int>("IdContent")
                         .HasColumnName("IdContent")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
-                    b.Property<decimal>("IdParentContent")
+                    b.Property<int>("IdParentContent")
                         .HasColumnName("IdParentContent")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
                     b.HasKey("IdContent", "IdParentContent")
                         .HasName("PK_ParentContent");
@@ -331,13 +308,13 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.ParentTaxonomy", b =>
                 {
-                    b.Property<decimal>("IdTaxonomy")
+                    b.Property<int>("IdTaxonomy")
                         .HasColumnName("IdTaxonomy")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
-                    b.Property<decimal>("IdParentTaxonomy")
+                    b.Property<int>("IdParentTaxonomy")
                         .HasColumnName("IdParentTaxonomy")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
                     b.HasKey("IdTaxonomy", "IdParentTaxonomy")
                         .HasName("PK_ParentTaxonomy");
@@ -349,21 +326,21 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.UserContent", b =>
                 {
-                    b.Property<decimal>("IdUser")
+                    b.Property<int>("IdUser")
                         .HasColumnName("IdUser")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
-                    b.Property<decimal>("IdContent")
+                    b.Property<int>("IdContent")
                         .HasColumnName("IdContent")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
-                    b.Property<decimal>("IdContentRelationType")
+                    b.Property<int>("IdContentRelationType")
                         .HasColumnName("IdContentRelationType")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
-                    b.Property<decimal?>("IdCollection")
+                    b.Property<int?>("IdCollection")
                         .HasColumnName("IdCollection")
-                        .HasColumnType("decimal");
+                        .HasColumnType("integer(11)");
 
                     b.HasKey("IdUser", "IdContent", "IdContentRelationType")
                         .HasName("PK_UserContent");
@@ -379,14 +356,11 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.TypeData.ContentRelationType", b =>
                 {
-                    b.Property<decimal>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("Id")
                         .HasColumnName("Id")
-                        .HasColumnType("decimal")
-                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("integer(11) AUTO_INCREMENT");
 
                     b.Property<DateTime>("Created")
-                        .ValueGeneratedOnAdd()
                         .HasColumnName("Created")
                         .HasColumnType("datetime");
 
@@ -400,7 +374,6 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnType("varchar(128)");
 
                     b.Property<DateTime>("Updated")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnName("Updated")
                         .HasColumnType("datetime");
 
@@ -412,14 +385,11 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.TypeData.ContentType", b =>
                 {
-                    b.Property<decimal>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("Id")
                         .HasColumnName("Id")
-                        .HasColumnType("decimal")
-                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("integer(11) AUTO_INCREMENT");
 
                     b.Property<DateTime>("Created")
-                        .ValueGeneratedOnAdd()
                         .HasColumnName("Created")
                         .HasColumnType("datetime");
 
@@ -436,7 +406,6 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnType("varchar(128)");
 
                     b.Property<DateTime>("Updated")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnName("Updated")
                         .HasColumnType("datetime");
 
@@ -448,14 +417,11 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.TypeData.MetaValueType", b =>
                 {
-                    b.Property<decimal>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("Id")
                         .HasColumnName("Id")
-                        .HasColumnType("decimal")
-                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("integer(11) AUTO_INCREMENT");
 
                     b.Property<DateTime>("Created")
-                        .ValueGeneratedOnAdd()
                         .HasColumnName("Created")
                         .HasColumnType("datetime");
 
@@ -469,7 +435,6 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnType("varchar(128)");
 
                     b.Property<DateTime>("Updated")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnName("Updated")
                         .HasColumnType("datetime");
 
@@ -481,14 +446,11 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.TypeData.Taxonomy", b =>
                 {
-                    b.Property<decimal>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("Id")
                         .HasColumnName("Id")
-                        .HasColumnType("decimal")
-                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("integer(11) AUTO_INCREMENT");
 
                     b.Property<DateTime>("Created")
-                        .ValueGeneratedOnAdd()
                         .HasColumnName("Created")
                         .HasColumnType("datetime");
 
@@ -506,7 +468,6 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnType("varchar(128)");
 
                     b.Property<DateTime>("Updated")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnName("Updated")
                         .HasColumnType("datetime");
 
