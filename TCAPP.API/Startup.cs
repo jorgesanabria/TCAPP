@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HotChocolate;
+using HotChocolate.AspNetCore;
+using HotChocolate.Execution.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using TCAPP.API.Graphql.Contents;
 using TCAPP.DataAccess.Context;
 
 namespace TCAPP.API
@@ -29,6 +33,11 @@ namespace TCAPP.API
         {
             services.AddControllers();
             services.AddDbContext<TCAPPContext>(o => o.UseMySql(Configuration.GetConnectionString("Test")));
+            services.AddGraphQL(
+                SchemaBuilder.New()
+                    .AddQueryType<Query>()
+                    .Create(),
+                new QueryExecutionOptions { ForceSerialExecution = true });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +53,9 @@ namespace TCAPP.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseGraphQL();
+            app.UsePlayground();
 
             app.UseAuthorization();
 
