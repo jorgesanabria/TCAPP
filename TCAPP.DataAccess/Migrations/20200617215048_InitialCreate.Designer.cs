@@ -9,7 +9,7 @@ using TCAPP.DataAccess.Context;
 namespace TCAPP.DataAccess.Migrations
 {
     [DbContext(typeof(TCAPPContext))]
-    [Migration("20200615011341_InitialCreate")]
+    [Migration("20200617215048_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -18,41 +18,6 @@ namespace TCAPP.DataAccess.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
-
-            modelBuilder.Entity("TCAPP.Domain.ConcreteData.Collection", b =>
-                {
-                    b.Property<int>("Id")
-                        .HasColumnName("Id")
-                        .HasColumnType("integer(11) AUTO_INCREMENT");
-
-                    b.Property<DateTime>("Created")
-                        .HasColumnName("Created")
-                        .HasColumnType("datetime");
-
-                    b.Property<bool>("Enabled")
-                        .HasColumnName("Enabled")
-                        .HasColumnType("bool");
-
-                    b.Property<int>("IdUser")
-                        .HasColumnName("IdUser")
-                        .HasColumnType("integer(11)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnName("Title")
-                        .HasColumnType("varchar(128)");
-
-                    b.Property<DateTime>("Updated")
-                        .HasColumnName("Updated")
-                        .HasColumnType("datetime");
-
-                    b.HasKey("Id")
-                        .HasName("PK_Collecton");
-
-                    b.HasIndex("IdUser");
-
-                    b.ToTable("Collection");
-                });
 
             modelBuilder.Entity("TCAPP.Domain.ConcreteData.Content", b =>
                 {
@@ -76,10 +41,6 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnName("IdContentType")
                         .HasColumnType("integer(11)");
 
-                    b.Property<int?>("IdImage")
-                        .HasColumnName("IdImage")
-                        .HasColumnType("integer(11)");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnName("Title")
@@ -94,38 +55,7 @@ namespace TCAPP.DataAccess.Migrations
 
                     b.HasIndex("IdContentType");
 
-                    b.HasIndex("IdImage");
-
                     b.ToTable("Content");
-                });
-
-            modelBuilder.Entity("TCAPP.Domain.ConcreteData.Image", b =>
-                {
-                    b.Property<int>("Id")
-                        .HasColumnName("Id")
-                        .HasColumnType("integer(11) AUTO_INCREMENT");
-
-                    b.Property<DateTime>("Created")
-                        .HasColumnName("Created")
-                        .HasColumnType("datetime");
-
-                    b.Property<bool>("Enabled")
-                        .HasColumnName("Enabled")
-                        .HasColumnType("bool");
-
-                    b.Property<DateTime>("Updated")
-                        .HasColumnName("Updated")
-                        .HasColumnType("datetime");
-
-                    b.Property<string>("Url")
-                        .IsRequired()
-                        .HasColumnName("Url")
-                        .HasColumnType("varchar(1024)");
-
-                    b.HasKey("Id")
-                        .HasName("PK_Image");
-
-                    b.ToTable("Image");
                 });
 
             modelBuilder.Entity("TCAPP.Domain.ConcreteData.User", b =>
@@ -260,7 +190,7 @@ namespace TCAPP.DataAccess.Migrations
                     b.Property<string>("Value")
                         .IsRequired()
                         .HasColumnName("Value")
-                        .HasColumnType("varchar(512)");
+                        .HasColumnType("varchar(1024)");
 
                     b.HasKey("IdContent", "IdMetaValueType")
                         .HasName("PK_ContentFloatMetaValue");
@@ -286,6 +216,41 @@ namespace TCAPP.DataAccess.Migrations
                     b.HasIndex("IdTaxonomy");
 
                     b.ToTable("ContentTaxonomy");
+                });
+
+            modelBuilder.Entity("TCAPP.Domain.RelationalData.ContentTextMetaValue", b =>
+                {
+                    b.Property<int>("IdContent")
+                        .HasColumnName("IdContent")
+                        .HasColumnType("integer(11)");
+
+                    b.Property<int>("IdMetaValueType")
+                        .HasColumnName("IdMetaValueType")
+                        .HasColumnType("integer(11)");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnName("Created")
+                        .HasColumnType("datetime");
+
+                    b.Property<bool>("Enabled")
+                        .HasColumnName("Enabled")
+                        .HasColumnType("bool");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnName("Updated")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnName("Value")
+                        .HasColumnType("text");
+
+                    b.HasKey("IdContent", "IdMetaValueType")
+                        .HasName("PK_ContentTextMetaValue");
+
+                    b.HasIndex("IdMetaValueType");
+
+                    b.ToTable("ContentTextMetaValue");
                 });
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.ParentContent", b =>
@@ -338,14 +303,8 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnName("IdContentRelationType")
                         .HasColumnType("integer(11)");
 
-                    b.Property<int?>("IdCollection")
-                        .HasColumnName("IdCollection")
-                        .HasColumnType("integer(11)");
-
                     b.HasKey("IdUser", "IdContent", "IdContentRelationType")
                         .HasName("PK_UserContent");
-
-                    b.HasIndex("IdCollection");
 
                     b.HasIndex("IdContent");
 
@@ -477,16 +436,6 @@ namespace TCAPP.DataAccess.Migrations
                     b.ToTable("Taxonomy");
                 });
 
-            modelBuilder.Entity("TCAPP.Domain.ConcreteData.Collection", b =>
-                {
-                    b.HasOne("TCAPP.Domain.ConcreteData.User", "User")
-                        .WithMany("Collections")
-                        .HasForeignKey("IdUser")
-                        .HasConstraintName("FK_Collection_User")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("TCAPP.Domain.ConcreteData.Content", b =>
                 {
                     b.HasOne("TCAPP.Domain.TypeData.ContentType", "ContentType")
@@ -495,12 +444,6 @@ namespace TCAPP.DataAccess.Migrations
                         .HasConstraintName("FK_Content_ContentType")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
-
-                    b.HasOne("TCAPP.Domain.ConcreteData.Image", "Image")
-                        .WithMany("Contents")
-                        .HasForeignKey("IdImage")
-                        .HasConstraintName("FK_Content_Image")
-                        .OnDelete(DeleteBehavior.NoAction);
                 });
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.ContentBoolMetaValue", b =>
@@ -571,6 +514,23 @@ namespace TCAPP.DataAccess.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("TCAPP.Domain.RelationalData.ContentTextMetaValue", b =>
+                {
+                    b.HasOne("TCAPP.Domain.ConcreteData.Content", "Content")
+                        .WithMany("ContentTextMetaValues")
+                        .HasForeignKey("IdContent")
+                        .HasConstraintName("FK_ContentTextMetaValue_Content")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("TCAPP.Domain.TypeData.MetaValueType", "MetaValueType")
+                        .WithMany("ContentTextMetaValues")
+                        .HasForeignKey("IdMetaValueType")
+                        .HasConstraintName("FK_ContentTextMetaValue_MetaValueType")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("TCAPP.Domain.RelationalData.ParentContent", b =>
                 {
                     b.HasOne("TCAPP.Domain.ConcreteData.Content", "Content")
@@ -607,12 +567,6 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.UserContent", b =>
                 {
-                    b.HasOne("TCAPP.Domain.ConcreteData.Collection", "Collection")
-                        .WithMany("UserContents")
-                        .HasForeignKey("IdCollection")
-                        .HasConstraintName("FK_UserContent_Collection")
-                        .OnDelete(DeleteBehavior.NoAction);
-
                     b.HasOne("TCAPP.Domain.ConcreteData.Content", "Content")
                         .WithMany("UserContents")
                         .HasForeignKey("IdContent")

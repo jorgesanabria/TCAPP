@@ -20,7 +20,6 @@ namespace TCAPP.DataAccess.Mapping
             builder.Property(x => x.Enabled).HasColumnName("Enabled").HasColumnType("bool").IsRequired();
 
             builder.HasMany(x => x.UserContents).WithOne(x => x.User).HasForeignKey(x => x.IdUser).HasConstraintName("FK_UserContent_User").OnDelete(DeleteBehavior.NoAction);
-            builder.HasMany(x => x.Collections).WithOne(x => x.User).HasForeignKey(x => x.IdUser).HasConstraintName("FK_Collection_User").OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

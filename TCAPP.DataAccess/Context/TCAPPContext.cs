@@ -11,9 +11,7 @@ namespace TCAPP.DataAccess.Context
 {
     public class TCAPPContext : DbContext
     {
-        public DbSet<Collection> Collections { get; set; }
         public DbSet<Content> Contents { get; set; }
-        public DbSet<Image> Images { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<ContentRelationType> ContentRelationTypes { get; set; }
         public DbSet<ContentType> ContentTypes { get; set; }
@@ -26,11 +24,11 @@ namespace TCAPP.DataAccess.Context
         public DbSet<ParentContent> ParentContents { get; set; }
         public DbSet<ParentTaxonomy> ParentTaxonomies { get; set; }
         public DbSet<UserContent> UserContents { get; set; }
+        public DbSet<ContentTextMetaValue> ContentTextMetaValues { get; set; }
         public TCAPPContext(DbContextOptions<TCAPPContext> options) : base(options)
         { }
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.ApplyConfiguration(new CollectionEntityTypeConfiguration());
             builder.ApplyConfiguration(new ContentBoolMetaValueEntityTypeConfiguration());
             builder.ApplyConfiguration(new ContentEntityTypeConfiguration());
             builder.ApplyConfiguration(new ContentFloatMetaValueEntityTypeConfiguration());
@@ -38,15 +36,13 @@ namespace TCAPP.DataAccess.Context
             builder.ApplyConfiguration(new ContentStringMetaValeuEntityTypeConfiguration());
             builder.ApplyConfiguration(new ContentTaxonomyEntityTypeConfiguration());
             builder.ApplyConfiguration(new ContentTypeEntityTypeConfiguration());
-            builder.ApplyConfiguration(new ImageEntityTypeConfiguration());
             builder.ApplyConfiguration(new MetaValueTypeEntityTypeConfiguration());
             builder.ApplyConfiguration(new ParentContentEntityTypeConfiguration());
             builder.ApplyConfiguration(new ParentTaxonomyEntityTypeConfiguration());
             builder.ApplyConfiguration(new TaxonomyEntityTypeConfiguration());
             builder.ApplyConfiguration(new UserContentEntityTypeConfiguration());
             builder.ApplyConfiguration(new UserEntityTypeConfiguration());
-
-            //builder.HasDefaultSchema("TCAPP");
+            builder.ApplyConfiguration(new ContentTextEntityTypeConfiguration());
         }
     }
 }

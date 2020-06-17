@@ -20,6 +20,7 @@ namespace TCAPP.DataAccess.Mapping
             builder.HasMany(x => x.ContentFloatMetaValues).WithOne(x => x.MetaValueType).HasForeignKey(x => x.IdMetaValueType).HasConstraintName("FK_ContentFloatMetaValueType_MetaValueType").OnDelete(DeleteBehavior.NoAction);
             builder.HasMany(x => x.ContentStringMetaValues).WithOne(x => x.MetaValueType).HasForeignKey(x => x.IdMetaValueType).HasConstraintName("FK_ContentStringMetaValueType_MetaValueType").OnDelete(DeleteBehavior.NoAction);
             builder.HasMany(x => x.ContentBoolMetaValues).WithOne(x => x.MetaValueType).HasForeignKey(x => x.IdMetaValueType).HasConstraintName("FK_ContentBoolMetaValueType_MetaValueType").OnDelete(DeleteBehavior.NoAction);
+            builder.HasMany(x => x.ContentTextMetaValues).WithOne(x => x.MetaValueType).HasForeignKey(x => x.IdMetaValueType).HasConstraintName("FK_ContentTextMetaValue_MetaValueType").OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

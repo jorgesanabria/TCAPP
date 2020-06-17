@@ -9,7 +9,6 @@ namespace TCAPP.Domain.ConcreteData
         public User()
         {
             UserContents = new HashSet<UserContent>();
-            Collections = new HashSet<Collection>();
         }
         public long Id { get; set; }
         public string Name { get; set; }
@@ -19,6 +18,5 @@ namespace TCAPP.Domain.ConcreteData
         public DateTime Updated { get; set; }
         public bool Enabled { get; set; }
         public ICollection<UserContent> UserContents { get; set; }
-        public ICollection<Collection> Collections { get; set; }
     }
 }

@@ -39,21 +39,6 @@ namespace TCAPP.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Image",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer(11) AUTO_INCREMENT", nullable: false),
-                    Url = table.Column<string>(type: "varchar(1024)", nullable: false),
-                    Created = table.Column<DateTime>(type: "datetime", nullable: false),
-                    Updated = table.Column<DateTime>(type: "datetime", nullable: false),
-                    Enabled = table.Column<bool>(type: "bool", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Image", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "MetaValueType",
                 columns: table => new
                 {
@@ -111,7 +96,6 @@ namespace TCAPP.DataAccess.Migrations
                     IdContentType = table.Column<int>(type: "integer(11)", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime", nullable: false),
                     Updated = table.Column<DateTime>(type: "datetime", nullable: false),
-                    IdImage = table.Column<int>(type: "integer(11)", nullable: true),
                     Enabled = table.Column<bool>(type: "bool", nullable: false)
                 },
                 constraints: table =>
@@ -121,11 +105,6 @@ namespace TCAPP.DataAccess.Migrations
                         name: "FK_Content_ContentType",
                         column: x => x.IdContentType,
                         principalTable: "ContentType",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_Content_Image",
-                        column: x => x.IdImage,
-                        principalTable: "Image",
                         principalColumn: "Id");
                 });
 
@@ -148,27 +127,6 @@ namespace TCAPP.DataAccess.Migrations
                         name: "FK_ParentTaxonomy_Taxonomy",
                         column: x => x.IdTaxonomy,
                         principalTable: "Taxonomy",
-                        principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Collection",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer(11) AUTO_INCREMENT", nullable: false),
-                    IdUser = table.Column<int>(type: "integer(11)", nullable: false),
-                    Title = table.Column<string>(type: "varchar(128)", nullable: false),
-                    Created = table.Column<DateTime>(type: "datetime", nullable: false),
-                    Updated = table.Column<DateTime>(type: "datetime", nullable: false),
-                    Enabled = table.Column<bool>(type: "bool", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Collecton", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Collection_User",
-                        column: x => x.IdUser,
-                        principalTable: "User",
                         principalColumn: "Id");
                 });
 
@@ -230,7 +188,7 @@ namespace TCAPP.DataAccess.Migrations
                 {
                     IdContent = table.Column<int>(type: "integer(11)", nullable: false),
                     IdMetaValueType = table.Column<int>(type: "integer(11)", nullable: false),
-                    Value = table.Column<string>(type: "varchar(512)", nullable: false),
+                    Value = table.Column<string>(type: "varchar(1024)", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime", nullable: false),
                     Updated = table.Column<DateTime>(type: "datetime", nullable: false),
                     Enabled = table.Column<bool>(type: "bool", nullable: false)
@@ -273,6 +231,32 @@ namespace TCAPP.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "ContentTextMetaValue",
+                columns: table => new
+                {
+                    IdContent = table.Column<int>(type: "integer(11)", nullable: false),
+                    IdMetaValueType = table.Column<int>(type: "integer(11)", nullable: false),
+                    Value = table.Column<string>(type: "text", nullable: false),
+                    Created = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Updated = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Enabled = table.Column<bool>(type: "bool", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ContentTextMetaValue", x => new { x.IdContent, x.IdMetaValueType });
+                    table.ForeignKey(
+                        name: "FK_ContentTextMetaValue_Content",
+                        column: x => x.IdContent,
+                        principalTable: "Content",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_ContentTextMetaValue_MetaValueType",
+                        column: x => x.IdMetaValueType,
+                        principalTable: "MetaValueType",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ParentContent",
                 columns: table => new
                 {
@@ -300,17 +284,11 @@ namespace TCAPP.DataAccess.Migrations
                 {
                     IdUser = table.Column<int>(type: "integer(11)", nullable: false),
                     IdContent = table.Column<int>(type: "integer(11)", nullable: false),
-                    IdContentRelationType = table.Column<int>(type: "integer(11)", nullable: false),
-                    IdCollection = table.Column<int>(type: "integer(11)", nullable: true)
+                    IdContentRelationType = table.Column<int>(type: "integer(11)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_UserContent", x => new { x.IdUser, x.IdContent, x.IdContentRelationType });
-                    table.ForeignKey(
-                        name: "FK_UserContent_Collection",
-                        column: x => x.IdCollection,
-                        principalTable: "Collection",
-                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_UserContent_Content",
                         column: x => x.IdContent,
@@ -329,19 +307,9 @@ namespace TCAPP.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Collection_IdUser",
-                table: "Collection",
-                column: "IdUser");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Content_IdContentType",
                 table: "Content",
                 column: "IdContentType");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Content_IdImage",
-                table: "Content",
-                column: "IdImage");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ContentBoolMetaValue_IdMetaValueType",
@@ -364,6 +332,11 @@ namespace TCAPP.DataAccess.Migrations
                 column: "IdTaxonomy");
 
             migrationBuilder.CreateIndex(
+                name: "IX_ContentTextMetaValue_IdMetaValueType",
+                table: "ContentTextMetaValue",
+                column: "IdMetaValueType");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ParentContent_IdParentContent",
                 table: "ParentContent",
                 column: "IdParentContent");
@@ -372,11 +345,6 @@ namespace TCAPP.DataAccess.Migrations
                 name: "IX_ParentTaxonomy_IdParentTaxonomy",
                 table: "ParentTaxonomy",
                 column: "IdParentTaxonomy");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_UserContent_IdCollection",
-                table: "UserContent",
-                column: "IdCollection");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserContent_IdContent",
@@ -404,6 +372,9 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ContentTaxonomy");
 
             migrationBuilder.DropTable(
+                name: "ContentTextMetaValue");
+
+            migrationBuilder.DropTable(
                 name: "ParentContent");
 
             migrationBuilder.DropTable(
@@ -419,9 +390,6 @@ namespace TCAPP.DataAccess.Migrations
                 name: "Taxonomy");
 
             migrationBuilder.DropTable(
-                name: "Collection");
-
-            migrationBuilder.DropTable(
                 name: "Content");
 
             migrationBuilder.DropTable(
@@ -432,9 +400,6 @@ namespace TCAPP.DataAccess.Migrations
 
             migrationBuilder.DropTable(
                 name: "ContentType");
-
-            migrationBuilder.DropTable(
-                name: "Image");
         }
     }
 }

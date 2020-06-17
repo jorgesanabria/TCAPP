@@ -11,6 +11,7 @@ namespace TCAPP.Domain.TypeData
             ContentFloatMetaValues = new HashSet<ContentFloatMetaValue>();
             ContentStringMetaValues = new HashSet<ContentStringMetaValue>();
             ContentBoolMetaValues = new HashSet<ContentBoolMetaValue>();
+            ContentTextMetaValues = new HashSet<ContentTextMetaValue>();
         }
         public long Id { get; set; }
         public string Title { get; set; }
@@ -20,5 +21,6 @@ namespace TCAPP.Domain.TypeData
         public ICollection<ContentFloatMetaValue> ContentFloatMetaValues { get; set; }
         public ICollection<ContentStringMetaValue> ContentStringMetaValues { get; set; }
         public ICollection<ContentBoolMetaValue> ContentBoolMetaValues { get; set; }
+        public ICollection<ContentTextMetaValue> ContentTextMetaValues { get; set; }
     }
 }

@@ -12,9 +12,11 @@ namespace TCAPP.Domain.ConcreteData
             ParentContents = new HashSet<ParentContent>();
             ChildrenContents = new HashSet<ParentContent>();
             UserContents = new HashSet<UserContent>();
+            ContentTaxonomies = new HashSet<ContentTaxonomy>();
             ContentFloatMetaValues = new HashSet<ContentFloatMetaValue>();
             ContentStringMetaValues = new HashSet<ContentStringMetaValue>();
             ContentBoolMetaValues = new HashSet<ContentBoolMetaValue>();
+            ContentTextMetaValues = new HashSet<ContentTextMetaValue>();
         }
         public long Id { get; set; }
         public string Title { get; set; }
@@ -22,10 +24,8 @@ namespace TCAPP.Domain.ConcreteData
         public long IdContentType { get; set; }
         public DateTime Created { get; set; }
         public DateTime Updated { get; set; }
-        public long? IdImage { get; set; }
         public bool Enabled { get; set; }
         public ContentType ContentType { get; set; }
-        public Image Image { get; set; }
         public ICollection<ParentContent> ParentContents { get; set; }
         public ICollection<ParentContent> ChildrenContents { get; set; }
         public ICollection<UserContent> UserContents { get; set; }
@@ -33,5 +33,6 @@ namespace TCAPP.Domain.ConcreteData
         public ICollection<ContentFloatMetaValue> ContentFloatMetaValues { get; set; }
         public ICollection<ContentStringMetaValue> ContentStringMetaValues { get; set; }
         public ICollection<ContentBoolMetaValue> ContentBoolMetaValues { get; set; }
+        public ICollection<ContentTextMetaValue> ContentTextMetaValues { get; set; }
     }
 }

@@ -14,12 +14,10 @@ namespace TCAPP.DataAccess.Mapping
             builder.Property(x => x.IdUser).HasColumnName("IdUser").HasColumnType("integer(11)").IsRequired();
             builder.Property(x => x.IdContent).HasColumnName("IdContent").HasColumnType("integer(11)").IsRequired();
             builder.Property(x => x.IdContentRelationType).HasColumnName("IdContentRelationType").HasColumnType("integer(11)").IsRequired();
-            builder.Property(x => x.IdCollection).HasColumnName("IdCollection").HasColumnType("integer(11)").IsRequired(false);
 
             builder.HasOne(x => x.User).WithMany(x => x.UserContents).HasForeignKey(x => x.IdUser).OnDelete(DeleteBehavior.NoAction);
             builder.HasOne(x => x.Content).WithMany(x => x.UserContents).HasForeignKey(x => x.IdContent).OnDelete(DeleteBehavior.NoAction);
             builder.HasOne(x => x.ContentRelationType).WithMany(x => x.UserContents).HasForeignKey(x => x.IdContentRelationType).OnDelete(DeleteBehavior.NoAction);
-            builder.HasOne(x => x.Collection).WithMany(x => x.UserContents).HasForeignKey(x => x.IdCollection).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

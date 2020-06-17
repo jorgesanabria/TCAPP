@@ -13,7 +13,7 @@ namespace TCAPP.DataAccess.Mapping
 
             builder.Property(x => x.IdContent).HasColumnName("IdContent").HasColumnType("integer(11)").IsRequired();
             builder.Property(x => x.IdMetaValueType).HasColumnName("IdMetaValueType").HasColumnType("integer(11)").IsRequired();
-            builder.Property(x => x.Value).HasColumnName("Value").HasColumnType("varchar(512)").IsRequired();
+            builder.Property(x => x.Value).HasColumnName("Value").HasColumnType("varchar(1024)").IsRequired();
             builder.Property(x => x.Created).HasColumnName("Created").HasColumnType("datetime").IsRequired();
             builder.Property(x => x.Updated).HasColumnName("Updated").HasColumnType("datetime").IsRequired();
             builder.Property(x => x.Enabled).HasColumnName("Enabled").HasColumnType("bool").IsRequired();
