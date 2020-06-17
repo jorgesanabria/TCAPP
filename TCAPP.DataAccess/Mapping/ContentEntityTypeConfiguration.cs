@@ -14,7 +14,6 @@ namespace TCAPP.DataAccess.Mapping
 
             builder.Property(x => x.Id).HasColumnName("Id").HasColumnType("integer(11) AUTO_INCREMENT").ValueGeneratedNever();
             builder.Property(x => x.Title).HasColumnName("Title").HasColumnType("varchar(128)").IsRequired();
-            builder.Property(x => x.Description).HasColumnName("Description").HasColumnType("varchar(1024)").IsRequired(false);
             builder.Property(x => x.IdContentType).HasColumnName("IdContentType").HasColumnType("integer(11)").IsRequired();
             builder.Property(x => x.Created).HasColumnName("Created").HasColumnType("datetime").IsRequired();
             builder.Property(x => x.Updated).HasColumnName("Updated").HasColumnType("datetime").IsRequired();

@@ -9,7 +9,7 @@ using TCAPP.DataAccess.Context;
 namespace TCAPP.DataAccess.Migrations
 {
     [DbContext(typeof(TCAPPContext))]
-    [Migration("20200617215048_InitialCreate")]
+    [Migration("20200617220627_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,10 +28,6 @@ namespace TCAPP.DataAccess.Migrations
                     b.Property<DateTime>("Created")
                         .HasColumnName("Created")
                         .HasColumnType("datetime");
-
-                    b.Property<string>("Description")
-                        .HasColumnName("Description")
-                        .HasColumnType("varchar(1024)");
 
                     b.Property<bool>("Enabled")
                         .HasColumnName("Enabled")

@@ -20,7 +20,6 @@ namespace TCAPP.Domain.ConcreteData
         }
         public long Id { get; set; }
         public string Title { get; set; }
-        public string Description { get; set; }
         public long IdContentType { get; set; }
         public DateTime Created { get; set; }
         public DateTime Updated { get; set; }

@@ -27,10 +27,6 @@ namespace TCAPP.DataAccess.Migrations
                         .HasColumnName("Created")
                         .HasColumnType("datetime");
 
-                    b.Property<string>("Description")
-                        .HasColumnName("Description")
-                        .HasColumnType("varchar(1024)");
-
                     b.Property<bool>("Enabled")
                         .HasColumnName("Enabled")
                         .HasColumnType("bool");

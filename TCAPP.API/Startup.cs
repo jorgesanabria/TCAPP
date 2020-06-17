@@ -15,7 +15,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using TCAPP.API.Graphql.Contents;
+using TCAPP.API.Graphql.Contents.Strategies;
 using TCAPP.DataAccess.Context;
+using QueryContent = TCAPP.API.Graphql.Contents.Query;
+using MutationContent = TCAPP.API.Graphql.Contents.Mutation;
 
 namespace TCAPP.API
 {
@@ -35,9 +38,12 @@ namespace TCAPP.API
             services.AddDbContext<TCAPPContext>(o => o.UseMySql(Configuration.GetConnectionString("Test")));
             services.AddGraphQL(
                 SchemaBuilder.New()
-                    .AddQueryType<Query>()
+                    .AddQueryType<QueryContent>()
+                    .AddMutationType<MutationContent>()
                     .Create(),
                 new QueryExecutionOptions { ForceSerialExecution = true });
+
+            services.AddScoped<ICreateContentStrategy, CreateContentStrategy>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

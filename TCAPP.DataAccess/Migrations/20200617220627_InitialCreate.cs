@@ -92,7 +92,6 @@ namespace TCAPP.DataAccess.Migrations
                 {
                     Id = table.Column<int>(type: "integer(11) AUTO_INCREMENT", nullable: false),
                     Title = table.Column<string>(type: "varchar(128)", nullable: false),
-                    Description = table.Column<string>(type: "varchar(1024)", nullable: true),
                     IdContentType = table.Column<int>(type: "integer(11)", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime", nullable: false),
                     Updated = table.Column<DateTime>(type: "datetime", nullable: false),
