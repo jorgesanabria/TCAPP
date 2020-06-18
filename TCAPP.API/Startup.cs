@@ -35,7 +35,7 @@ namespace TCAPP.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<TCAPPContext>(o => o.UseMySql(Configuration.GetConnectionString("Test")));
+            services.AddDbContext<TCAPPContext>(o => o.UseMySql(Configuration.GetConnectionString("Test")), ServiceLifetime.Scoped);
             services.AddGraphQL(
                 SchemaBuilder.New()
                     .AddQueryType<QueryContent>()

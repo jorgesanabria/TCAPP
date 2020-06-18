@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Threading.Tasks;
 using TCAPP.DataAccess.Context;
 using TCAPP.Domain.ConcreteData;
@@ -15,7 +16,7 @@ namespace TCAPP.API.Graphql.Contents.Strategies
         }
         public async Task<Content> CreateAsync(CreateContentInput input)
         {
-            var content = new Content { Title = input.Title };
+            var content = new Content { Title = input.Title, IdContentType = input.IdContentType, Created = input.Created, Updated = input.Updated };
 
             if (input.Parents != null && input.Parents.Any())
             {
@@ -42,7 +43,9 @@ namespace TCAPP.API.Graphql.Contents.Strategies
                 content.ContentBoolMetaValues = input.Bools.Select(x => new ContentBoolMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType }).ToList();
             }
 
-            content = _context.Contents.Add(content).Entity;
+            _context.Entry(content).State = EntityState.Added;
+
+            //_context.Contents.Add(content);
             await _context.SaveChangesAsync();
 
             if (input.Children != null && input.Children.Any())

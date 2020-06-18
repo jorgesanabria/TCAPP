@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TCAPP.API.Graphql.Contents.MetaValues;
 using TCAPP.API.Graphql.Contents.Parents;
 
@@ -16,6 +17,9 @@ namespace TCAPP.API.Graphql.Contents
             Floats = new List<CreateFloatMetaValueInput>();
         }
         public string Title { get; set; }
+        public long IdContentType { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Updated { get; set; }
         public List<CreateParentInput> Parents { get; set; }
         public List<CreateContentInput> Children { get; set; }
         public List<CreateTextMetaValueInput> Texts { get; set; }
