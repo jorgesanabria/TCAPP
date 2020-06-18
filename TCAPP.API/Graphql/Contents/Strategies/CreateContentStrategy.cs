@@ -53,26 +53,13 @@ namespace TCAPP.API.Graphql.Contents.Strategies
                 content.ContentBoolMetaValues = input.Bools.Select(x => new ContentBoolMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType, IdContent = content.Id }).ToList();
             }
 
-            //_context.Entry(content).State = EntityState.Added;
-
-            //_context.Contents.Add(content);
-            //await _context.SaveChangesAsync();
-
-            //TODO: reemplazar los auto_increment de todo el proyecto por valores calculados por programación en los casos de inserción de content
-            //TODO: reemplazar todos los auto_increment de todo el proyecto por valores generados a mano y montados en constantes de código
-
-            //_context.Entry(content).State = EntityState.Detached;
 
             if (input.Children != null && input.Children.Any())
             {
                 foreach (var child in input.Children)
                 {
                     var childContent = DoCreate(child);
-                    //var idChild = childContent.Id;
-                    //_context.Entry(childContent).State = EntityState.Detached;
-                    content.ParentContents.Add(new ParentContent { IdParentContent = content.Id, IdContent = childContent.Id });
-
-                    //await _context.SaveChangesAsync();
+                    content.ChildrenContents.Add(new ParentContent { Parent = content, Content = childContent });
                 }
             }
 
