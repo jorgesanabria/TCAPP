@@ -1676,3 +1676,2014 @@ VALUES (@p6, @p7);
 2020-06-18 12:46:48.052 -03:00 [DBG] No candidates found for the request path '/'
 2020-06-18 12:46:48.052 -03:00 [DBG] Request did not match any endpoints
 2020-06-18 12:46:48.062 -03:00 [INF] Request finished in 10.9638ms 200 application/json
+2020-06-18 13:53:57.236 -03:00 [DBG] Hosting starting
+2020-06-18 13:53:58.480 -03:00 [DBG] Loaded hosting startup assembly TCAPP.API
+2020-06-18 13:53:58.483 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-06-18 13:53:58.483 -03:00 [INF] Hosting environment: Development
+2020-06-18 13:53:58.483 -03:00 [INF] Content root path: C:\work\APP\TCAPP\TCAPP.API
+2020-06-18 13:53:58.484 -03:00 [DBG] Hosting started
+2020-06-18 13:53:58.668 -03:00 [DBG] Connection ID "18374686494167138314" disconnecting.
+2020-06-18 13:53:58.677 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/weatherforecast  
+2020-06-18 13:53:58.677 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/playground/settings.js  
+2020-06-18 13:53:58.684 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2020-06-18 13:53:58.684 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2020-06-18 13:53:58.714 -03:00 [DBG] No candidates found for the request path '/playground/settings.js'
+2020-06-18 13:53:58.715 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:53:58.721 -03:00 [DBG] 1 candidate(s) found for the request path '/weatherforecast'
+2020-06-18 13:53:58.728 -03:00 [DBG] Endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)' with route pattern 'WeatherForecast' is valid for the request path '/weatherforecast'
+2020-06-18 13:53:58.729 -03:00 [DBG] Request matched endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-18 13:53:58.773 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2020-06-18 13:53:58.775 -03:00 [INF] Executing endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-18 13:53:58.787 -03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2020-06-18 13:53:58.857 -03:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[TCAPP.API.WeatherForecast] Get() on controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API).
+2020-06-18 13:53:58.864 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2020-06-18 13:53:58.864 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2020-06-18 13:53:58.865 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2020-06-18 13:53:58.865 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2020-06-18 13:53:58.865 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2020-06-18 13:53:58.872 -03:00 [DBG] Executing controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-06-18 13:53:58.891 -03:00 [INF] Request finished in 217.8633ms 200 application/javascript
+2020-06-18 13:54:00.021 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:00.023 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:00.023 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:00.025 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:00.025 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:00.426 -03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2020-06-18 13:54:00.486 -03:00 [DBG] Executed controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-06-18 13:54:00.492 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2020-06-18 13:54:00.495 -03:00 [DBG] No information found on request to perform content negotiation.
+2020-06-18 13:54:00.495 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2020-06-18 13:54:00.495 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2020-06-18 13:54:00.497 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2020-06-18 13:54:00.498 -03:00 [INF] Executing ObjectResult, writing value of type 'TCAPP.API.WeatherForecast[]'.
+2020-06-18 13:54:00.522 -03:00 [INF] Executed action TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API) in 1651.6636ms
+2020-06-18 13:54:00.523 -03:00 [INF] Executed endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-18 13:54:00.525 -03:00 [INF] Request finished in 1851.9986ms 200 application/json; charset=utf-8
+2020-06-18 13:54:00.658 -03:00 [INF] Request finished in 645.4011ms 200 application/json
+2020-06-18 13:54:00.711 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:00.712 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:00.712 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:00.712 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:00.712 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:00.735 -03:00 [INF] Request finished in 23.439ms 200 application/json
+2020-06-18 13:54:01.567 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:01.575 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:01.577 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:01.581 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:01.583 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:01.621 -03:00 [INF] Request finished in 56.3277ms 200 application/json
+2020-06-18 13:54:03.690 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:03.697 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:03.697 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:03.699 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:03.700 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:03.742 -03:00 [INF] Request finished in 52.2633ms 200 application/json
+2020-06-18 13:54:05.769 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:05.770 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:05.770 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:05.770 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:05.770 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:05.783 -03:00 [INF] Request finished in 14.6111ms 200 application/json
+2020-06-18 13:54:07.865 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:07.866 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:07.867 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:07.867 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:07.868 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:07.888 -03:00 [INF] Request finished in 22.7595ms 200 application/json
+2020-06-18 13:54:09.954 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:09.956 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:09.957 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:09.957 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:09.958 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:09.983 -03:00 [INF] Request finished in 29.792ms 200 application/json
+2020-06-18 13:54:12.017 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:12.019 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:12.019 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:12.019 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:12.019 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:12.035 -03:00 [INF] Request finished in 17.6568ms 200 application/json
+2020-06-18 13:54:14.090 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:14.092 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:14.093 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:14.094 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:14.094 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:14.137 -03:00 [INF] Request finished in 47.171ms 200 application/json
+2020-06-18 13:54:16.165 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:16.165 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:16.165 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:16.165 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:16.165 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:16.187 -03:00 [INF] Request finished in 22.5973ms 200 application/json
+2020-06-18 13:54:18.220 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:18.220 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:18.221 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:18.221 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:18.221 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:18.250 -03:00 [INF] Request finished in 30.9721ms 200 application/json
+2020-06-18 13:54:20.273 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:20.273 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:20.274 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:20.274 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:20.274 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:20.311 -03:00 [INF] Request finished in 38.4461ms 200 application/json
+2020-06-18 13:54:22.353 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:22.353 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:22.353 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:22.354 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:22.354 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:22.384 -03:00 [INF] Request finished in 31.4192ms 200 application/json
+2020-06-18 13:54:24.434 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:24.435 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:24.435 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:24.436 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:24.436 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:24.458 -03:00 [INF] Request finished in 24.0195ms 200 application/json
+2020-06-18 13:54:26.488 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:26.488 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:26.488 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:26.488 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:26.488 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:26.503 -03:00 [INF] Request finished in 15.3513ms 200 application/json
+2020-06-18 13:54:28.547 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:28.548 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:28.548 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:28.549 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:28.549 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:28.585 -03:00 [INF] Request finished in 38.3884ms 200 application/json
+2020-06-18 13:54:30.642 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:30.643 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:30.643 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:30.655 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:30.656 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:30.686 -03:00 [INF] Request finished in 44.6601ms 200 application/json
+2020-06-18 13:54:32.703 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:32.704 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:32.704 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:32.704 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:32.704 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:32.716 -03:00 [INF] Request finished in 12.6619ms 200 application/json
+2020-06-18 13:54:34.730 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:34.730 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:34.730 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:34.731 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:34.731 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:34.740 -03:00 [INF] Request finished in 10.582ms 200 application/json
+2020-06-18 13:54:36.779 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:36.779 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:36.780 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:36.780 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:36.780 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:36.805 -03:00 [INF] Request finished in 26.2921ms 200 application/json
+2020-06-18 13:54:38.835 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:38.835 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:38.835 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:38.836 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:38.837 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:38.852 -03:00 [INF] Request finished in 18.0943ms 200 application/json
+2020-06-18 13:54:40.880 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:40.881 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:40.882 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:40.882 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:40.883 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:40.921 -03:00 [INF] Request finished in 41.1137ms 200 application/json
+2020-06-18 13:54:42.967 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:42.968 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:42.968 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:42.969 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:42.969 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:42.998 -03:00 [INF] Request finished in 31.2394ms 200 application/json
+2020-06-18 13:54:45.027 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:45.028 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:45.028 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:45.028 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:45.028 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:45.038 -03:00 [INF] Request finished in 10.9703ms 200 application/json
+2020-06-18 13:54:47.057 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:47.057 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:47.057 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:47.057 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:47.057 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:47.077 -03:00 [INF] Request finished in 20.555ms 200 application/json
+2020-06-18 13:54:49.101 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:49.101 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:49.101 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:49.101 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:49.101 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:49.121 -03:00 [INF] Request finished in 20.4655ms 200 application/json
+2020-06-18 13:54:50.149 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 169
+2020-06-18 13:54:50.149 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:50.150 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:50.150 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:50.150 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:51.020 -03:00 [DBG] No relationship from 'Content' to 'ParentContent' has been configured by convention because there are multiple properties on one entity type {'ChildrenContents', 'ParentContents'} that could be matched with the properties on the other entity type {'Content', 'Parent'}. This message can be disregarded if explicit configuration has been specified.
+2020-06-18 13:54:51.034 -03:00 [DBG] No relationship from 'ParentContent' to 'Content' has been configured by convention because there are multiple properties on one entity type {'Content', 'Parent'} that could be matched with the properties on the other entity type {'ChildrenContents', 'ParentContents'}. This message can be disregarded if explicit configuration has been specified.
+2020-06-18 13:54:51.035 -03:00 [DBG] No relationship from 'ParentTaxonomy' to 'Taxonomy' has been configured by convention because there are multiple properties on one entity type {'Parent', 'Taxonomy'} that could be matched with the properties on the other entity type {'ChildrenTaxonomies', 'ParentTaxonomies'}. This message can be disregarded if explicit configuration has been specified.
+2020-06-18 13:54:51.038 -03:00 [DBG] No relationship from 'Taxonomy' to 'ParentTaxonomy' has been configured by convention because there are multiple properties on one entity type {'ChildrenTaxonomies', 'ParentTaxonomies'} that could be matched with the properties on the other entity type {'Parent', 'Taxonomy'}. This message can be disregarded if explicit configuration has been specified.
+2020-06-18 13:54:51.137 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:51.137 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:51.137 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:51.137 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:51.137 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:51.149 -03:00 [INF] Request finished in 12.636ms 200 application/json
+2020-06-18 13:54:51.253 -03:00 [DBG] No relationship from 'Content' to 'ParentContent' has been configured by convention because there are multiple properties on one entity type {'ChildrenContents', 'ParentContents'} that could be matched with the properties on the other entity type {'Content', 'Parent'}. This message can be disregarded if explicit configuration has been specified.
+2020-06-18 13:54:51.254 -03:00 [DBG] No relationship from 'ParentContent' to 'Content' has been configured by convention because there are multiple properties on one entity type {'Content', 'Parent'} that could be matched with the properties on the other entity type {'ChildrenContents', 'ParentContents'}. This message can be disregarded if explicit configuration has been specified.
+2020-06-18 13:54:51.297 -03:00 [DBG] No relationship from 'ParentTaxonomy' to 'Taxonomy' has been configured by convention because there are multiple properties on one entity type {'Parent', 'Taxonomy'} that could be matched with the properties on the other entity type {'ChildrenTaxonomies', 'ParentTaxonomies'}. This message can be disregarded if explicit configuration has been specified.
+2020-06-18 13:54:51.297 -03:00 [DBG] No relationship from 'Taxonomy' to 'ParentTaxonomy' has been configured by convention because there are multiple properties on one entity type {'ChildrenTaxonomies', 'ParentTaxonomies'} that could be matched with the properties on the other entity type {'Parent', 'Taxonomy'}. This message can be disregarded if explicit configuration has been specified.
+2020-06-18 13:54:51.400 -03:00 [DBG] The index {'IdContent'} was not created on entity type 'ContentBoolMetaValue' as the properties are already covered by the index {'IdContent', 'IdMetaValueType'}.
+2020-06-18 13:54:51.400 -03:00 [DBG] The index {'IdContent'} was not created on entity type 'ContentFloatMetaValue' as the properties are already covered by the index {'IdContent', 'IdMetaValueType'}.
+2020-06-18 13:54:51.400 -03:00 [DBG] The index {'IdContent'} was not created on entity type 'ContentStringMetaValue' as the properties are already covered by the index {'IdContent', 'IdMetaValueType'}.
+2020-06-18 13:54:51.401 -03:00 [DBG] The index {'IdContent'} was not created on entity type 'ContentTaxonomy' as the properties are already covered by the index {'IdContent', 'IdTaxonomy'}.
+2020-06-18 13:54:51.401 -03:00 [DBG] The index {'IdContent'} was not created on entity type 'ContentTextMetaValue' as the properties are already covered by the index {'IdContent', 'IdMetaValueType'}.
+2020-06-18 13:54:51.401 -03:00 [DBG] The index {'IdContent'} was not created on entity type 'ParentContent' as the properties are already covered by the index {'IdContent', 'IdParentContent'}.
+2020-06-18 13:54:51.401 -03:00 [DBG] The index {'IdTaxonomy'} was not created on entity type 'ParentTaxonomy' as the properties are already covered by the index {'IdTaxonomy', 'IdParentTaxonomy'}.
+2020-06-18 13:54:51.401 -03:00 [DBG] The index {'IdUser'} was not created on entity type 'UserContent' as the properties are already covered by the index {'IdUser', 'IdContent', 'IdContentRelationType'}.
+2020-06-18 13:54:51.584 -03:00 [INF] Entity Framework Core 3.1.5 initialized 'TCAPPContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: None
+2020-06-18 13:54:51.806 -03:00 [DBG] queryContext => new QueryingEnumerable<int>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, int>, 
+    TCAPP.DataAccess.Context.TCAPPContext, 
+    DiagnosticsLogger<Query>
+)
+    .Single()
+2020-06-18 13:54:51.836 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2020-06-18 13:54:51.889 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (46ms).
+2020-06-18 13:54:51.901 -03:00 [DBG] Opening connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 13:54:53.172 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:53.172 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:53.173 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:53.173 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:53.173 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:53.188 -03:00 [INF] Request finished in 16.0363ms 200 application/json
+2020-06-18 13:54:55.202 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:55.203 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:55.203 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:55.203 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:55.204 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:55.223 -03:00 [INF] Request finished in 20.8185ms 200 application/json
+2020-06-18 13:54:56.194 -03:00 [ERR] An error occurred using the connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 13:54:56.763 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'TCAPP.DataAccess.Context.TCAPPContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseMySql' call.
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ServerSession.cs:line 442
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ConnectionPool.cs:line 112
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ConnectionPool.cs:line 141
+   at MySql.Data.MySqlClient.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Nullable`1 ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlConnection.cs:line 645
+   at MySql.Data.MySqlClient.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlConnection.cs:line 312
+   at MySql.Data.MySqlClient.MySqlConnection.Open() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlConnection.cs:line 280
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlRelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   --- End of inner exception stack trace ---
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseMySql' call.
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ServerSession.cs:line 442
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ConnectionPool.cs:line 112
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ConnectionPool.cs:line 141
+   at MySql.Data.MySqlClient.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Nullable`1 ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlConnection.cs:line 645
+   at MySql.Data.MySqlClient.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlConnection.cs:line 312
+   at MySql.Data.MySqlClient.MySqlConnection.Open() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlConnection.cs:line 280
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlRelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   --- End of inner exception stack trace ---
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2020-06-18 13:54:56.824 -03:00 [DBG] 'TCAPPContext' disposed.
+2020-06-18 13:54:56.836 -03:00 [INF] Request finished in 6686.856ms 200 application/json
+2020-06-18 13:54:57.244 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:57.245 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:57.245 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:57.245 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:57.245 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:57.255 -03:00 [INF] Request finished in 10.6191ms 200 application/json
+2020-06-18 13:54:59.275 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:54:59.275 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:54:59.275 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:54:59.275 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:54:59.276 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:54:59.285 -03:00 [INF] Request finished in 11.0294ms 200 application/json
+2020-06-18 13:55:01.305 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:01.305 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:01.305 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:01.305 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:01.305 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:01.328 -03:00 [INF] Request finished in 23.1124ms 200 application/json
+2020-06-18 13:55:03.390 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:03.390 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:03.391 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:03.393 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:03.394 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:03.431 -03:00 [INF] Request finished in 41.5095ms 200 application/json
+2020-06-18 13:55:05.485 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:05.489 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:05.490 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:05.490 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:05.490 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:05.507 -03:00 [INF] Request finished in 22.1494ms 200 application/json
+2020-06-18 13:55:07.529 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:07.529 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:07.530 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:07.530 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:07.530 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:07.537 -03:00 [INF] Request finished in 8.0915ms 200 application/json
+2020-06-18 13:55:09.553 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:09.553 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:09.553 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:09.553 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:09.553 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:09.566 -03:00 [INF] Request finished in 13.9578ms 200 application/json
+2020-06-18 13:55:11.590 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:11.591 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:11.591 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:11.592 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:11.592 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:11.609 -03:00 [INF] Request finished in 18.8267ms 200 application/json
+2020-06-18 13:55:13.635 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:13.635 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:13.636 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:13.636 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:13.636 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:13.647 -03:00 [INF] Request finished in 11.4569ms 200 application/json
+2020-06-18 13:55:15.689 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:15.689 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:15.689 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:15.689 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:15.689 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:15.708 -03:00 [INF] Request finished in 19.6483ms 200 application/json
+2020-06-18 13:55:17.729 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:17.730 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:17.730 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:17.730 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:17.730 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:17.735 -03:00 [INF] Request finished in 6.1226ms 200 application/json
+2020-06-18 13:55:19.775 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:19.776 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:19.776 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:19.776 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:19.776 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:19.799 -03:00 [INF] Request finished in 23.9517ms 200 application/json
+2020-06-18 13:55:21.847 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:21.848 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:21.850 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:21.850 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:21.850 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:21.910 -03:00 [INF] Request finished in 62.7626ms 200 application/json
+2020-06-18 13:55:23.960 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:23.960 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:23.960 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:23.964 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:23.964 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:23.987 -03:00 [INF] Request finished in 27.1045ms 200 application/json
+2020-06-18 13:55:26.028 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:26.029 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:26.034 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:26.035 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:26.035 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:26.063 -03:00 [INF] Request finished in 34.9048ms 200 application/json
+2020-06-18 13:55:28.084 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:28.084 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:28.084 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:28.085 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:28.085 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:28.095 -03:00 [INF] Request finished in 10.7829ms 200 application/json
+2020-06-18 13:55:30.124 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:30.124 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:30.125 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:30.125 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:30.125 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:30.147 -03:00 [INF] Request finished in 23.1954ms 200 application/json
+2020-06-18 13:55:32.170 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:32.170 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:32.170 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:32.170 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:32.170 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:32.179 -03:00 [INF] Request finished in 8.9144ms 200 application/json
+2020-06-18 13:55:34.201 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:34.201 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:34.202 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:34.202 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:34.203 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:34.228 -03:00 [INF] Request finished in 27.3926ms 200 application/json
+2020-06-18 13:55:36.253 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:36.253 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:36.253 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:36.253 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:36.253 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:36.263 -03:00 [INF] Request finished in 9.8722ms 200 application/json
+2020-06-18 13:55:38.327 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:38.327 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:38.327 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:38.327 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:38.327 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:38.347 -03:00 [INF] Request finished in 20.2851ms 200 application/json
+2020-06-18 13:55:40.378 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:40.382 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:40.382 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:40.383 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:40.383 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:40.419 -03:00 [INF] Request finished in 40.3971ms 200 application/json
+2020-06-18 13:55:42.446 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:42.446 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:42.446 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:42.446 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:42.447 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:42.460 -03:00 [INF] Request finished in 14.2371ms 200 application/json
+2020-06-18 13:55:44.491 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:44.491 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:44.491 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:44.491 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:44.492 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:44.502 -03:00 [INF] Request finished in 11.7303ms 200 application/json
+2020-06-18 13:55:46.551 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:46.552 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:46.552 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:46.558 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:46.558 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:46.585 -03:00 [INF] Request finished in 35.466ms 200 application/json
+2020-06-18 13:55:48.606 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:48.606 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:48.606 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:48.606 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:48.606 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:48.614 -03:00 [INF] Request finished in 8.5178ms 200 application/json
+2020-06-18 13:55:50.660 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:50.660 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:50.660 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:50.661 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:50.661 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:50.685 -03:00 [INF] Request finished in 25.804ms 200 application/json
+2020-06-18 13:55:52.751 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:52.751 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:52.751 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:52.751 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:52.751 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:52.786 -03:00 [INF] Request finished in 35.3472ms 200 application/json
+2020-06-18 13:55:54.827 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:54.828 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:54.828 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:54.828 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:54.828 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:54.880 -03:00 [INF] Request finished in 53.4444ms 200 application/json
+2020-06-18 13:55:56.919 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:56.919 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:56.919 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:56.919 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:56.920 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:56.951 -03:00 [INF] Request finished in 32.1239ms 200 application/json
+2020-06-18 13:55:58.978 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:55:58.978 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:55:58.978 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:55:58.978 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:55:58.978 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:55:58.992 -03:00 [INF] Request finished in 14.7316ms 200 application/json
+2020-06-18 13:56:01.020 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:01.022 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:01.022 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:01.022 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:01.022 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:01.040 -03:00 [INF] Request finished in 20.7541ms 200 application/json
+2020-06-18 13:56:03.064 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:03.064 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:03.064 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:03.064 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:03.065 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:03.078 -03:00 [INF] Request finished in 14.7436ms 200 application/json
+2020-06-18 13:56:05.101 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:05.101 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:05.101 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:05.101 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:05.101 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:05.117 -03:00 [INF] Request finished in 16.2611ms 200 application/json
+2020-06-18 13:56:07.151 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:07.152 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:07.152 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:07.152 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:07.152 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:07.197 -03:00 [INF] Request finished in 45.6662ms 200 application/json
+2020-06-18 13:56:09.215 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:09.216 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:09.216 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:09.216 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:09.216 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:09.223 -03:00 [INF] Request finished in 7.823ms 200 application/json
+2020-06-18 13:56:11.239 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:11.239 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:11.239 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:11.239 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:11.239 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:11.250 -03:00 [INF] Request finished in 10.9536ms 200 application/json
+2020-06-18 13:56:13.273 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:13.273 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:13.273 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:13.273 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:13.274 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:13.296 -03:00 [INF] Request finished in 23.4701ms 200 application/json
+2020-06-18 13:56:15.328 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:15.328 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:15.328 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:15.329 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:15.330 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:15.358 -03:00 [INF] Request finished in 30.3874ms 200 application/json
+2020-06-18 13:56:17.385 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:17.385 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:17.385 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:17.389 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:17.389 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:17.407 -03:00 [INF] Request finished in 22.2902ms 200 application/json
+2020-06-18 13:56:19.461 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:19.461 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:19.461 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:19.461 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:19.461 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:19.499 -03:00 [INF] Request finished in 38.6681ms 200 application/json
+2020-06-18 13:56:21.524 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:21.524 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:21.524 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:21.525 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:21.526 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:21.541 -03:00 [INF] Request finished in 17.0517ms 200 application/json
+2020-06-18 13:56:23.561 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:23.562 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:23.563 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:23.563 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:23.563 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:23.575 -03:00 [INF] Request finished in 13.3012ms 200 application/json
+2020-06-18 13:56:25.598 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:25.598 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:25.598 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:25.598 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:25.598 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:25.614 -03:00 [INF] Request finished in 16.1916ms 200 application/json
+2020-06-18 13:56:27.642 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:27.642 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:27.643 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:27.644 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:27.645 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:27.668 -03:00 [INF] Request finished in 26.3354ms 200 application/json
+2020-06-18 13:56:29.706 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:29.706 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:29.707 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:29.707 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:29.707 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:29.731 -03:00 [INF] Request finished in 27.335ms 200 application/json
+2020-06-18 13:56:31.771 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:31.772 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:31.772 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:31.773 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:31.773 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:31.797 -03:00 [INF] Request finished in 25.3885ms 200 application/json
+2020-06-18 13:56:33.823 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:33.823 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:33.823 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:33.823 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:33.823 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:33.845 -03:00 [INF] Request finished in 22.7957ms 200 application/json
+2020-06-18 13:56:35.886 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:35.886 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:35.887 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:35.889 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:35.890 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:35.930 -03:00 [INF] Request finished in 45.6582ms 200 application/json
+2020-06-18 13:56:37.969 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:37.969 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:37.969 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:37.970 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:37.970 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:37.992 -03:00 [INF] Request finished in 23.2775ms 200 application/json
+2020-06-18 13:56:40.060 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:40.060 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:40.060 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:40.060 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:40.060 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:40.126 -03:00 [INF] Request finished in 66.6628ms 200 application/json
+2020-06-18 13:56:42.156 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:42.156 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:42.156 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:42.157 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:42.157 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:42.163 -03:00 [INF] Request finished in 6.7549ms 200 application/json
+2020-06-18 13:56:44.181 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:44.182 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:44.182 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:44.182 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:44.182 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:44.195 -03:00 [INF] Request finished in 13.2575ms 200 application/json
+2020-06-18 13:56:46.212 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:46.212 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:46.212 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:46.212 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:46.212 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:46.228 -03:00 [INF] Request finished in 15.9323ms 200 application/json
+2020-06-18 13:56:48.281 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:48.281 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:48.281 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:48.282 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:48.282 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:48.309 -03:00 [INF] Request finished in 28.4066ms 200 application/json
+2020-06-18 13:56:50.330 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:50.330 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:50.330 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:50.330 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:50.330 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:50.343 -03:00 [INF] Request finished in 13.6619ms 200 application/json
+2020-06-18 13:56:52.365 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:52.365 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:52.365 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:52.366 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:52.366 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:52.389 -03:00 [INF] Request finished in 24.4196ms 200 application/json
+2020-06-18 13:56:54.446 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:54.448 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:54.449 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:54.449 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:54.450 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:54.479 -03:00 [INF] Request finished in 36.1389ms 200 application/json
+2020-06-18 13:56:56.515 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:56.516 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:56.516 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:56.518 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:56.518 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:56.558 -03:00 [INF] Request finished in 42.2445ms 200 application/json
+2020-06-18 13:56:57.089 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 169
+2020-06-18 13:56:57.089 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:57.089 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:57.089 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:57.089 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:57.135 -03:00 [INF] Entity Framework Core 3.1.5 initialized 'TCAPPContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: None
+2020-06-18 13:56:57.145 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2020-06-18 13:56:57.146 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2020-06-18 13:56:57.146 -03:00 [DBG] Opening connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 13:56:57.325 -03:00 [DBG] Opened connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 13:56:57.341 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Content` AS `c`
+2020-06-18 13:56:57.557 -03:00 [INF] Executed DbCommand (220ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Content` AS `c`
+2020-06-18 13:56:57.672 -03:00 [DBG] A data reader was disposed.
+2020-06-18 13:56:57.675 -03:00 [DBG] Closing connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 13:56:57.682 -03:00 [DBG] Closed connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 13:56:57.859 -03:00 [DBG] queryContext => new QueryingEnumerable<Content>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, Content>, 
+    TCAPP.DataAccess.Context.TCAPPContext, 
+    DiagnosticsLogger<Query>
+)
+2020-06-18 13:56:57.874 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2020-06-18 13:56:57.875 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2020-06-18 13:56:57.875 -03:00 [DBG] Opening connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 13:56:57.882 -03:00 [DBG] Opened connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 13:56:57.882 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`IdContentType`, FALSE, `c0`.`Title`
+FROM `Content` AS `c`
+INNER JOIN `ContentType` AS `c0` ON `c`.`IdContentType` = `c0`.`Id`
+2020-06-18 13:56:57.921 -03:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`IdContentType`, FALSE, `c0`.`Title`
+FROM `Content` AS `c`
+INNER JOIN `ContentType` AS `c0` ON `c`.`IdContentType` = `c0`.`Id`
+2020-06-18 13:56:57.927 -03:00 [DBG] A data reader was disposed.
+2020-06-18 13:56:57.927 -03:00 [DBG] Closing connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 13:56:57.927 -03:00 [DBG] Closed connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 13:56:58.186 -03:00 [DBG] 'TCAPPContext' disposed.
+2020-06-18 13:56:58.187 -03:00 [INF] Request finished in 1098.1545ms 200 application/json
+2020-06-18 13:56:58.575 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:56:58.575 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:56:58.575 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:56:58.575 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:56:58.575 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:56:58.589 -03:00 [INF] Request finished in 14.2174ms 200 application/json
+2020-06-18 13:57:00.606 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:00.606 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:00.607 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:00.607 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:00.608 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:00.622 -03:00 [INF] Request finished in 15.5063ms 200 application/json
+2020-06-18 13:57:02.656 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:02.656 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:02.657 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:02.658 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:02.658 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:02.699 -03:00 [INF] Request finished in 43.1373ms 200 application/json
+2020-06-18 13:57:04.737 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:04.738 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:04.738 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:04.739 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:04.739 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:04.795 -03:00 [INF] Request finished in 59.2932ms 200 application/json
+2020-06-18 13:57:06.822 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:06.822 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:06.823 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:06.823 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:06.823 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:06.843 -03:00 [INF] Request finished in 21.6119ms 200 application/json
+2020-06-18 13:57:08.870 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:08.871 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:08.871 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:08.872 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:08.872 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:08.883 -03:00 [INF] Request finished in 12.9036ms 200 application/json
+2020-06-18 13:57:10.903 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:10.904 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:10.905 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:10.905 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:10.905 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:10.925 -03:00 [INF] Request finished in 21.3963ms 200 application/json
+2020-06-18 13:57:12.945 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:12.946 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:12.946 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:12.946 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:12.946 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:12.953 -03:00 [INF] Request finished in 7.5259ms 200 application/json
+2020-06-18 13:57:14.976 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:14.976 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:14.976 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:14.976 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:14.976 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:15.004 -03:00 [INF] Request finished in 28.1024ms 200 application/json
+2020-06-18 13:57:17.056 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:17.057 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:17.057 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:17.059 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:17.059 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:17.089 -03:00 [INF] Request finished in 33.4959ms 200 application/json
+2020-06-18 13:57:19.116 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:19.116 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:19.116 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:19.116 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:19.117 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:19.129 -03:00 [INF] Request finished in 14.8175ms 200 application/json
+2020-06-18 13:57:21.172 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:21.173 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:21.173 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:21.173 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:21.173 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:21.190 -03:00 [INF] Request finished in 17.0512ms 200 application/json
+2020-06-18 13:57:23.212 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:23.213 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:23.213 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:23.213 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:23.213 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:23.230 -03:00 [INF] Request finished in 18.0665ms 200 application/json
+2020-06-18 13:57:25.278 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:25.278 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:25.278 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:25.279 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:25.279 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:25.302 -03:00 [INF] Request finished in 23.9614ms 200 application/json
+2020-06-18 13:57:27.327 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:27.327 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:27.327 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:27.327 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:27.328 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:27.353 -03:00 [INF] Request finished in 26.4611ms 200 application/json
+2020-06-18 13:57:29.377 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:29.377 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:29.377 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:29.377 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:29.377 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:29.392 -03:00 [INF] Request finished in 15.1206ms 200 application/json
+2020-06-18 13:57:31.409 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:31.409 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:31.410 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:31.410 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:31.410 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:31.421 -03:00 [INF] Request finished in 11.9724ms 200 application/json
+2020-06-18 13:57:33.479 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:33.480 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:33.480 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:33.480 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:33.480 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:33.502 -03:00 [INF] Request finished in 22.7108ms 200 application/json
+2020-06-18 13:57:35.521 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:35.521 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:35.521 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:35.521 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:35.521 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:35.531 -03:00 [INF] Request finished in 10.7818ms 200 application/json
+2020-06-18 13:57:37.559 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:37.559 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:37.559 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:37.560 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:37.560 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:37.574 -03:00 [INF] Request finished in 15.2748ms 200 application/json
+2020-06-18 13:57:39.616 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:39.617 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:39.617 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:39.617 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:39.617 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:39.628 -03:00 [INF] Request finished in 11.5562ms 200 application/json
+2020-06-18 13:57:41.656 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:41.656 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:41.656 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:41.656 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:41.656 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:41.683 -03:00 [INF] Request finished in 27.7287ms 200 application/json
+2020-06-18 13:57:43.733 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:43.733 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:43.733 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:43.733 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:43.736 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:43.770 -03:00 [INF] Request finished in 36.8899ms 200 application/json
+2020-06-18 13:57:45.817 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:45.817 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:45.817 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:45.818 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:45.818 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:45.846 -03:00 [INF] Request finished in 29.4975ms 200 application/json
+2020-06-18 13:57:47.881 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:47.881 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:47.881 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:47.881 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:47.881 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:47.889 -03:00 [INF] Request finished in 8.8632ms 200 application/json
+2020-06-18 13:57:49.907 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:49.907 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:49.907 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:49.907 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:49.907 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:49.927 -03:00 [INF] Request finished in 19.6013ms 200 application/json
+2020-06-18 13:57:51.972 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:51.973 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:51.973 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:51.973 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:51.973 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:51.993 -03:00 [INF] Request finished in 21.2726ms 200 application/json
+2020-06-18 13:57:54.039 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:54.040 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:54.040 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:54.040 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:54.040 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:54.086 -03:00 [INF] Request finished in 46.9901ms 200 application/json
+2020-06-18 13:57:56.107 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:56.108 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:56.108 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:56.108 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:56.108 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:56.120 -03:00 [INF] Request finished in 12.8147ms 200 application/json
+2020-06-18 13:57:58.139 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:57:58.140 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:57:58.141 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:57:58.141 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:57:58.141 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:57:58.159 -03:00 [INF] Request finished in 19.9435ms 200 application/json
+2020-06-18 13:58:00.185 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:00.186 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:00.186 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:00.186 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:00.186 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:00.211 -03:00 [INF] Request finished in 26.3073ms 200 application/json
+2020-06-18 13:58:02.257 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:02.257 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:02.257 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:02.266 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:02.266 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:02.286 -03:00 [INF] Request finished in 29.4731ms 200 application/json
+2020-06-18 13:58:04.323 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:04.323 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:04.323 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:04.324 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:04.324 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:04.347 -03:00 [INF] Request finished in 24.5791ms 200 application/json
+2020-06-18 13:58:06.375 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:06.376 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:06.376 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:06.376 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:06.377 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:06.403 -03:00 [INF] Request finished in 27.7901ms 200 application/json
+2020-06-18 13:58:08.430 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:08.430 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:08.431 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:08.431 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:08.431 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:08.458 -03:00 [INF] Request finished in 27.7802ms 200 application/json
+2020-06-18 13:58:10.493 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:10.493 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:10.494 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:10.495 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:10.496 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:10.511 -03:00 [INF] Request finished in 17.9404ms 200 application/json
+2020-06-18 13:58:12.674 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:12.674 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:12.675 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:12.675 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:12.675 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:12.713 -03:00 [INF] Request finished in 39.2797ms 200 application/json
+2020-06-18 13:58:14.820 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:14.821 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:14.821 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:14.822 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:14.822 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:14.844 -03:00 [INF] Request finished in 24.2267ms 200 application/json
+2020-06-18 13:58:16.875 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:16.875 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:16.875 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:16.875 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:16.875 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:16.885 -03:00 [INF] Request finished in 10.405ms 200 application/json
+2020-06-18 13:58:18.917 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:18.917 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:18.917 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:18.917 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:18.917 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:18.939 -03:00 [INF] Request finished in 21.6783ms 200 application/json
+2020-06-18 13:58:20.970 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:20.971 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:20.971 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:20.972 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:20.972 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:21.005 -03:00 [INF] Request finished in 35.574ms 200 application/json
+2020-06-18 13:58:23.038 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:23.038 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:23.038 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:23.039 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:23.039 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:23.054 -03:00 [INF] Request finished in 16.8736ms 200 application/json
+2020-06-18 13:58:25.090 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:25.090 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:25.090 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:25.090 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:25.090 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:25.105 -03:00 [INF] Request finished in 15.0013ms 200 application/json
+2020-06-18 13:58:27.130 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:27.130 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:27.130 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:27.130 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:27.133 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:27.149 -03:00 [INF] Request finished in 19.8372ms 200 application/json
+2020-06-18 13:58:29.188 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:29.188 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:29.189 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:29.189 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:29.189 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:29.218 -03:00 [INF] Request finished in 30.6401ms 200 application/json
+2020-06-18 13:58:31.315 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:31.317 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:31.317 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:31.317 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:31.317 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:31.350 -03:00 [INF] Request finished in 34.867ms 200 application/json
+2020-06-18 13:58:33.389 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:33.389 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:33.389 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:33.389 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:33.389 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:33.402 -03:00 [INF] Request finished in 13.0137ms 200 application/json
+2020-06-18 13:58:35.427 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:35.428 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:35.428 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:35.428 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:35.428 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:35.445 -03:00 [INF] Request finished in 18.4582ms 200 application/json
+2020-06-18 13:58:37.468 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:37.468 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:37.468 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:37.468 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:37.469 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:37.482 -03:00 [INF] Request finished in 14.6611ms 200 application/json
+2020-06-18 13:58:39.511 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:39.512 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:39.512 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:39.513 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:39.513 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:39.522 -03:00 [INF] Request finished in 10.7633ms 200 application/json
+2020-06-18 13:58:41.545 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:41.545 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:41.547 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:41.548 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:41.549 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:41.581 -03:00 [INF] Request finished in 35.73ms 200 application/json
+2020-06-18 13:58:43.603 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:43.603 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:43.603 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:43.603 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:43.603 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:43.617 -03:00 [INF] Request finished in 14.8678ms 200 application/json
+2020-06-18 13:58:45.695 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:45.695 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:45.695 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:45.695 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:45.696 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:45.715 -03:00 [INF] Request finished in 20.7982ms 200 application/json
+2020-06-18 13:58:47.799 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:47.799 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:47.799 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:47.799 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:47.799 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:47.819 -03:00 [INF] Request finished in 19.8535ms 200 application/json
+2020-06-18 13:58:49.853 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:49.853 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:49.854 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:49.855 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:49.855 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:49.891 -03:00 [INF] Request finished in 38.196ms 200 application/json
+2020-06-18 13:58:51.929 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:51.929 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:51.929 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:51.930 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:51.930 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:51.964 -03:00 [INF] Request finished in 35.425ms 200 application/json
+2020-06-18 13:58:53.983 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:53.983 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:53.984 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:53.984 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:53.984 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:53.998 -03:00 [INF] Request finished in 14.3682ms 200 application/json
+2020-06-18 13:58:56.023 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:56.023 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:56.024 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:56.029 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:56.030 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:56.049 -03:00 [INF] Request finished in 25.6116ms 200 application/json
+2020-06-18 13:58:58.081 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:58:58.082 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:58:58.084 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:58:58.086 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:58:58.086 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:58:58.128 -03:00 [INF] Request finished in 48.0132ms 200 application/json
+2020-06-18 13:59:00.149 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:00.149 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:00.149 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:00.149 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:00.149 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:00.155 -03:00 [INF] Request finished in 5.9358ms 200 application/json
+2020-06-18 13:59:02.193 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:02.194 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:02.194 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:02.194 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:02.198 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:02.221 -03:00 [INF] Request finished in 27.951ms 200 application/json
+2020-06-18 13:59:04.253 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:04.253 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:04.253 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:04.253 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:04.254 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:04.287 -03:00 [INF] Request finished in 34.9987ms 200 application/json
+2020-06-18 13:59:06.308 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:06.308 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:06.308 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:06.308 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:06.309 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:06.320 -03:00 [INF] Request finished in 11.6568ms 200 application/json
+2020-06-18 13:59:08.342 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:08.342 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:08.342 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:08.342 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:08.343 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:08.356 -03:00 [INF] Request finished in 14.4533ms 200 application/json
+2020-06-18 13:59:10.375 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:10.375 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:10.375 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:10.375 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:10.375 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:10.385 -03:00 [INF] Request finished in 10.268ms 200 application/json
+2020-06-18 13:59:12.401 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:12.402 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:12.402 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:12.404 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:12.404 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:12.420 -03:00 [INF] Request finished in 19.2769ms 200 application/json
+2020-06-18 13:59:14.464 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:14.464 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:14.464 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:14.465 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:14.465 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:14.482 -03:00 [INF] Request finished in 18.1939ms 200 application/json
+2020-06-18 13:59:16.513 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:16.513 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:16.513 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:16.513 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:16.514 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:16.540 -03:00 [INF] Request finished in 27.5713ms 200 application/json
+2020-06-18 13:59:18.574 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:18.574 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:18.574 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:18.575 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:18.575 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:18.598 -03:00 [INF] Request finished in 24.0956ms 200 application/json
+2020-06-18 13:59:20.630 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:20.631 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:20.631 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:20.631 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:20.631 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:20.651 -03:00 [INF] Request finished in 21.1999ms 200 application/json
+2020-06-18 13:59:22.703 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:22.703 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:22.703 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:22.703 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:22.703 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:22.719 -03:00 [INF] Request finished in 16.2404ms 200 application/json
+2020-06-18 13:59:24.740 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:24.740 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:24.740 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:24.740 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:24.740 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:24.752 -03:00 [INF] Request finished in 12.3997ms 200 application/json
+2020-06-18 13:59:25.906 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 361
+2020-06-18 13:59:25.906 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:25.906 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:25.906 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:25.906 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:25.998 -03:00 [INF] Entity Framework Core 3.1.5 initialized 'TCAPPContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: None
+2020-06-18 13:59:26.148 -03:00 [DBG] Context 'TCAPPContext' started tracking 'Content' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-06-18 13:59:26.182 -03:00 [DBG] Context 'TCAPPContext' started tracking 'ParentContent' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-06-18 13:59:26.185 -03:00 [DBG] SaveChanges starting for 'TCAPPContext'.
+2020-06-18 13:59:26.188 -03:00 [DBG] DetectChanges starting for 'TCAPPContext'.
+2020-06-18 13:59:26.204 -03:00 [DBG] DetectChanges completed for 'TCAPPContext'.
+2020-06-18 13:59:26.232 -03:00 [DBG] Opening connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 13:59:26.304 -03:00 [DBG] Opened connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 13:59:26.313 -03:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2020-06-18 13:59:26.334 -03:00 [DBG] Began transaction with isolation level 'Unspecified'.
+2020-06-18 13:59:26.410 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2020-06-18 13:59:26.410 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2020-06-18 13:59:26.435 -03:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (Size = 16) (DbType = Binary), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p4='?' (Size = 128), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Content` (`Id`, `Created`, `Enabled`, `IdContentType`, `Title`, `Updated`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2020-06-18 13:59:26.528 -03:00 [INF] Executed DbCommand (96ms) [Parameters=[@p0='?' (Size = 16) (DbType = Binary), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p4='?' (Size = 128), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Content` (`Id`, `Created`, `Enabled`, `IdContentType`, `Title`, `Updated`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2020-06-18 13:59:26.534 -03:00 [DBG] A data reader was disposed.
+2020-06-18 13:59:26.536 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2020-06-18 13:59:26.536 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2020-06-18 13:59:26.536 -03:00 [DBG] Executing DbCommand [Parameters=[@p6='?' (Size = 16) (DbType = Binary), @p7='?' (Size = 16) (DbType = Binary)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `ParentContent` (`IdContent`, `IdParentContent`)
+VALUES (@p6, @p7);
+2020-06-18 13:59:26.549 -03:00 [INF] Executed DbCommand (13ms) [Parameters=[@p6='?' (Size = 16) (DbType = Binary), @p7='?' (Size = 16) (DbType = Binary)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `ParentContent` (`IdContent`, `IdParentContent`)
+VALUES (@p6, @p7);
+2020-06-18 13:59:26.549 -03:00 [DBG] A data reader was disposed.
+2020-06-18 13:59:26.551 -03:00 [DBG] Committing transaction.
+2020-06-18 13:59:26.612 -03:00 [DBG] Committing transaction.
+2020-06-18 13:59:26.615 -03:00 [DBG] Closing connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 13:59:26.615 -03:00 [DBG] Closed connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 13:59:26.623 -03:00 [DBG] Disposing transaction.
+2020-06-18 13:59:26.681 -03:00 [DBG] An 'Content' entity tracked by 'TCAPPContext' changed from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-06-18 13:59:26.682 -03:00 [DBG] An 'ParentContent' entity tracked by 'TCAPPContext' changed from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-06-18 13:59:26.686 -03:00 [DBG] SaveChanges completed for 'TCAPPContext' with 2 entities written to the database.
+2020-06-18 13:59:26.691 -03:00 [DBG] 'TCAPPContext' disposed.
+2020-06-18 13:59:26.692 -03:00 [INF] Request finished in 785.5534ms 200 application/json
+2020-06-18 13:59:26.781 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:26.781 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:26.781 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:26.781 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:26.781 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:26.790 -03:00 [INF] Request finished in 9.1851ms 200 application/json
+2020-06-18 13:59:28.812 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:28.812 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:28.812 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:28.812 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:28.812 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:28.829 -03:00 [INF] Request finished in 17.0179ms 200 application/json
+2020-06-18 13:59:30.870 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:30.874 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:30.875 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:30.875 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:30.876 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:30.917 -03:00 [INF] Request finished in 47.9192ms 200 application/json
+2020-06-18 13:59:32.965 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:32.966 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:32.967 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:32.968 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:32.968 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:32.987 -03:00 [INF] Request finished in 22.7493ms 200 application/json
+2020-06-18 13:59:35.021 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:35.022 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:35.022 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:35.023 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:35.023 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:35.045 -03:00 [INF] Request finished in 24.366ms 200 application/json
+2020-06-18 13:59:37.074 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:37.074 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:37.074 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:37.075 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:37.075 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:37.099 -03:00 [INF] Request finished in 25.394ms 200 application/json
+2020-06-18 13:59:39.124 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:39.124 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:39.124 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:39.124 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:39.125 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:39.142 -03:00 [INF] Request finished in 18.3445ms 200 application/json
+2020-06-18 13:59:41.167 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:41.168 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:41.168 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:41.168 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:41.168 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:41.187 -03:00 [INF] Request finished in 19.5389ms 200 application/json
+2020-06-18 13:59:43.216 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:43.217 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:43.217 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:43.218 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:43.218 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:43.263 -03:00 [INF] Request finished in 46.337ms 200 application/json
+2020-06-18 13:59:45.303 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:45.303 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:45.305 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:45.305 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:45.305 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:45.326 -03:00 [INF] Request finished in 23.0098ms 200 application/json
+2020-06-18 13:59:47.347 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:47.348 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:47.349 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:47.349 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:47.349 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:47.364 -03:00 [INF] Request finished in 16.8696ms 200 application/json
+2020-06-18 13:59:49.386 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:49.388 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:49.388 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:49.388 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:49.388 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:49.404 -03:00 [INF] Request finished in 18.3161ms 200 application/json
+2020-06-18 13:59:51.429 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:51.430 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:51.430 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:51.430 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:51.430 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:51.446 -03:00 [INF] Request finished in 16.9601ms 200 application/json
+2020-06-18 13:59:53.470 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:53.470 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:53.470 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:53.471 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:53.471 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:53.496 -03:00 [INF] Request finished in 26.3353ms 200 application/json
+2020-06-18 13:59:55.527 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:55.529 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:55.530 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:55.531 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:55.531 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:55.552 -03:00 [INF] Request finished in 25.2037ms 200 application/json
+2020-06-18 13:59:57.593 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:57.593 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:57.593 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:57.593 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:57.593 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:57.610 -03:00 [INF] Request finished in 17.1055ms 200 application/json
+2020-06-18 13:59:59.643 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 13:59:59.643 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 13:59:59.644 -03:00 [INF] CORS policy execution successful.
+2020-06-18 13:59:59.644 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 13:59:59.645 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 13:59:59.677 -03:00 [INF] Request finished in 34.4757ms 200 application/json
+2020-06-18 14:00:01.703 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:01.703 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:01.703 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:01.703 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:01.703 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:01.718 -03:00 [INF] Request finished in 15.3904ms 200 application/json
+2020-06-18 14:00:03.748 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:03.748 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:03.748 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:03.748 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:03.748 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:03.771 -03:00 [INF] Request finished in 23.0559ms 200 application/json
+2020-06-18 14:00:05.826 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:05.827 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:05.830 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:05.830 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:05.830 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:05.851 -03:00 [INF] Request finished in 24.6961ms 200 application/json
+2020-06-18 14:00:07.870 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:07.870 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:07.870 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:07.870 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:07.870 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:07.879 -03:00 [INF] Request finished in 9.8504ms 200 application/json
+2020-06-18 14:00:09.931 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:09.932 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:09.933 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:09.933 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:09.933 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:09.984 -03:00 [INF] Request finished in 52.864ms 200 application/json
+2020-06-18 14:00:11.746 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 363
+2020-06-18 14:00:11.746 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:11.746 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:11.746 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:11.746 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:21.504 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:21.504 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:21.504 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:21.504 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:21.504 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:21.504 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:21.504 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:21.504 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:21.505 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:21.505 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:21.581 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:21.581 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:21.581 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:21.581 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:21.581 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:21.581 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:21.581 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:21.581 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:21.581 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:21.581 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:21.581 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:21.581 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:21.581 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:21.582 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:21.582 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:21.591 -03:00 [INF] Request finished in 86.6915ms 200 application/json
+2020-06-18 14:00:21.593 -03:00 [INF] Request finished in 12.1573ms 200 application/json
+2020-06-18 14:00:21.596 -03:00 [INF] Request finished in 91.3926ms 200 application/json
+2020-06-18 14:00:21.630 -03:00 [INF] Request finished in 48.5564ms 200 application/json
+2020-06-18 14:00:22.945 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:22.946 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:22.946 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:22.946 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:25.426 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:25.427 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:25.427 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:25.427 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:25.437 -03:00 [INF] Request finished in 3856.2769ms 200 application/json
+2020-06-18 14:00:25.437 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:25.438 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:25.480 -03:00 [INF] Request finished in 53.9012ms 200 application/json
+2020-06-18 14:00:26.708 -03:00 [INF] Request finished in 3763.2217ms 200 application/json
+2020-06-18 14:00:27.680 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:27.680 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:27.682 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:27.682 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:27.682 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:31.894 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:31.894 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:31.894 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:31.894 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:31.894 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:34.876 -03:00 [INF] Request finished in 7196.5125ms 200 application/json
+2020-06-18 14:00:34.891 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:34.891 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:35.816 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:35.816 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:35.816 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:35.816 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:35.816 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:35.816 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:35.819 -03:00 [INF] Request finished in 3925.4563ms 200 application/json
+2020-06-18 14:00:36.408 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:36.408 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:35.825 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:36.408 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:36.408 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:36.409 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:36.409 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:36.483 -03:00 [INF] Request finished in 1591.3259ms 200 application/json
+2020-06-18 14:00:36.484 -03:00 [INF] Request finished in 1592.6094ms 200 application/json
+2020-06-18 14:00:36.491 -03:00 [INF] Request finished in 666.5638ms 200 application/json
+2020-06-18 14:00:36.492 -03:00 [INF] Entity Framework Core 3.1.5 initialized 'TCAPPContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: None
+2020-06-18 14:00:36.495 -03:00 [DBG] Context 'TCAPPContext' started tracking 'Content' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-06-18 14:00:36.497 -03:00 [DBG] Context 'TCAPPContext' started tracking 'ParentContent' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-06-18 14:00:37.365 -03:00 [DBG] SaveChanges starting for 'TCAPPContext'.
+2020-06-18 14:00:37.366 -03:00 [DBG] DetectChanges starting for 'TCAPPContext'.
+2020-06-18 14:00:37.368 -03:00 [DBG] DetectChanges completed for 'TCAPPContext'.
+2020-06-18 14:00:37.369 -03:00 [DBG] Opening connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 14:00:37.382 -03:00 [DBG] Opened connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 14:00:37.383 -03:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2020-06-18 14:00:37.388 -03:00 [DBG] Began transaction with isolation level 'Unspecified'.
+2020-06-18 14:00:37.440 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2020-06-18 14:00:37.440 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2020-06-18 14:00:37.442 -03:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (Size = 16) (DbType = Binary), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p4='?' (Size = 128), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Content` (`Id`, `Created`, `Enabled`, `IdContentType`, `Title`, `Updated`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2020-06-18 14:00:37.466 -03:00 [INF] Executed DbCommand (24ms) [Parameters=[@p0='?' (Size = 16) (DbType = Binary), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p4='?' (Size = 128), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Content` (`Id`, `Created`, `Enabled`, `IdContentType`, `Title`, `Updated`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2020-06-18 14:00:37.466 -03:00 [DBG] A data reader was disposed.
+2020-06-18 14:00:37.467 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2020-06-18 14:00:37.467 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2020-06-18 14:00:37.467 -03:00 [DBG] Executing DbCommand [Parameters=[@p6='?' (Size = 16) (DbType = Binary), @p7='?' (Size = 16) (DbType = Binary)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `ParentContent` (`IdContent`, `IdParentContent`)
+VALUES (@p6, @p7);
+2020-06-18 14:00:37.470 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p6='?' (Size = 16) (DbType = Binary), @p7='?' (Size = 16) (DbType = Binary)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `ParentContent` (`IdContent`, `IdParentContent`)
+VALUES (@p6, @p7);
+2020-06-18 14:00:37.470 -03:00 [DBG] A data reader was disposed.
+2020-06-18 14:00:37.470 -03:00 [DBG] Committing transaction.
+2020-06-18 14:00:37.808 -03:00 [DBG] Committing transaction.
+2020-06-18 14:00:37.809 -03:00 [DBG] Closing connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 14:00:37.810 -03:00 [DBG] Closed connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 14:00:37.811 -03:00 [DBG] Disposing transaction.
+2020-06-18 14:00:37.813 -03:00 [DBG] An 'Content' entity tracked by 'TCAPPContext' changed from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-06-18 14:00:37.814 -03:00 [DBG] An 'ParentContent' entity tracked by 'TCAPPContext' changed from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-06-18 14:00:37.815 -03:00 [DBG] SaveChanges completed for 'TCAPPContext' with 2 entities written to the database.
+2020-06-18 14:00:39.219 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:41.306 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:41.306 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:41.306 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:41.306 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:41.306 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:41.307 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:41.307 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:41.307 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:41.307 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:41.375 -03:00 [INF] Request finished in 68.8923ms 200 application/json
+2020-06-18 14:00:41.412 -03:00 [INF] Request finished in 2193.0349ms 200 application/json
+2020-06-18 14:00:43.556 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:43.556 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:43.558 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:43.558 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:43.558 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:45.778 -03:00 [DBG] 'TCAPPContext' disposed.
+2020-06-18 14:00:45.778 -03:00 [INF] Request finished in 34032.5712ms 200 application/json
+2020-06-18 14:00:45.780 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:45.780 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:45.780 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:45.781 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:45.781 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:45.787 -03:00 [INF] Request finished in 2230.5588ms 200 application/json
+2020-06-18 14:00:45.797 -03:00 [INF] Request finished in 16.2643ms 200 application/json
+2020-06-18 14:00:47.872 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:47.872 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:47.872 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:47.872 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:47.872 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:47.886 -03:00 [INF] Request finished in 14.1789ms 200 application/json
+2020-06-18 14:00:49.912 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:49.912 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:49.914 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:49.914 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:49.914 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:49.931 -03:00 [INF] Request finished in 20.2681ms 200 application/json
+2020-06-18 14:00:51.956 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:51.956 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:51.956 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:51.956 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:51.956 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:51.972 -03:00 [INF] Request finished in 16.4109ms 200 application/json
+2020-06-18 14:00:54.006 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:54.009 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:54.010 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:54.011 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:54.011 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:54.045 -03:00 [INF] Request finished in 38.8326ms 200 application/json
+2020-06-18 14:00:56.077 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:56.078 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:56.078 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:56.078 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:56.078 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:56.091 -03:00 [INF] Request finished in 13.162ms 200 application/json
+2020-06-18 14:00:58.119 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:00:58.120 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:00:58.120 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:00:58.120 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:00:58.122 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:00:58.145 -03:00 [INF] Request finished in 25.7842ms 200 application/json
+2020-06-18 14:01:00.171 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:00.172 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:00.172 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:00.172 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:00.172 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:00.181 -03:00 [INF] Request finished in 9.7218ms 200 application/json
+2020-06-18 14:01:02.197 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:02.197 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:02.197 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:02.197 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:02.197 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:02.204 -03:00 [INF] Request finished in 7.2874ms 200 application/json
+2020-06-18 14:01:04.220 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:04.221 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:04.221 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:04.221 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:04.221 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:04.229 -03:00 [INF] Request finished in 9.4356ms 200 application/json
+2020-06-18 14:01:06.300 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:06.301 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:06.301 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:06.301 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:06.301 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:06.311 -03:00 [INF] Request finished in 11.1156ms 200 application/json
+2020-06-18 14:01:08.330 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:08.330 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:08.330 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:08.330 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:08.330 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:08.347 -03:00 [INF] Request finished in 17.4914ms 200 application/json
+2020-06-18 14:01:10.378 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:10.378 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:10.378 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:10.378 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:10.379 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:10.406 -03:00 [INF] Request finished in 28.1129ms 200 application/json
+2020-06-18 14:01:12.424 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:12.425 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:12.426 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:12.426 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:12.427 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:12.443 -03:00 [INF] Request finished in 18.558ms 200 application/json
+2020-06-18 14:01:14.461 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:14.461 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:14.461 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:14.461 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:14.461 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:14.477 -03:00 [INF] Request finished in 16.1813ms 200 application/json
+2020-06-18 14:01:16.590 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:16.590 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:16.590 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:16.590 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:16.590 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:16.604 -03:00 [INF] Request finished in 14.2522ms 200 application/json
+2020-06-18 14:01:18.649 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:18.649 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:18.649 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:18.651 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:18.651 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:18.673 -03:00 [INF] Request finished in 25.1122ms 200 application/json
+2020-06-18 14:01:20.744 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:20.745 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:20.745 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:20.746 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:20.746 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:20.768 -03:00 [INF] Request finished in 23.8442ms 200 application/json
+2020-06-18 14:01:20.799 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 251
+2020-06-18 14:01:20.799 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:20.799 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:20.799 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:20.799 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:20.815 -03:00 [INF] Entity Framework Core 3.1.5 initialized 'TCAPPContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: None
+2020-06-18 14:01:20.823 -03:00 [DBG] queryContext => new QueryingEnumerable<int>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, int>, 
+    TCAPP.DataAccess.Context.TCAPPContext, 
+    DiagnosticsLogger<Query>
+)
+    .Single()
+2020-06-18 14:01:20.823 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2020-06-18 14:01:20.824 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2020-06-18 14:01:20.826 -03:00 [DBG] Opening connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 14:01:20.827 -03:00 [DBG] Opened connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 14:01:20.827 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Content` AS `c`
+2020-06-18 14:01:20.828 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Content` AS `c`
+2020-06-18 14:01:20.828 -03:00 [DBG] A data reader was disposed.
+2020-06-18 14:01:20.828 -03:00 [DBG] Closing connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 14:01:20.828 -03:00 [DBG] Closed connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 14:01:20.886 -03:00 [DBG] queryContext => new QueryingEnumerable<Content>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, Content>, 
+    TCAPP.DataAccess.Context.TCAPPContext, 
+    DiagnosticsLogger<Query>
+)
+2020-06-18 14:01:20.888 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2020-06-18 14:01:20.888 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2020-06-18 14:01:20.888 -03:00 [DBG] Opening connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 14:01:20.888 -03:00 [DBG] Opened connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 14:01:20.888 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`IdContentType`, FALSE, `c0`.`Title`, `c0`.`Id`, `t`.`c`, `t`.`Title`, `t`.`IdContent`, `t`.`IdParentContent`, `t`.`Id`
+FROM `Content` AS `c`
+INNER JOIN `ContentType` AS `c0` ON `c`.`IdContentType` = `c0`.`Id`
+LEFT JOIN (
+    SELECT FALSE AS `c`, `c1`.`Title`, `p`.`IdContent`, `p`.`IdParentContent`, `c1`.`Id`
+    FROM `ParentContent` AS `p`
+    INNER JOIN `Content` AS `c1` ON `p`.`IdContent` = `c1`.`Id`
+) AS `t` ON `c`.`Id` = `t`.`IdParentContent`
+ORDER BY `c`.`Id`, `c0`.`Id`, `t`.`IdContent`, `t`.`IdParentContent`, `t`.`Id`
+2020-06-18 14:01:20.891 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`IdContentType`, FALSE, `c0`.`Title`, `c0`.`Id`, `t`.`c`, `t`.`Title`, `t`.`IdContent`, `t`.`IdParentContent`, `t`.`Id`
+FROM `Content` AS `c`
+INNER JOIN `ContentType` AS `c0` ON `c`.`IdContentType` = `c0`.`Id`
+LEFT JOIN (
+    SELECT FALSE AS `c`, `c1`.`Title`, `p`.`IdContent`, `p`.`IdParentContent`, `c1`.`Id`
+    FROM `ParentContent` AS `p`
+    INNER JOIN `Content` AS `c1` ON `p`.`IdContent` = `c1`.`Id`
+) AS `t` ON `c`.`Id` = `t`.`IdParentContent`
+ORDER BY `c`.`Id`, `c0`.`Id`, `t`.`IdContent`, `t`.`IdParentContent`, `t`.`Id`
+2020-06-18 14:01:20.896 -03:00 [DBG] A data reader was disposed.
+2020-06-18 14:01:20.896 -03:00 [DBG] Closing connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 14:01:20.896 -03:00 [DBG] Closed connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 14:01:20.897 -03:00 [DBG] 'TCAPPContext' disposed.
+2020-06-18 14:01:20.898 -03:00 [INF] Request finished in 99.1669ms 200 application/json
+2020-06-18 14:01:22.793 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:22.793 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:22.793 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:22.793 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:22.793 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:22.822 -03:00 [INF] Request finished in 29.4478ms 200 application/json
+2020-06-18 14:01:24.841 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:24.841 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:24.841 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:24.841 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:24.841 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:24.853 -03:00 [INF] Request finished in 12.5498ms 200 application/json
+2020-06-18 14:01:26.877 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:26.877 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:26.877 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:26.877 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:26.878 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:26.896 -03:00 [INF] Request finished in 19.3704ms 200 application/json
+2020-06-18 14:01:28.932 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:28.932 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:28.933 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:28.933 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:28.934 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:28.949 -03:00 [INF] Request finished in 17.176ms 200 application/json
+2020-06-18 14:01:30.968 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:30.968 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:30.968 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:30.968 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:30.969 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:30.984 -03:00 [INF] Request finished in 15.3106ms 200 application/json
+2020-06-18 14:01:33.008 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:33.008 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:33.009 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:33.009 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:33.009 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:33.021 -03:00 [INF] Request finished in 12.1538ms 200 application/json
+2020-06-18 14:01:35.067 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:35.067 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:35.067 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:35.068 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:35.068 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:35.109 -03:00 [INF] Request finished in 42.787ms 200 application/json
+2020-06-18 14:01:37.141 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:37.141 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:37.141 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:37.141 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:37.142 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:37.162 -03:00 [INF] Request finished in 20.9534ms 200 application/json
+2020-06-18 14:01:39.208 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:39.209 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:39.214 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:39.215 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:39.216 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:39.244 -03:00 [INF] Request finished in 36.2801ms 200 application/json
+2020-06-18 14:01:41.298 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:41.298 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:41.298 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:41.298 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:41.299 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:41.321 -03:00 [INF] Request finished in 23.932ms 200 application/json
+2020-06-18 14:01:43.349 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:43.351 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:43.351 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:43.351 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:43.351 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:43.363 -03:00 [INF] Request finished in 14.2831ms 200 application/json
+2020-06-18 14:01:45.394 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:45.394 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:45.400 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:45.400 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:45.401 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:45.427 -03:00 [INF] Request finished in 32.7676ms 200 application/json
+2020-06-18 14:01:47.459 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:47.460 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:47.460 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:47.461 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:47.463 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:47.498 -03:00 [INF] Request finished in 39.533ms 200 application/json
+2020-06-18 14:01:49.543 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:49.544 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:49.547 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:49.548 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:49.548 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:49.587 -03:00 [INF] Request finished in 44.0376ms 200 application/json
+2020-06-18 14:01:51.605 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:51.605 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:51.605 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:51.605 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:51.605 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:51.619 -03:00 [INF] Request finished in 14.751ms 200 application/json
+2020-06-18 14:01:53.653 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:53.653 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:53.653 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:53.654 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:53.654 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:53.674 -03:00 [INF] Request finished in 21.0164ms 200 application/json
+2020-06-18 14:01:55.700 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:55.700 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:55.700 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:55.700 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:55.701 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:55.716 -03:00 [INF] Request finished in 16.1283ms 200 application/json
+2020-06-18 14:01:57.733 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:57.733 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:57.733 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:57.734 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:57.734 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:57.742 -03:00 [INF] Request finished in 8.4708ms 200 application/json
+2020-06-18 14:01:59.772 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:01:59.772 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:01:59.772 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:01:59.773 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:01:59.773 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:01:59.789 -03:00 [INF] Request finished in 17.0771ms 200 application/json
+2020-06-18 14:02:01.831 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:02:01.831 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:02:01.831 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:02:01.832 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:02:01.833 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:02:01.860 -03:00 [INF] Request finished in 29.7797ms 200 application/json
+2020-06-18 14:02:03.899 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:02:03.899 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:02:03.899 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:02:03.899 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:02:03.899 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:02:03.910 -03:00 [INF] Request finished in 11.0115ms 200 application/json
+2020-06-18 14:02:05.933 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:02:05.934 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:02:05.934 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:02:05.934 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:02:05.934 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:02:05.951 -03:00 [INF] Request finished in 17.9504ms 200 application/json
+2020-06-18 14:02:07.969 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:02:07.969 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:02:07.969 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:02:07.969 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:02:07.969 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:02:07.977 -03:00 [INF] Request finished in 7.474ms 200 application/json
+2020-06-18 14:02:10.006 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:02:10.007 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:02:10.007 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:02:10.007 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:02:10.007 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:02:10.029 -03:00 [INF] Request finished in 22.4115ms 200 application/json
+2020-06-18 14:02:56.569 -03:00 [DBG] Hosting starting
+2020-06-18 14:02:56.904 -03:00 [DBG] Loaded hosting startup assembly TCAPP.API
+2020-06-18 14:02:56.930 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-06-18 14:02:56.930 -03:00 [INF] Hosting environment: Development
+2020-06-18 14:02:56.930 -03:00 [INF] Content root path: C:\work\APP\TCAPP\TCAPP.API
+2020-06-18 14:02:56.930 -03:00 [DBG] Hosting started
+2020-06-18 14:02:56.953 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/weatherforecast  
+2020-06-18 14:02:56.963 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2020-06-18 14:02:57.001 -03:00 [DBG] 1 candidate(s) found for the request path '/weatherforecast'
+2020-06-18 14:02:57.010 -03:00 [DBG] Endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)' with route pattern 'WeatherForecast' is valid for the request path '/weatherforecast'
+2020-06-18 14:02:57.017 -03:00 [DBG] Request matched endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-18 14:02:57.035 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2020-06-18 14:02:57.037 -03:00 [INF] Executing endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-18 14:02:57.047 -03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2020-06-18 14:02:57.070 -03:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[TCAPP.API.WeatherForecast] Get() on controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API).
+2020-06-18 14:02:57.076 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2020-06-18 14:02:57.077 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2020-06-18 14:02:57.077 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2020-06-18 14:02:57.077 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2020-06-18 14:02:57.078 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2020-06-18 14:02:57.079 -03:00 [DBG] Executing controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-06-18 14:02:57.348 -03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2020-06-18 14:02:57.378 -03:00 [DBG] Executed controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-06-18 14:02:57.382 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2020-06-18 14:02:57.385 -03:00 [DBG] No information found on request to perform content negotiation.
+2020-06-18 14:02:57.385 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2020-06-18 14:02:57.385 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2020-06-18 14:02:57.386 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2020-06-18 14:02:57.387 -03:00 [INF] Executing ObjectResult, writing value of type 'TCAPP.API.WeatherForecast[]'.
+2020-06-18 14:02:57.425 -03:00 [INF] Executed action TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API) in 340.6987ms
+2020-06-18 14:02:57.427 -03:00 [INF] Executed endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-18 14:02:57.436 -03:00 [INF] Request finished in 486.314ms 200 application/json; charset=utf-8
+2020-06-18 14:02:57.693 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/favicon.ico  
+2020-06-18 14:02:57.696 -03:00 [DBG] No candidates found for the request path '/favicon.ico'
+2020-06-18 14:02:57.696 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:02:57.697 -03:00 [DBG] The request path  does not match the path filter
+2020-06-18 14:02:57.700 -03:00 [INF] Request finished in 7.591ms 404 
+2020-06-18 14:03:05.105 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/playground/settings.js  
+2020-06-18 14:03:05.111 -03:00 [DBG] No candidates found for the request path '/playground/settings.js'
+2020-06-18 14:03:05.112 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:05.156 -03:00 [INF] Request finished in 51.0059ms 200 application/javascript
+2020-06-18 14:03:06.602 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:06.604 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:06.604 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:06.606 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:06.607 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:06.959 -03:00 [INF] Request finished in 359.8697ms 200 application/json
+2020-06-18 14:03:06.996 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:06.997 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:06.997 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:06.997 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:06.997 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:07.020 -03:00 [INF] Request finished in 23.5511ms 200 application/json
+2020-06-18 14:03:08.021 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:08.024 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:08.025 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:08.026 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:08.027 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:08.056 -03:00 [INF] Request finished in 34.1466ms 200 application/json
+2020-06-18 14:03:10.105 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:10.107 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:10.108 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:10.109 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:10.110 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:10.145 -03:00 [INF] Request finished in 40.9913ms 200 application/json
+2020-06-18 14:03:12.177 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:12.178 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:12.179 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:12.180 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:12.181 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:12.212 -03:00 [INF] Request finished in 35.2859ms 200 application/json
+2020-06-18 14:03:14.244 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:14.246 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:14.246 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:14.246 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:14.247 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:14.269 -03:00 [INF] Request finished in 25.1896ms 200 application/json
+2020-06-18 14:03:16.304 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:16.305 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:16.306 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:16.309 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:16.310 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:16.323 -03:00 [INF] Request finished in 17.1245ms 200 application/json
+2020-06-18 14:03:18.346 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:18.347 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:18.347 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:18.347 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:18.348 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:18.365 -03:00 [INF] Request finished in 18.5744ms 200 application/json
+2020-06-18 14:03:20.265 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 363
+2020-06-18 14:03:20.266 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:20.266 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:20.266 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:20.266 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:20.387 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:20.387 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:20.387 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:20.387 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:20.388 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:20.399 -03:00 [INF] Request finished in 11.89ms 200 application/json
+2020-06-18 14:03:20.718 -03:00 [DBG] No relationship from 'Content' to 'ParentContent' has been configured by convention because there are multiple properties on one entity type {'ChildrenContents', 'ParentContents'} that could be matched with the properties on the other entity type {'Content', 'Parent'}. This message can be disregarded if explicit configuration has been specified.
+2020-06-18 14:03:20.733 -03:00 [DBG] No relationship from 'ParentContent' to 'Content' has been configured by convention because there are multiple properties on one entity type {'Content', 'Parent'} that could be matched with the properties on the other entity type {'ChildrenContents', 'ParentContents'}. This message can be disregarded if explicit configuration has been specified.
+2020-06-18 14:03:20.735 -03:00 [DBG] No relationship from 'ParentTaxonomy' to 'Taxonomy' has been configured by convention because there are multiple properties on one entity type {'Parent', 'Taxonomy'} that could be matched with the properties on the other entity type {'ChildrenTaxonomies', 'ParentTaxonomies'}. This message can be disregarded if explicit configuration has been specified.
+2020-06-18 14:03:20.736 -03:00 [DBG] No relationship from 'Taxonomy' to 'ParentTaxonomy' has been configured by convention because there are multiple properties on one entity type {'ChildrenTaxonomies', 'ParentTaxonomies'} that could be matched with the properties on the other entity type {'Parent', 'Taxonomy'}. This message can be disregarded if explicit configuration has been specified.
+2020-06-18 14:03:20.942 -03:00 [DBG] No relationship from 'Content' to 'ParentContent' has been configured by convention because there are multiple properties on one entity type {'ChildrenContents', 'ParentContents'} that could be matched with the properties on the other entity type {'Content', 'Parent'}. This message can be disregarded if explicit configuration has been specified.
+2020-06-18 14:03:20.943 -03:00 [DBG] No relationship from 'ParentContent' to 'Content' has been configured by convention because there are multiple properties on one entity type {'Content', 'Parent'} that could be matched with the properties on the other entity type {'ChildrenContents', 'ParentContents'}. This message can be disregarded if explicit configuration has been specified.
+2020-06-18 14:03:20.981 -03:00 [DBG] No relationship from 'ParentTaxonomy' to 'Taxonomy' has been configured by convention because there are multiple properties on one entity type {'Parent', 'Taxonomy'} that could be matched with the properties on the other entity type {'ChildrenTaxonomies', 'ParentTaxonomies'}. This message can be disregarded if explicit configuration has been specified.
+2020-06-18 14:03:20.982 -03:00 [DBG] No relationship from 'Taxonomy' to 'ParentTaxonomy' has been configured by convention because there are multiple properties on one entity type {'ChildrenTaxonomies', 'ParentTaxonomies'} that could be matched with the properties on the other entity type {'Parent', 'Taxonomy'}. This message can be disregarded if explicit configuration has been specified.
+2020-06-18 14:03:21.066 -03:00 [DBG] The index {'IdContent'} was not created on entity type 'ContentBoolMetaValue' as the properties are already covered by the index {'IdContent', 'IdMetaValueType'}.
+2020-06-18 14:03:21.067 -03:00 [DBG] The index {'IdContent'} was not created on entity type 'ContentFloatMetaValue' as the properties are already covered by the index {'IdContent', 'IdMetaValueType'}.
+2020-06-18 14:03:21.067 -03:00 [DBG] The index {'IdContent'} was not created on entity type 'ContentStringMetaValue' as the properties are already covered by the index {'IdContent', 'IdMetaValueType'}.
+2020-06-18 14:03:21.067 -03:00 [DBG] The index {'IdContent'} was not created on entity type 'ContentTaxonomy' as the properties are already covered by the index {'IdContent', 'IdTaxonomy'}.
+2020-06-18 14:03:21.067 -03:00 [DBG] The index {'IdContent'} was not created on entity type 'ContentTextMetaValue' as the properties are already covered by the index {'IdContent', 'IdMetaValueType'}.
+2020-06-18 14:03:21.067 -03:00 [DBG] The index {'IdContent'} was not created on entity type 'ParentContent' as the properties are already covered by the index {'IdContent', 'IdParentContent'}.
+2020-06-18 14:03:21.067 -03:00 [DBG] The index {'IdTaxonomy'} was not created on entity type 'ParentTaxonomy' as the properties are already covered by the index {'IdTaxonomy', 'IdParentTaxonomy'}.
+2020-06-18 14:03:21.067 -03:00 [DBG] The index {'IdUser'} was not created on entity type 'UserContent' as the properties are already covered by the index {'IdUser', 'IdContent', 'IdContentRelationType'}.
+2020-06-18 14:03:21.212 -03:00 [INF] Entity Framework Core 3.1.5 initialized 'TCAPPContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: None
+2020-06-18 14:03:21.329 -03:00 [DBG] Context 'TCAPPContext' started tracking 'Content' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-06-18 14:03:21.361 -03:00 [DBG] Context 'TCAPPContext' started tracking 'ParentContent' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-06-18 14:03:21.364 -03:00 [DBG] SaveChanges starting for 'TCAPPContext'.
+2020-06-18 14:03:21.367 -03:00 [DBG] DetectChanges starting for 'TCAPPContext'.
+2020-06-18 14:03:21.385 -03:00 [DBG] DetectChanges completed for 'TCAPPContext'.
+2020-06-18 14:03:21.425 -03:00 [DBG] Opening connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 14:03:21.652 -03:00 [DBG] Opened connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 14:03:21.657 -03:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2020-06-18 14:03:21.750 -03:00 [DBG] Began transaction with isolation level 'Unspecified'.
+2020-06-18 14:03:21.821 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2020-06-18 14:03:21.829 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2020-06-18 14:03:21.864 -03:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (Size = 16) (DbType = Binary), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p4='?' (Size = 128), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Content` (`Id`, `Created`, `Enabled`, `IdContentType`, `Title`, `Updated`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2020-06-18 14:03:21.917 -03:00 [INF] Executed DbCommand (58ms) [Parameters=[@p0='?' (Size = 16) (DbType = Binary), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p4='?' (Size = 128), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Content` (`Id`, `Created`, `Enabled`, `IdContentType`, `Title`, `Updated`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2020-06-18 14:03:21.924 -03:00 [DBG] A data reader was disposed.
+2020-06-18 14:03:21.928 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2020-06-18 14:03:21.929 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2020-06-18 14:03:21.929 -03:00 [DBG] Executing DbCommand [Parameters=[@p6='?' (Size = 16) (DbType = Binary), @p7='?' (Size = 16) (DbType = Binary)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `ParentContent` (`IdContent`, `IdParentContent`)
+VALUES (@p6, @p7);
+2020-06-18 14:03:21.931 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p6='?' (Size = 16) (DbType = Binary), @p7='?' (Size = 16) (DbType = Binary)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `ParentContent` (`IdContent`, `IdParentContent`)
+VALUES (@p6, @p7);
+2020-06-18 14:03:21.931 -03:00 [DBG] A data reader was disposed.
+2020-06-18 14:03:21.934 -03:00 [DBG] Committing transaction.
+2020-06-18 14:03:22.063 -03:00 [DBG] Committing transaction.
+2020-06-18 14:03:22.065 -03:00 [DBG] Closing connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 14:03:22.069 -03:00 [DBG] Closed connection to database 'TCAPP' on server 'localhost'.
+2020-06-18 14:03:22.073 -03:00 [DBG] Disposing transaction.
+2020-06-18 14:03:22.092 -03:00 [DBG] An 'Content' entity tracked by 'TCAPPContext' changed from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-06-18 14:03:22.093 -03:00 [DBG] An 'ParentContent' entity tracked by 'TCAPPContext' changed from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-06-18 14:03:22.095 -03:00 [DBG] SaveChanges completed for 'TCAPPContext' with 2 entities written to the database.
+2020-06-18 14:03:22.116 -03:00 [DBG] 'TCAPPContext' disposed.
+2020-06-18 14:03:22.119 -03:00 [INF] Request finished in 1853.5814ms 200 application/json
+2020-06-18 14:03:22.427 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:22.427 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:22.428 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:22.428 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:22.428 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:22.475 -03:00 [INF] Request finished in 47.9598ms 200 application/json
+2020-06-18 14:03:24.514 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:24.514 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:24.515 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:24.515 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:24.515 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:24.529 -03:00 [INF] Request finished in 15.4981ms 200 application/json
+2020-06-18 14:03:26.577 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:26.577 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:26.577 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:26.577 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:26.578 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:26.610 -03:00 [INF] Request finished in 33.3104ms 200 application/json
+2020-06-18 14:03:28.637 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:28.639 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:28.639 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:28.639 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:28.639 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:28.653 -03:00 [INF] Request finished in 18.9408ms 200 application/json
+2020-06-18 14:03:30.724 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:30.725 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:30.725 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:30.725 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:30.725 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:30.750 -03:00 [INF] Request finished in 27.3268ms 200 application/json
+2020-06-18 14:03:32.824 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:32.824 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:32.825 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:32.825 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:32.825 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:32.846 -03:00 [INF] Request finished in 22.446ms 200 application/json
+2020-06-18 14:03:34.903 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:34.907 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:34.907 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:34.908 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:34.908 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:34.951 -03:00 [INF] Request finished in 48.9099ms 200 application/json
+2020-06-18 14:03:36.996 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:37.000 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:37.000 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:37.001 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:37.001 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:37.045 -03:00 [INF] Request finished in 49.4635ms 200 application/json
+2020-06-18 14:03:39.080 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:39.080 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:39.081 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:39.081 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:39.082 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:39.113 -03:00 [INF] Request finished in 33.5149ms 200 application/json
+2020-06-18 14:03:41.143 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:41.144 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:41.144 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:41.145 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:41.145 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:41.168 -03:00 [INF] Request finished in 24.4519ms 200 application/json
+2020-06-18 14:03:43.218 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:43.218 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:43.218 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:43.218 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:43.218 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:43.233 -03:00 [INF] Request finished in 15.3199ms 200 application/json
+2020-06-18 14:03:45.285 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:45.285 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:45.285 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:45.286 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:45.286 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:45.311 -03:00 [INF] Request finished in 26.2617ms 200 application/json
+2020-06-18 14:03:47.329 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:47.329 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:47.329 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:47.329 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:47.329 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:47.337 -03:00 [INF] Request finished in 7.8517ms 200 application/json
+2020-06-18 14:03:49.368 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:49.368 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:49.368 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:49.369 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:49.369 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:49.391 -03:00 [INF] Request finished in 23.7268ms 200 application/json
+2020-06-18 14:03:52.113 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:52.113 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:52.113 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:52.113 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:52.113 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:52.124 -03:00 [INF] Request finished in 11.0515ms 200 application/json
+2020-06-18 14:03:54.405 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:54.406 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:54.406 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:54.406 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:54.406 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:54.416 -03:00 [INF] Request finished in 10.6379ms 200 application/json
+2020-06-18 14:03:56.445 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:56.445 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:56.446 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:56.446 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:56.447 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:56.472 -03:00 [INF] Request finished in 27.5818ms 200 application/json
+2020-06-18 14:03:58.501 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:03:58.503 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:03:58.503 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:03:58.503 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:03:58.503 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:03:58.525 -03:00 [INF] Request finished in 23.9914ms 200 application/json
+2020-06-18 14:04:00.550 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-18 14:04:00.551 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-18 14:04:00.552 -03:00 [INF] CORS policy execution successful.
+2020-06-18 14:04:00.553 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-18 14:04:00.553 -03:00 [DBG] Request did not match any endpoints
+2020-06-18 14:04:00.574 -03:00 [INF] Request finished in 24.8235ms 200 application/json
