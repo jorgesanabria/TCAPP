@@ -26,7 +26,7 @@ namespace TCAPP.API.Graphql.Contents.Strategies
 
         private Content DoCreate(CreateContentInput input)
         {
-            var content = new Content { Id = Guid.NewGuid(), Title = input.Title, IdContentType = input.IdContentType, Created = input.Created, Updated = input.Updated };
+            var content = new Content { Id = Guid.NewGuid(), Title = input.Title, IdContentType = input.IdContentType, Created = input.Created, Updated = input.Updated, Enabled = input.Enabled };
 
             if (input.Parents != null && input.Parents.Any())
             {
@@ -35,22 +35,22 @@ namespace TCAPP.API.Graphql.Contents.Strategies
 
             if (input.Texts != null && input.Texts.Any())
             {
-                content.ContentTextMetaValues = input.Texts.Select(x => new ContentTextMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType, Content = content }).ToList();
+                content.ContentTextMetaValues = input.Texts.Select(x => new ContentTextMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType, Content = content, Enabled = x.Enabled, Created = content.Created, Updated = content.Updated }).ToList();
             }
 
             if (input.Strings != null && input.Strings.Any())
             {
-                content.ContentStringMetaValues = input.Strings.Select(x => new ContentStringMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType, Content = content }).ToList();
+                content.ContentStringMetaValues = input.Strings.Select(x => new ContentStringMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType, Content = content, Enabled = x.Enabled, Created = content.Created, Updated = content.Updated }).ToList();
             }
 
             if (input.Floats != null && input.Floats.Any())
             {
-                content.ContentFloatMetaValues = input.Floats.Select(x => new ContentFloatMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType, Content = content }).ToList();
+                content.ContentFloatMetaValues = input.Floats.Select(x => new ContentFloatMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType, Content = content, Enabled = x.Enabled, Created = content.Created, Updated = content.Updated }).ToList();
             }
 
             if (input.Bools != null && input.Bools.Any())
             {
-                content.ContentBoolMetaValues = input.Bools.Select(x => new ContentBoolMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType, Content = content }).ToList();
+                content.ContentBoolMetaValues = input.Bools.Select(x => new ContentBoolMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType, Content = content, Enabled = x.Enabled, Created = content.Created, Updated = content.Updated }).ToList();
             }
 
 

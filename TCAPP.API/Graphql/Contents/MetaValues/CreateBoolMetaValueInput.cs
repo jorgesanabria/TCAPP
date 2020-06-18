@@ -4,5 +4,6 @@
     {
         public long IdMetaValueType { get; set; }
         public bool Value { get; set; }
+        public bool Enabled { get; set; }
     }
 }

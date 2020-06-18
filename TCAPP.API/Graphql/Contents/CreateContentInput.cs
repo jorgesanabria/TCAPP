@@ -20,6 +20,7 @@ namespace TCAPP.API.Graphql.Contents
         public long IdContentType { get; set; }
         public DateTime Created { get; set; }
         public DateTime Updated { get; set; }
+        public bool Enabled { get; set; }
         public List<CreateParentInput> Parents { get; set; }
         public List<CreateContentInput> Children { get; set; }
         public List<CreateTextMetaValueInput> Texts { get; set; }

@@ -4,5 +4,6 @@
     {
         public long IdMetaValueType { get; set; }
         public float Value { get; set; }
+        public bool Enabled { get; set; }
     }
 }
