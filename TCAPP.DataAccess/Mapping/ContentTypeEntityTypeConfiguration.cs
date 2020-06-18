@@ -11,7 +11,7 @@ namespace TCAPP.DataAccess.Mapping
             builder.ToTable(nameof(ContentType));
             builder.HasKey(x => x.Id).HasName("PK_ContentType");
 
-            builder.Property(x => x.Id).HasColumnName("Id").HasColumnType("integer(11) AUTO_INCREMENT").ValueGeneratedNever();
+            builder.Property(x => x.Id).HasColumnName("Id").HasColumnType("integer(11)").ValueGeneratedNever();
             builder.Property(x => x.Title).HasColumnName("Title").HasColumnType("varchar(128)").IsRequired();
             builder.Property(x => x.Created).HasColumnName("Created").HasColumnType("datetime").IsRequired();
             builder.Property(x => x.Updated).HasColumnName("Updated").HasColumnType("datetime").IsRequired();

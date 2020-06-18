@@ -1,12 +1,13 @@
-﻿using TCAPP.Domain.ConcreteData;
+﻿using System;
+using TCAPP.Domain.ConcreteData;
 using TCAPP.Domain.TypeData;
 
 namespace TCAPP.Domain.RelationalData
 {
     public class ContentTaxonomy
     {
-        public long IdContent { get; set; }
-        public long IdTaxonomy { get; set; }
+        public Guid IdContent { get; set; }
+        public Guid IdTaxonomy { get; set; }
         public Content Content { get; set; }
         public Taxonomy Taxonomy { get; set; }
     }

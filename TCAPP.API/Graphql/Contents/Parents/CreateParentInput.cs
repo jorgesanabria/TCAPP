@@ -1,7 +1,9 @@
-﻿namespace TCAPP.API.Graphql.Contents.Parents
+﻿using System;
+
+namespace TCAPP.API.Graphql.Contents.Parents
 {
     public class CreateParentInput
     {
-        public long IdParent { get; set; }
+        public Guid IdParent { get; set; }
     }
 }

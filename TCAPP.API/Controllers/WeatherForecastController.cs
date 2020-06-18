@@ -48,45 +48,45 @@ namespace TCAPP.API.Controllers
             await _contenxt.SaveChangesAsync();
             return Ok(content);
         }
-        [HttpPost("generate-child/{id}")]
-        public async Task<IActionResult> GenerateRel(long id, [FromBody] Content content)
-        {
-            var r = _contenxt.Contents.Add(content);
-            await _contenxt.SaveChangesAsync();
-            var result = await _contenxt.Contents.FindAsync(id);
-            result.ChildrenContents.Add(new ParentContent { IdContent = content.Id, IdParentContent = id });
-            await _contenxt.SaveChangesAsync();
-            return Ok(r.Entity);
-        }
-        [HttpGet("get-item/{id}")]
-        public async Task<IActionResult> GetItem(long id)
-        {
-            var result = await _contenxt.Contents.Select(x => new {
-                x.Id,
-                x.IdContentType,
-                ChildrenContents = x.ChildrenContents.Select(y => new
-                {
-                    y.IdContent,
-                    y.IdParentContent,
-                    y.Content
-                })
-            }).FirstOrDefaultAsync(x => x.Id == id);
-            return Ok(result);
-        }
-        [HttpGet("get-parent/{id}")]
-        public async Task<IActionResult> GeteParent(long id)
-        {
-            var result = await _contenxt.Contents.Select(x => new
-            {
-                x.Id,
-                ParentContent = x.ParentContents.Select(y => new
-                {
-                    y.IdContent,
-                    y.IdParentContent,
-                    y.Parent
-                })
-            }).FirstAsync(x => x.Id == id);
-            return Ok(result);
-        }
+        //[HttpPost("generate-child/{id}")]
+        //public async Task<IActionResult> GenerateRel(long id, [FromBody] Content content)
+        //{
+        //    var r = _contenxt.Contents.Add(content);
+        //    await _contenxt.SaveChangesAsync();
+        //    var result = await _contenxt.Contents.FindAsync(id);
+        //    result.ChildrenContents.Add(new ParentContent { IdContent = content.Id, IdParentContent = id });
+        //    await _contenxt.SaveChangesAsync();
+        //    return Ok(r.Entity);
+        //}
+        //[HttpGet("get-item/{id}")]
+        //public async Task<IActionResult> GetItem(long id)
+        //{
+        //    var result = await _contenxt.Contents.Select(x => new {
+        //        x.Id,
+        //        x.IdContentType,
+        //        ChildrenContents = x.ChildrenContents.Select(y => new
+        //        {
+        //            y.IdContent,
+        //            y.IdParentContent,
+        //            y.Content
+        //        })
+        //    }).FirstOrDefaultAsync(x => x.Id == id);
+        //    return Ok(result);
+        //}
+        //[HttpGet("get-parent/{id}")]
+        //public async Task<IActionResult> GeteParent(long id)
+        //{
+        //    var result = await _contenxt.Contents.Select(x => new
+        //    {
+        //        x.Id,
+        //        ParentContent = x.ParentContents.Select(y => new
+        //        {
+        //            y.IdContent,
+        //            y.IdParentContent,
+        //            y.Parent
+        //        })
+        //    }).FirstAsync(x => x.Id == id);
+        //    return Ok(result);
+        //}
     }
 }

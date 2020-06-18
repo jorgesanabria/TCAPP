@@ -1,12 +1,13 @@
-﻿using TCAPP.Domain.ConcreteData;
+﻿using System;
+using TCAPP.Domain.ConcreteData;
 using TCAPP.Domain.TypeData;
 
 namespace TCAPP.Domain.RelationalData
 {
     public class UserContent
     {
-        public long IdUser { get; set; }
-        public long IdContent { get; set; }
+        public Guid IdUser { get; set; }
+        public Guid IdContent { get; set; }
         public long IdContentRelationType { get; set; }
         public User User { get; set; }
         public Content Content { get; set; }

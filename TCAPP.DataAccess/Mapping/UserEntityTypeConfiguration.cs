@@ -11,7 +11,7 @@ namespace TCAPP.DataAccess.Mapping
             builder.ToTable(nameof(User));
             builder.HasKey(x => x.Id).HasName("PK_User");
 
-            builder.Property(x => x.Id).HasColumnName("Id").HasColumnType("integer(11) AUTO_INCREMENT").ValueGeneratedNever();
+            builder.Property(x => x.Id).HasColumnName("Id").HasColumnType("BINARY(16)").ValueGeneratedNever();
             builder.Property(x => x.Name).HasColumnName("Name").HasColumnType("varchar(64)").IsRequired();
             builder.Property(x => x.Password).HasColumnName("Password").HasColumnType("varchar(512)").IsRequired();
             builder.Property(x => x.Email).HasColumnName("Email").HasColumnType("varchar(512)").IsRequired();

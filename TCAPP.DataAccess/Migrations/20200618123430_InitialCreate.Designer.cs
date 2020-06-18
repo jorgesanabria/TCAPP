@@ -9,7 +9,7 @@ using TCAPP.DataAccess.Context;
 namespace TCAPP.DataAccess.Migrations
 {
     [DbContext(typeof(TCAPPContext))]
-    [Migration("20200617220627_InitialCreate")]
+    [Migration("20200618123430_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,9 +21,9 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.ConcreteData.Content", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<byte[]>("Id")
                         .HasColumnName("Id")
-                        .HasColumnType("integer(11) AUTO_INCREMENT");
+                        .HasColumnType("BINARY(16)");
 
                     b.Property<DateTime>("Created")
                         .HasColumnName("Created")
@@ -56,9 +56,9 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.ConcreteData.User", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<byte[]>("Id")
                         .HasColumnName("Id")
-                        .HasColumnType("integer(11) AUTO_INCREMENT");
+                        .HasColumnType("BINARY(16)");
 
                     b.Property<DateTime>("Created")
                         .HasColumnName("Created")
@@ -95,9 +95,9 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.ContentBoolMetaValue", b =>
                 {
-                    b.Property<int>("IdContent")
+                    b.Property<byte[]>("IdContent")
                         .HasColumnName("IdContent")
-                        .HasColumnType("integer(11)");
+                        .HasColumnType("BINARY(16)");
 
                     b.Property<int>("IdMetaValueType")
                         .HasColumnName("IdMetaValueType")
@@ -129,9 +129,9 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.ContentFloatMetaValue", b =>
                 {
-                    b.Property<int>("IdContent")
+                    b.Property<byte[]>("IdContent")
                         .HasColumnName("IdContent")
-                        .HasColumnType("integer(11)");
+                        .HasColumnType("BINARY(16)");
 
                     b.Property<int>("IdMetaValueType")
                         .HasColumnName("IdMetaValueType")
@@ -163,9 +163,9 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.ContentStringMetaValue", b =>
                 {
-                    b.Property<int>("IdContent")
+                    b.Property<byte[]>("IdContent")
                         .HasColumnName("IdContent")
-                        .HasColumnType("integer(11)");
+                        .HasColumnType("BINARY(16)");
 
                     b.Property<int>("IdMetaValueType")
                         .HasColumnName("IdMetaValueType")
@@ -198,13 +198,13 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.ContentTaxonomy", b =>
                 {
-                    b.Property<int>("IdContent")
+                    b.Property<byte[]>("IdContent")
                         .HasColumnName("IdContent")
-                        .HasColumnType("integer(11)");
+                        .HasColumnType("BINARY(16)");
 
-                    b.Property<int>("IdTaxonomy")
+                    b.Property<byte[]>("IdTaxonomy")
                         .HasColumnName("IdTaxonomy")
-                        .HasColumnType("integer(11)");
+                        .HasColumnType("BINARY(16)");
 
                     b.HasKey("IdContent", "IdTaxonomy")
                         .HasName("PK_ContentTaxonomy");
@@ -216,9 +216,9 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.ContentTextMetaValue", b =>
                 {
-                    b.Property<int>("IdContent")
+                    b.Property<byte[]>("IdContent")
                         .HasColumnName("IdContent")
-                        .HasColumnType("integer(11)");
+                        .HasColumnType("BINARY(16)");
 
                     b.Property<int>("IdMetaValueType")
                         .HasColumnName("IdMetaValueType")
@@ -251,13 +251,13 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.ParentContent", b =>
                 {
-                    b.Property<int>("IdContent")
+                    b.Property<byte[]>("IdContent")
                         .HasColumnName("IdContent")
-                        .HasColumnType("integer(11)");
+                        .HasColumnType("BINARY(16)");
 
-                    b.Property<int>("IdParentContent")
+                    b.Property<byte[]>("IdParentContent")
                         .HasColumnName("IdParentContent")
-                        .HasColumnType("integer(11)");
+                        .HasColumnType("BINARY(16)");
 
                     b.HasKey("IdContent", "IdParentContent")
                         .HasName("PK_ParentContent");
@@ -269,13 +269,13 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.ParentTaxonomy", b =>
                 {
-                    b.Property<int>("IdTaxonomy")
+                    b.Property<byte[]>("IdTaxonomy")
                         .HasColumnName("IdTaxonomy")
-                        .HasColumnType("integer(11)");
+                        .HasColumnType("BINARY(16)");
 
-                    b.Property<int>("IdParentTaxonomy")
+                    b.Property<byte[]>("IdParentTaxonomy")
                         .HasColumnName("IdParentTaxonomy")
-                        .HasColumnType("integer(11)");
+                        .HasColumnType("BINARY(16)");
 
                     b.HasKey("IdTaxonomy", "IdParentTaxonomy")
                         .HasName("PK_ParentTaxonomy");
@@ -287,13 +287,13 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.RelationalData.UserContent", b =>
                 {
-                    b.Property<int>("IdUser")
+                    b.Property<byte[]>("IdUser")
                         .HasColumnName("IdUser")
-                        .HasColumnType("integer(11)");
+                        .HasColumnType("BINARY(16)");
 
-                    b.Property<int>("IdContent")
+                    b.Property<byte[]>("IdContent")
                         .HasColumnName("IdContent")
-                        .HasColumnType("integer(11)");
+                        .HasColumnType("BINARY(16)");
 
                     b.Property<int>("IdContentRelationType")
                         .HasColumnName("IdContentRelationType")
@@ -313,7 +313,7 @@ namespace TCAPP.DataAccess.Migrations
                 {
                     b.Property<int>("Id")
                         .HasColumnName("Id")
-                        .HasColumnType("integer(11) AUTO_INCREMENT");
+                        .HasColumnType("integer(11)");
 
                     b.Property<DateTime>("Created")
                         .HasColumnName("Created")
@@ -342,7 +342,7 @@ namespace TCAPP.DataAccess.Migrations
                 {
                     b.Property<int>("Id")
                         .HasColumnName("Id")
-                        .HasColumnType("integer(11) AUTO_INCREMENT");
+                        .HasColumnType("integer(11)");
 
                     b.Property<DateTime>("Created")
                         .HasColumnName("Created")
@@ -374,7 +374,7 @@ namespace TCAPP.DataAccess.Migrations
                 {
                     b.Property<int>("Id")
                         .HasColumnName("Id")
-                        .HasColumnType("integer(11) AUTO_INCREMENT");
+                        .HasColumnType("integer(11)");
 
                     b.Property<DateTime>("Created")
                         .HasColumnName("Created")
@@ -401,9 +401,9 @@ namespace TCAPP.DataAccess.Migrations
 
             modelBuilder.Entity("TCAPP.Domain.TypeData.Taxonomy", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<byte[]>("Id")
                         .HasColumnName("Id")
-                        .HasColumnType("integer(11) AUTO_INCREMENT");
+                        .HasColumnType("BINARY(16)");
 
                     b.Property<DateTime>("Created")
                         .HasColumnName("Created")

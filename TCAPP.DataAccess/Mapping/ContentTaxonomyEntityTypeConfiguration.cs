@@ -11,8 +11,8 @@ namespace TCAPP.DataAccess.Mapping
             builder.ToTable(nameof(ContentTaxonomy));
             builder.HasKey(x => new { x.IdContent, x.IdTaxonomy }).HasName("PK_ContentTaxonomy");
 
-            builder.Property(x => x.IdContent).HasColumnName("IdContent").HasColumnType("integer(11)").IsRequired();
-            builder.Property(x => x.IdTaxonomy).HasColumnName("IdTaxonomy").HasColumnType("integer(11)").IsRequired();
+            builder.Property(x => x.IdContent).HasColumnName("IdContent").HasColumnType("BINARY(16)").IsRequired();
+            builder.Property(x => x.IdTaxonomy).HasColumnName("IdTaxonomy").HasColumnType("BINARY(16)").IsRequired();
 
             builder.HasOne(x => x.Content).WithMany(x => x.ContentTaxonomies).HasForeignKey(x => x.IdContent).OnDelete(DeleteBehavior.NoAction);
             builder.HasOne(x => x.Taxonomy).WithMany(x => x.ContentTaxonomies).HasForeignKey(x => x.IdTaxonomy).OnDelete(DeleteBehavior.NoAction);

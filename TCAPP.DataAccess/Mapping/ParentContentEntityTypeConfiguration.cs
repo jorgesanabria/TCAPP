@@ -11,8 +11,8 @@ namespace TCAPP.DataAccess.Mapping
             builder.ToTable(nameof(ParentContent));
             builder.HasKey(x => new { x.IdContent, x.IdParentContent }).HasName("PK_ParentContent");
 
-            builder.Property(x => x.IdContent).HasColumnName("IdContent").HasColumnType("integer(11)").IsRequired();
-            builder.Property(x => x.IdParentContent).HasColumnName("IdParentContent").HasColumnType("integer(11)").IsRequired();
+            builder.Property(x => x.IdContent).HasColumnName("IdContent").HasColumnType("BINARY(16)").IsRequired();
+            builder.Property(x => x.IdParentContent).HasColumnName("IdParentContent").HasColumnType("BINARY(16)").IsRequired();
 
             builder.HasOne(x => x.Content).WithMany(x => x.ParentContents).HasForeignKey(x => x.IdContent).HasConstraintName("FK_ParentContent_Content").OnDelete(DeleteBehavior.NoAction);
             builder.HasOne(x => x.Parent).WithMany(x => x.ChildrenContents).HasForeignKey(x => x.IdParentContent).HasConstraintName("FK_ParentContent_ChildrenContent").OnDelete(DeleteBehavior.NoAction);

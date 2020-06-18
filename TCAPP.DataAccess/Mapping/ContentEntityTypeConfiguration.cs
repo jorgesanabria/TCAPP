@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TCAPP.Domain.ConcreteData;
 using Pomelo.EntityFrameworkCore;
+using System;
 
 namespace TCAPP.DataAccess.Mapping
 {
@@ -12,7 +13,7 @@ namespace TCAPP.DataAccess.Mapping
             builder.ToTable(nameof(Content));
             builder.HasKey(x => x.Id).HasName("Content_PK");
 
-            builder.Property(x => x.Id).HasColumnName("Id").HasColumnType("integer(11) AUTO_INCREMENT").ValueGeneratedNever();
+            builder.Property(x => x.Id).HasColumnName("Id").HasColumnType("BINARY(16)").ValueGeneratedNever();
             builder.Property(x => x.Title).HasColumnName("Title").HasColumnType("varchar(128)").IsRequired();
             builder.Property(x => x.IdContentType).HasColumnName("IdContentType").HasColumnType("integer(11)").IsRequired();
             builder.Property(x => x.Created).HasColumnName("Created").HasColumnType("datetime").IsRequired();

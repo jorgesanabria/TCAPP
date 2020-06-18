@@ -18,7 +18,7 @@ namespace TCAPP.Domain.ConcreteData
             ContentBoolMetaValues = new HashSet<ContentBoolMetaValue>();
             ContentTextMetaValues = new HashSet<ContentTextMetaValue>();
         }
-        public long Id { get; set; }
+        public Guid Id { get; set; }
         public string Title { get; set; }
         public long IdContentType { get; set; }
         public DateTime Created { get; set; }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
@@ -17,53 +18,61 @@ namespace TCAPP.API.Graphql.Contents.Strategies
         }
         public async Task<Content> CreateAsync(CreateContentInput input)
         {
-            var content = new Content { Title = input.Title, IdContentType = input.IdContentType, Created = input.Created, Updated = input.Updated };
+            var content = DoCreate(input);
+            _context.Contents.Add(content);
+            await _context.SaveChangesAsync();
+            return content;
+        }
+
+        private Content DoCreate(CreateContentInput input)
+        {
+            var content = new Content { Id = Guid.NewGuid(), Title = input.Title, IdContentType = input.IdContentType, Created = input.Created, Updated = input.Updated };
 
             if (input.Parents != null && input.Parents.Any())
             {
-                content.ParentContents = input.Parents.Select(x => new ParentContent { IdParentContent = x.IdParent }).ToList();
+                content.ParentContents = input.Parents.Select(x => new ParentContent { IdParentContent = x.IdParent, IdContent = content.Id }).ToList();
             }
 
             if (input.Texts != null && input.Texts.Any())
             {
-                content.ContentTextMetaValues = input.Texts.Select(x => new ContentTextMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType }).ToList();
+                content.ContentTextMetaValues = input.Texts.Select(x => new ContentTextMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType, IdContent = content.Id }).ToList();
             }
 
             if (input.Strings != null && input.Strings.Any())
             {
-                content.ContentStringMetaValues = input.Strings.Select(x => new ContentStringMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType }).ToList();
+                content.ContentStringMetaValues = input.Strings.Select(x => new ContentStringMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType, IdContent = content.Id }).ToList();
             }
 
             if (input.Floats != null && input.Floats.Any())
             {
-                content.ContentFloatMetaValues = input.Floats.Select(x => new ContentFloatMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType }).ToList();
+                content.ContentFloatMetaValues = input.Floats.Select(x => new ContentFloatMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType, IdContent = content.Id }).ToList();
             }
 
             if (input.Bools != null && input.Bools.Any())
             {
-                content.ContentBoolMetaValues = input.Bools.Select(x => new ContentBoolMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType }).ToList();
+                content.ContentBoolMetaValues = input.Bools.Select(x => new ContentBoolMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType, IdContent = content.Id }).ToList();
             }
 
-            _context.Entry(content).State = EntityState.Added;
+            //_context.Entry(content).State = EntityState.Added;
 
             //_context.Contents.Add(content);
-            await _context.SaveChangesAsync();
+            //await _context.SaveChangesAsync();
 
             //TODO: reemplazar los auto_increment de todo el proyecto por valores calculados por programación en los casos de inserción de content
             //TODO: reemplazar todos los auto_increment de todo el proyecto por valores generados a mano y montados en constantes de código
 
-            _context.Entry(content).State = EntityState.Detached;
+            //_context.Entry(content).State = EntityState.Detached;
 
             if (input.Children != null && input.Children.Any())
             {
                 foreach (var child in input.Children)
                 {
-                    var childContent = await CreateAsync(child);
+                    var childContent = DoCreate(child);
                     //var idChild = childContent.Id;
                     //_context.Entry(childContent).State = EntityState.Detached;
-                    content.ParentContents.Add(new ParentContent { Content = childContent, Parent = content });
+                    content.ParentContents.Add(new ParentContent { IdParentContent = content.Id, IdContent = childContent.Id });
 
-                    await _context.SaveChangesAsync();
+                    //await _context.SaveChangesAsync();
                 }
             }
 

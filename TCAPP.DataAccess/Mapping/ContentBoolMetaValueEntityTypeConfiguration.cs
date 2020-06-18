@@ -11,7 +11,7 @@ namespace TCAPP.DataAccess.Mapping
             builder.ToTable(nameof(ContentBoolMetaValue));
             builder.HasKey(x => new { x.IdContent, x.IdMetaValueType }).HasName("PK_ContentBoolMetaValue");
 
-            builder.Property(x => x.IdContent).HasColumnName("IdContent").HasColumnType("integer(11)").IsRequired();
+            builder.Property(x => x.IdContent).HasColumnName("IdContent").HasColumnType("BINARY(16)").IsRequired();
             builder.Property(x => x.IdMetaValueType).HasColumnName("IdMetaValueType").HasColumnType("integer(11)").IsRequired();
             builder.Property(x => x.Value).HasColumnName("Value").HasColumnType("bool").IsRequired();
             builder.Property(x => x.Created).HasColumnName("Created").HasColumnType("datetime").IsRequired();

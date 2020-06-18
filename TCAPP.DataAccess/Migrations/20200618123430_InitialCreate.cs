@@ -11,7 +11,7 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ContentRelationType",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer(11) AUTO_INCREMENT", nullable: false),
+                    Id = table.Column<int>(type: "integer(11)", nullable: false),
                     Title = table.Column<string>(type: "varchar(128)", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime", nullable: false),
                     Updated = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -26,7 +26,7 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ContentType",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer(11) AUTO_INCREMENT", nullable: false),
+                    Id = table.Column<int>(type: "integer(11)", nullable: false),
                     Title = table.Column<string>(type: "varchar(128)", nullable: false),
                     Description = table.Column<string>(nullable: true),
                     Created = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -42,7 +42,7 @@ namespace TCAPP.DataAccess.Migrations
                 name: "MetaValueType",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer(11) AUTO_INCREMENT", nullable: false),
+                    Id = table.Column<int>(type: "integer(11)", nullable: false),
                     Title = table.Column<string>(type: "varchar(128)", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime", nullable: false),
                     Updated = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -57,7 +57,7 @@ namespace TCAPP.DataAccess.Migrations
                 name: "Taxonomy",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer(11) AUTO_INCREMENT", nullable: false),
+                    Id = table.Column<byte[]>(type: "BINARY(16)", nullable: false),
                     Title = table.Column<string>(type: "varchar(128)", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime", nullable: false),
                     Updated = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -73,7 +73,7 @@ namespace TCAPP.DataAccess.Migrations
                 name: "User",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer(11) AUTO_INCREMENT", nullable: false),
+                    Id = table.Column<byte[]>(type: "BINARY(16)", nullable: false),
                     Name = table.Column<string>(type: "varchar(64)", nullable: false),
                     Email = table.Column<string>(type: "varchar(512)", nullable: false),
                     Password = table.Column<string>(type: "varchar(512)", nullable: false),
@@ -90,7 +90,7 @@ namespace TCAPP.DataAccess.Migrations
                 name: "Content",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer(11) AUTO_INCREMENT", nullable: false),
+                    Id = table.Column<byte[]>(type: "BINARY(16)", nullable: false),
                     Title = table.Column<string>(type: "varchar(128)", nullable: false),
                     IdContentType = table.Column<int>(type: "integer(11)", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -111,8 +111,8 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ParentTaxonomy",
                 columns: table => new
                 {
-                    IdTaxonomy = table.Column<int>(type: "integer(11)", nullable: false),
-                    IdParentTaxonomy = table.Column<int>(type: "integer(11)", nullable: false)
+                    IdTaxonomy = table.Column<byte[]>(type: "BINARY(16)", nullable: false),
+                    IdParentTaxonomy = table.Column<byte[]>(type: "BINARY(16)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -133,7 +133,7 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ContentBoolMetaValue",
                 columns: table => new
                 {
-                    IdContent = table.Column<int>(type: "integer(11)", nullable: false),
+                    IdContent = table.Column<byte[]>(type: "BINARY(16)", nullable: false),
                     IdMetaValueType = table.Column<int>(type: "integer(11)", nullable: false),
                     Value = table.Column<bool>(type: "bool", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -159,7 +159,7 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ContentFloatMetaValue",
                 columns: table => new
                 {
-                    IdContent = table.Column<int>(type: "integer(11)", nullable: false),
+                    IdContent = table.Column<byte[]>(type: "BINARY(16)", nullable: false),
                     IdMetaValueType = table.Column<int>(type: "integer(11)", nullable: false),
                     Value = table.Column<int>(type: "integer(11)", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -185,7 +185,7 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ContentStringMetaValue",
                 columns: table => new
                 {
-                    IdContent = table.Column<int>(type: "integer(11)", nullable: false),
+                    IdContent = table.Column<byte[]>(type: "BINARY(16)", nullable: false),
                     IdMetaValueType = table.Column<int>(type: "integer(11)", nullable: false),
                     Value = table.Column<string>(type: "varchar(1024)", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -211,8 +211,8 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ContentTaxonomy",
                 columns: table => new
                 {
-                    IdContent = table.Column<int>(type: "integer(11)", nullable: false),
-                    IdTaxonomy = table.Column<int>(type: "integer(11)", nullable: false)
+                    IdContent = table.Column<byte[]>(type: "BINARY(16)", nullable: false),
+                    IdTaxonomy = table.Column<byte[]>(type: "BINARY(16)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -233,7 +233,7 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ContentTextMetaValue",
                 columns: table => new
                 {
-                    IdContent = table.Column<int>(type: "integer(11)", nullable: false),
+                    IdContent = table.Column<byte[]>(type: "BINARY(16)", nullable: false),
                     IdMetaValueType = table.Column<int>(type: "integer(11)", nullable: false),
                     Value = table.Column<string>(type: "text", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -259,8 +259,8 @@ namespace TCAPP.DataAccess.Migrations
                 name: "ParentContent",
                 columns: table => new
                 {
-                    IdContent = table.Column<int>(type: "integer(11)", nullable: false),
-                    IdParentContent = table.Column<int>(type: "integer(11)", nullable: false)
+                    IdContent = table.Column<byte[]>(type: "BINARY(16)", nullable: false),
+                    IdParentContent = table.Column<byte[]>(type: "BINARY(16)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -281,8 +281,8 @@ namespace TCAPP.DataAccess.Migrations
                 name: "UserContent",
                 columns: table => new
                 {
-                    IdUser = table.Column<int>(type: "integer(11)", nullable: false),
-                    IdContent = table.Column<int>(type: "integer(11)", nullable: false),
+                    IdUser = table.Column<byte[]>(type: "BINARY(16)", nullable: false),
+                    IdContent = table.Column<byte[]>(type: "BINARY(16)", nullable: false),
                     IdContentRelationType = table.Column<int>(type: "integer(11)", nullable: false)
                 },
                 constraints: table =>

@@ -6,7 +6,7 @@ namespace TCAPP.Domain.RelationalData
 {
     public class ContentBoolMetaValue
     {
-        public long IdContent { get; set; }
+        public Guid IdContent { get; set; }
         public long IdMetaValueType { get; set; }
         public bool Value { get; set; }
         public DateTime Created { get; set; }
