@@ -18,7 +18,7 @@ namespace TCAPP.API.Graphql.Contents.Strategies
             input.Content = content;
             content = DoUpdate(input);
             await _context.SaveChangesAsync();
-            return await _context.Contents.FindAsync(content.Id);
+            return content;
         }
 
         private Content DoUpdate(UpdateContentInput input)
