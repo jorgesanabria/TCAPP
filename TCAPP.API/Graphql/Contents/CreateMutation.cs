@@ -4,10 +4,10 @@ using TCAPP.Domain.ConcreteData;
 
 namespace TCAPP.API.Graphql.Contents
 {
-    public class Mutation
+    public class CreateMutation
     {
         private readonly IAsyncCreateStrategy<Content, CreateContentInput> _strategy;
-        public Mutation(IAsyncCreateStrategy<Content, CreateContentInput> strategy)
+        public CreateMutation(IAsyncCreateStrategy<Content, CreateContentInput> strategy)
         {
             _strategy = strategy;
         }

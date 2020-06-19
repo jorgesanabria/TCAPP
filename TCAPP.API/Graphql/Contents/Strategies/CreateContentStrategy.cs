@@ -1,7 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Linq;
-using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
 using TCAPP.DataAccess.Context;
 using TCAPP.Domain.ConcreteData;
@@ -26,7 +24,8 @@ namespace TCAPP.API.Graphql.Contents.Strategies
 
         private Content DoCreate(CreateContentInput input)
         {
-            var content = new Content { Id = Guid.NewGuid(), Title = input.Title, IdContentType = input.IdContentType, Created = input.Created, Updated = input.Updated, Enabled = input.Enabled };
+            var created = input.Created ?? DateTime.Now;
+            var content = new Content { Id = Guid.NewGuid(), Title = input.Title, IdContentType = input.IdContentType, Created = created, Updated = created, Enabled = input.Enabled };
 
             if (input.Parents != null && input.Parents.Any())
             {

@@ -5,10 +5,10 @@ using TCAPP.Domain.RelationalData;
 
 namespace TCAPP.API.Graphql.Contents.ContentStringMetaValues
 {
-    public class Mutation
+    public class CreateMutation
     {
         private readonly IAsyncCreateStrategy<ContentStringMetaValue, CreateStringMetaValueInput> _strategy;
-        public Mutation(IAsyncCreateStrategy<ContentStringMetaValue, CreateStringMetaValueInput> strategy)
+        public CreateMutation(IAsyncCreateStrategy<ContentStringMetaValue, CreateStringMetaValueInput> strategy)
         {
             _strategy = strategy;
         }

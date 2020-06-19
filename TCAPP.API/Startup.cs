@@ -18,11 +18,11 @@ using TCAPP.API.Graphql.Contents;
 using TCAPP.API.Graphql.Contents.Strategies;
 using TCAPP.DataAccess.Context;
 using QueryContent = TCAPP.API.Graphql.Contents.Query;
-using MutationContent = TCAPP.API.Graphql.Contents.Mutation;
-using MutationText = TCAPP.API.Graphql.Contents.ContentTextMetaValues.Mutation;
-using MutationString = TCAPP.API.Graphql.Contents.ContentStringMetaValues.Mutation;
-using MutationFloat = TCAPP.API.Graphql.Contents.ContentFloatMetaValues.Mutation;
-using MutationBool = TCAPP.API.Graphql.Contents.ContentBoolMetaValues.Mutation;
+using CreateMutationContent = TCAPP.API.Graphql.Contents.CreateMutation;
+using CreateMutationText = TCAPP.API.Graphql.Contents.ContentTextMetaValues.CreateMutation;
+using CreateMutationString = TCAPP.API.Graphql.Contents.ContentStringMetaValues.CreateMutation;
+using CreateMutationFloat = TCAPP.API.Graphql.Contents.ContentFloatMetaValues.CreateMutation;
+using CreateMutationBool = TCAPP.API.Graphql.Contents.ContentBoolMetaValues.CreateMutation;
 using TCAPP.Domain.ConcreteData;
 using TCAPP.Domain.RelationalData;
 using TCAPP.API.Graphql.Contents.MetaValues;
@@ -46,11 +46,11 @@ namespace TCAPP.API
             services.AddGraphQL(
                 SchemaBuilder.New()
                     .AddQueryType<QueryContent>()
-                    .AddMutationType<MutationContent>()
-                    .AddMutationType<MutationText>()
-                    .AddMutationType<MutationString>()
-                    .AddMutationType<MutationFloat>()
-                    .AddMutationType<MutationBool>()
+                    .AddMutationType<CreateMutationContent>()
+                    .AddMutationType<CreateMutationText>()
+                    .AddMutationType<CreateMutationString>()
+                    .AddMutationType<CreateMutationFloat>()
+                    .AddMutationType<CreateMutationBool>()
                     .Create(),
                 new QueryExecutionOptions { ForceSerialExecution = true });
 
