@@ -3,18 +3,18 @@ using TCAPP.API.Graphql.Contents.MetaValues;
 using TCAPP.DataAccess.Context;
 using TCAPP.Domain.RelationalData;
 
-namespace TCAPP.API.Graphql.Contents
+namespace TCAPP.API.Graphql.Contents.Strategies
 {
-    public class CreateStringMetaValueStrategy
+    public class CreateFloatMetaVaueStrategy : IAsyncCreateStrategy<ContentFloatMetaValue, CreateFloatMetaValueInput>
     {
         private readonly TCAPPContext _context;
-        public CreateStringMetaValueStrategy(TCAPPContext context)
+        public CreateFloatMetaVaueStrategy(TCAPPContext context)
         {
             _context = context;
         }
-        public async Task<ContentStringMetaValue> CreateAsync(CreateStringMetaValueInput input)
+        public async Task<ContentFloatMetaValue> CreateAsync(CreateFloatMetaValueInput input)
         {
-            var metaValue = new ContentTextMetaValue
+            var metaValue = new ContentFloatMetaValue
             {
                 IdContent = input.IdContent,
                 IdMetaValueType = input.IdMetaValueType,
@@ -23,9 +23,9 @@ namespace TCAPP.API.Graphql.Contents
                 Enabled = input.Enabled,
                 Value = input.Value
             };
-            _context.ContentTextMetaValues.Add(metaValue);
+            _context.ContentFloatMetaValues.Add(metaValue);
             await _context.SaveChangesAsync();
-            return await _context.ContentStringMetaValues.FindAsync(metaValue.IdContent, metaValue.IdMetaValueType);
+            return await _context.ContentFloatMetaValues.FindAsync(metaValue.IdContent, metaValue.IdMetaValueType);
         }
     }
 }

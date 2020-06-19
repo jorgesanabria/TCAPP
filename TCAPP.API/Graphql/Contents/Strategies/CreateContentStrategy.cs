@@ -9,7 +9,7 @@ using TCAPP.Domain.RelationalData;
 
 namespace TCAPP.API.Graphql.Contents.Strategies
 {
-    public class CreateContentStrategy : ICreateContentStrategy
+    public class CreateContentStrategy : IAsyncCreateStrategy<Content, CreateContentInput>
     {
         private readonly TCAPPContext _context;
         public CreateContentStrategy(TCAPPContext context)

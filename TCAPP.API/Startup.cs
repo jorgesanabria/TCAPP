@@ -19,6 +19,13 @@ using TCAPP.API.Graphql.Contents.Strategies;
 using TCAPP.DataAccess.Context;
 using QueryContent = TCAPP.API.Graphql.Contents.Query;
 using MutationContent = TCAPP.API.Graphql.Contents.Mutation;
+using MutationText = TCAPP.API.Graphql.Contents.ContentTextMetaValues.Mutation;
+using MutationString = TCAPP.API.Graphql.Contents.ContentStringMetaValues.Mutation;
+using MutationFloat = TCAPP.API.Graphql.Contents.ContentFloatMetaValues.Mutation;
+using MutationBool = TCAPP.API.Graphql.Contents.ContentBoolMetaValues.Mutation;
+using TCAPP.Domain.ConcreteData;
+using TCAPP.Domain.RelationalData;
+using TCAPP.API.Graphql.Contents.MetaValues;
 
 namespace TCAPP.API
 {
@@ -40,10 +47,18 @@ namespace TCAPP.API
                 SchemaBuilder.New()
                     .AddQueryType<QueryContent>()
                     .AddMutationType<MutationContent>()
+                    .AddMutationType<MutationText>()
+                    .AddMutationType<MutationString>()
+                    .AddMutationType<MutationFloat>()
+                    .AddMutationType<MutationBool>()
                     .Create(),
                 new QueryExecutionOptions { ForceSerialExecution = true });
 
-            services.AddScoped<ICreateContentStrategy, CreateContentStrategy>();
+            services.AddScoped<IAsyncCreateStrategy<Content, CreateContentInput>, CreateContentStrategy>();
+            services.AddScoped<IAsyncCreateStrategy<ContentTextMetaValue, CreateTextMetaValueInput>, CreateTextMetaValueStrategy>();
+            services.AddScoped<IAsyncCreateStrategy<ContentStringMetaValue, CreateStringMetaValueInput>, CreateStringMetaValueStrategy>();
+            services.AddScoped<IAsyncCreateStrategy<ContentFloatMetaValue, CreateFloatMetaValueInput>, CreateFloatMetaVaueStrategy>();
+            services.AddScoped<IAsyncCreateStrategy<ContentBoolMetaValue, CreateBoolMetaValueInput>, CreateBoolMetaValueStrategy>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

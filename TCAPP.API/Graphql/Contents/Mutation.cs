@@ -1,18 +1,15 @@
 ﻿using System.Threading.Tasks;
 using TCAPP.API.Graphql.Contents.Strategies;
-using TCAPP.DataAccess.Context;
 using TCAPP.Domain.ConcreteData;
 
 namespace TCAPP.API.Graphql.Contents
 {
     public class Mutation
     {
-        private readonly ICreateContentStrategy _strategy;
-        private readonly TCAPPContext _context;
-        public Mutation(ICreateContentStrategy strategy, TCAPPContext context)
+        private readonly IAsyncCreateStrategy<Content, CreateContentInput> _strategy;
+        public Mutation(IAsyncCreateStrategy<Content, CreateContentInput> strategy)
         {
             _strategy = strategy;
-            _context = context;
         }
         public async Task<Content> CreateContent(CreateContentInput inputContent)
         {
