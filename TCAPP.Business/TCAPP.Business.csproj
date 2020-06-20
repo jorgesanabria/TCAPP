@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TCAPP.DataAccess\TCAPP.DataAccess.csproj" />
+    <ProjectReference Include="..\TCAPP.Domain\TCAPP.Domain.csproj" />
+    <ProjectReference Include="..\TCAPP.DTO\TCAPP.DTO.csproj" />
+    <ProjectReference Include="..\TCAPP.Infrastructure\TCAPP.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ConcreteData\Contents\" />
+    <Folder Include="ConcreteData\Users\" />
+    <Folder Include="RelationalData\ContentBoolMetaValues\" />
+    <Folder Include="RelationalData\ContentFloatMetaValues\" />
+    <Folder Include="RelationalData\ContentStringMetaValues\" />
+    <Folder Include="RelationalData\ContentTaxonomies\" />
+    <Folder Include="RelationalData\ContentTextMetaValues\" />
+    <Folder Include="RelationalData\ParentContents\" />
+    <Folder Include="RelationalData\ParentTaxonomies\" />
+    <Folder Include="RelationalData\UserContents\" />
+    <Folder Include="TypeData\ContentMetaValueTypes\" />
+    <Folder Include="TypeData\ContentRelationTypes\" />
+    <Folder Include="TypeData\ContentTypes\" />
+    <Folder Include="TypeData\Taxonomies\" />
+  </ItemGroup>
+
+</Project>
