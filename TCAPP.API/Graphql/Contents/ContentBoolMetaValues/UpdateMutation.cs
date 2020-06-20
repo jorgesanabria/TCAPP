@@ -7,8 +7,8 @@ namespace TCAPP.API.Graphql.Contents.ContentBoolMetaValues
 {
     public class UpdateMutation
     {
-        private readonly IAsyncUpdate<ContentBoolMetaValue, UpdateBoolMetaValueInput> _strategy;
-        public UpdateMutation(IAsyncUpdate<ContentBoolMetaValue, UpdateBoolMetaValueInput> strategy)
+        private readonly IAsyncUpdateStrategy<ContentBoolMetaValue, UpdateBoolMetaValueInput> _strategy;
+        public UpdateMutation(IAsyncUpdateStrategy<ContentBoolMetaValue, UpdateBoolMetaValueInput> strategy)
         {
             _strategy = strategy;
         }

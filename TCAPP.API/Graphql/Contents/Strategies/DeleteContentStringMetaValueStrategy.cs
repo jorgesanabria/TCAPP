@@ -4,7 +4,7 @@ using TCAPP.DataAccess.Context;
 
 namespace TCAPP.API.Graphql.Contents.Strategies
 {
-    public class DeleteContentStringMetaValueStrategy : IAsyncDelete<DeleteStringMetaValueInput>
+    public class DeleteContentStringMetaValueStrategy : IAsyncDeleteStrategy<DeleteStringMetaValueInput>
     {
         private readonly TCAPPContext _context;
         public DeleteContentStringMetaValueStrategy(TCAPPContext context)

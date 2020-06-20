@@ -6,7 +6,7 @@ using TCAPP.Domain.TypeData;
 
 namespace TCAPP.API.Graphql.Contents.Strategies
 {
-    public class UpdateTaxonomyStrategy : IAsyncUpdate<Taxonomy, UpdateTaxonomyInput>
+    public class UpdateTaxonomyStrategy : IAsyncUpdateStrategy<Taxonomy, UpdateTaxonomyInput>
     {
         private readonly TCAPPContext _context;
         public UpdateTaxonomyStrategy(TCAPPContext context)

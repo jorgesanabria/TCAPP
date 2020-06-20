@@ -6,7 +6,7 @@ using TCAPP.Domain.RelationalData;
 
 namespace TCAPP.API.Graphql.Contents.Strategies
 {
-    public class DeleteUserContentStrategy : IAsyncDelete<CreateOrDeleteUserContentInput>
+    public class DeleteUserContentStrategy : IAsyncDeleteStrategy<CreateOrDeleteUserContentInput>
     {
         private readonly TCAPPContext _context;
         public DeleteUserContentStrategy(TCAPPContext context)

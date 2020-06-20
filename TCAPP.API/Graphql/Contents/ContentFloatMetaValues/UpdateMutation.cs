@@ -7,8 +7,8 @@ namespace TCAPP.API.Graphql.Contents.ContentFloatMetaValues
 {
     public class UpdateMutation
     {
-        private readonly IAsyncUpdate<ContentFloatMetaValue, UpdateFloatMetaValueInput> _strategy;
-        public UpdateMutation(IAsyncUpdate<ContentFloatMetaValue, UpdateFloatMetaValueInput> strategy)
+        private readonly IAsyncUpdateStrategy<ContentFloatMetaValue, UpdateFloatMetaValueInput> _strategy;
+        public UpdateMutation(IAsyncUpdateStrategy<ContentFloatMetaValue, UpdateFloatMetaValueInput> strategy)
         {
             _strategy = strategy;
         }

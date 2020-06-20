@@ -5,7 +5,7 @@ using TCAPP.Domain.ConcreteData;
 
 namespace TCAPP.API.Graphql.Contents.Strategies
 {
-    public class UpdateContentStrategy : IAsyncUpdate<Content, UpdateContentInput>
+    public class UpdateContentStrategy : IAsyncUpdateStrategy<Content, UpdateContentInput>
     {
         private readonly TCAPPContext _context;
         public UpdateContentStrategy(TCAPPContext context)

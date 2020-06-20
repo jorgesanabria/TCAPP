@@ -6,7 +6,7 @@ using TCAPP.Domain.RelationalData;
 
 namespace TCAPP.API.Graphql.Contents.Strategies
 {
-    public class DeleteContentTaxonomyStrategy : IAsyncDelete<CreateOrDeleteContentTaxonomyInput>
+    public class DeleteContentTaxonomyStrategy : IAsyncDeleteStrategy<CreateOrDeleteContentTaxonomyInput>
     {
         private readonly TCAPPContext _context;
         public DeleteContentTaxonomyStrategy(TCAPPContext context)

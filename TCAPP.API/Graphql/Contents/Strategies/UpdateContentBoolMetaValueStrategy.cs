@@ -6,7 +6,7 @@ using TCAPP.Domain.RelationalData;
 
 namespace TCAPP.API.Graphql.Contents.Strategies
 {
-    public class UpdateContentBoolMetaValueStrategy : IAsyncUpdate<ContentBoolMetaValue, UpdateBoolMetaValueInput>
+    public class UpdateContentBoolMetaValueStrategy : IAsyncUpdateStrategy<ContentBoolMetaValue, UpdateBoolMetaValueInput>
     {
         private readonly TCAPPContext _context;
         public UpdateContentBoolMetaValueStrategy(TCAPPContext context)

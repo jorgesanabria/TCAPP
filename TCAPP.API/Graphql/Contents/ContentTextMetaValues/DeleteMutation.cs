@@ -6,8 +6,8 @@ namespace TCAPP.API.Graphql.Contents.ContentTextMetaValues
 {
     public class DeleteMutation
     {
-        private readonly IAsyncDelete<DeleteTextMetaValueInput> _strategy;
-        public DeleteMutation(IAsyncDelete<DeleteTextMetaValueInput> strategy)
+        private readonly IAsyncDeleteStrategy<DeleteTextMetaValueInput> _strategy;
+        public DeleteMutation(IAsyncDeleteStrategy<DeleteTextMetaValueInput> strategy)
         {
             _strategy = strategy;
         }

@@ -6,7 +6,7 @@ using TCAPP.Domain.TypeData;
 
 namespace TCAPP.API.Graphql.Contents.Strategies
 {
-    public class UpdateMetaValueTypeStrategy : IAsyncUpdate<MetaValueType, UpdateMetaValueTypeInput>
+    public class UpdateMetaValueTypeStrategy : IAsyncUpdateStrategy<MetaValueType, UpdateMetaValueTypeInput>
     {
         private readonly TCAPPContext _context;
         public UpdateMetaValueTypeStrategy (TCAPPContext context)

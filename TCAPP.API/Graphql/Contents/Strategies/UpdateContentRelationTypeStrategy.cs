@@ -6,7 +6,7 @@ using TCAPP.Domain.TypeData;
 
 namespace TCAPP.API.Graphql.Contents.Strategies
 {
-    public class UpdateContentRelationTypeStrategy : IAsyncUpdate<ContentRelationType, UpdateContentRelationTypeInput>
+    public class UpdateContentRelationTypeStrategy : IAsyncUpdateStrategy<ContentRelationType, UpdateContentRelationTypeInput>
     {
         private readonly TCAPPContext _context;
         public UpdateContentRelationTypeStrategy(TCAPPContext context)
