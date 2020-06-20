@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TCAPP.DataAccess\TCAPP.DataAccess.csproj" />
     <ProjectReference Include="..\TCAPP.Domain\TCAPP.Domain.csproj" />
     <ProjectReference Include="..\TCAPP.DTO\TCAPP.DTO.csproj" />

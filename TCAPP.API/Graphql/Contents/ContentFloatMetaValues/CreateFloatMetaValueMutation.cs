@@ -1,10 +1,12 @@
-﻿using System.Threading.Tasks;
+﻿using HotChocolate.Types;
+using System.Threading.Tasks;
 using TCAPP.Domain.RelationalData;
 using TCAPP.DTO.RelationalData.ContentFloatMetaValues;
 using TCAPP.Infrastructure.Generics;
 
 namespace TCAPP.API.Graphql.Contents.ContentFloatMetaValues
 {
+    [ExtendObjectType(Name = "Mutation")]
     public class CreateFloatMetaValueMutation
     {
         private readonly IAsyncCreateStrategy<ContentFloatMetaValue, CreateFloatMetaValueInput> _strategy;

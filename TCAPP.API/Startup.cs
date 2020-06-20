@@ -58,18 +58,24 @@ namespace TCAPP.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
             services.AddDbContext<TCAPPContext>(o => o.UseMySql(Configuration.GetConnectionString("Test")), ServiceLifetime.Scoped);
-            services.AddGraphQL(
+            services.AddGraphQL(sp => 
                 SchemaBuilder.New()
-                    .AddQueryType<ContentQuery>()
-                    .AddMutationType<CreateContentMutation>()
-                    .AddMutationType<CreateTextMetaValueMutation>()
-                    .AddMutationType<CreateStringMetaValueMutation>()
-                    .AddMutationType<CreateFloatMetaValueMutation>()
-                    .AddMutationType<CreateBoolMetaValueMutation>()
+                    .AddServices(sp)
+                    .AddQueryType(d => d.Name("Query"))
+                    .AddMutationType(d => d.Name("Mutation"))
+                    .AddType<ContentQuery>()
+                    .AddType<CreateContentMutation>()
+                    .AddType<CreateTextMetaValueMutation>()
+                    .AddType<CreateStringMetaValueMutation>()
+                    .AddType<CreateFloatMetaValueMutation>()
+                    .AddType<CreateBoolMetaValueMutation>()
                     .Create(),
                 new QueryExecutionOptions { ForceSerialExecution = true });
+            //services.AddGraphQL();
+            //services.AddGraphQLSchema(s => SchemaBuilder.New().AddQueryType<UserQuery>().AddMutationType<CreateUserMutation>().Create());
+            //services.AddGraphQLSchema(s => SchemaBuilder.New().AddQueryType<ContentQuery>().AddMutationType<CreateRootContent>().Create());
 
             services.AddScoped<IAsyncCreateStrategy<Content, CreateContentInput>, CreateContentStrategy>();
             services.AddScoped<IAsyncUpdateStrategy<Content, UpdateContentInput>, UpdateContentStrategy>();

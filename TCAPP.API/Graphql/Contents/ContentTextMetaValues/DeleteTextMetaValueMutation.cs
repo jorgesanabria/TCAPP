@@ -1,9 +1,11 @@
-﻿using System.Threading.Tasks;
+﻿using HotChocolate.Types;
+using System.Threading.Tasks;
 using TCAPP.DTO.RelationalData.ContentTextMetaValues;
 using TCAPP.Infrastructure.Generics;
 
 namespace TCAPP.API.Graphql.Contents.ContentTextMetaValues
 {
+    [ExtendObjectType(Name = "Mutation")]
     public class DeleteTextMetaValueMutation
     {
         private readonly IAsyncDeleteStrategy<DeleteTextMetaValueInput> _strategy;
@@ -11,7 +13,7 @@ namespace TCAPP.API.Graphql.Contents.ContentTextMetaValues
         {
             _strategy = strategy;
         }
-        public async Task DeleteContentTextMetaValue(DeleteTextMetaValueInput input)
+        public async Task DeleteText(DeleteTextMetaValueInput input)
         {
             await _strategy.DeleteAsync(input);
         }

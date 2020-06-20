@@ -1,10 +1,12 @@
-﻿using System.Threading.Tasks;
+﻿using HotChocolate.Types;
+using System.Threading.Tasks;
 using TCAPP.Domain.RelationalData;
 using TCAPP.DTO.RelationalData.ContentBoolMetaValues;
 using TCAPP.Infrastructure.Generics;
 
 namespace TCAPP.API.Graphql.Contents.ContentBoolMetaValues
 {
+    [ExtendObjectType(Name = "Mutation")]
     public class CreateBoolMetaValueMutation
     {
         private readonly IAsyncCreateStrategy<ContentBoolMetaValue, CreateBoolMetaValueInput> _strategy;

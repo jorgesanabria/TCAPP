@@ -1,10 +1,12 @@
-﻿using System.Threading.Tasks;
+﻿using HotChocolate.Types;
+using System.Threading.Tasks;
 using TCAPP.Domain.RelationalData;
 using TCAPP.DTO.RelationalData.ContentStringMetaValues;
 using TCAPP.Infrastructure.Generics;
 
 namespace TCAPP.API.Graphql.Contents.ContentStringMetaValues
 {
+    [ExtendObjectType(Name = "Mutation")]
     public class CreateStringMetaValueMutation
     {
         private readonly IAsyncCreateStrategy<ContentStringMetaValue, CreateStringMetaValueInput> _strategy;
