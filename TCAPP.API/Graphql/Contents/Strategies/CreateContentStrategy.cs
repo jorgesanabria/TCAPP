@@ -27,6 +27,11 @@ namespace TCAPP.API.Graphql.Contents.Strategies
             var created = input.Created ?? DateTime.Now;
             var content = new Content { Id = Guid.NewGuid(), Title = input.Title, IdContentType = input.IdContentType, Created = created, Updated = created, Enabled = input.Enabled };
 
+            if (input.UserContents != null && input.UserContents.Any())
+            {
+                content.UserContents = input.UserContents.Select(x => new UserContent { Content = content, IdUser = x.IdUser, IdContentRelationType = x.IdContentRelationType }).ToList();
+            }
+
             if (input.Parents != null && input.Parents.Any())
             {
                 content.ParentContents = input.Parents.Select(x => new ParentContent { IdParentContent = x.IdParent, Content = content }).ToList();
@@ -52,6 +57,10 @@ namespace TCAPP.API.Graphql.Contents.Strategies
                 content.ContentBoolMetaValues = input.Bools.Select(x => new ContentBoolMetaValue { Value = x.Value, IdMetaValueType = x.IdMetaValueType, Content = content, Enabled = x.Enabled, Created = content.Created, Updated = content.Updated }).ToList();
             }
 
+            if (input.ContentTaxonomies != null && input.ContentTaxonomies.Any())
+            {
+                content.ContentTaxonomies = input.ContentTaxonomies.Select(x => new ContentTaxonomy { IdTaxonomy = x.IdTaxonomy, Content = content }).ToList();
+            }
 
             if (input.Children != null && input.Children.Any())
             {
