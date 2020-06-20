@@ -32,5 +32,14 @@
     <ProjectReference Include="..\TCAPP.DataAccess\TCAPP.DataAccess.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Graphql\Contents\ContentTaxonomies\" />
+    <Folder Include="Graphql\Contents\UserContents\" />
+    <Folder Include="Graphql\ContentRelationTypes\" />
+    <Folder Include="Graphql\ContentTypes\" />
+    <Folder Include="Graphql\MetaValueTypes\" />
+    <Folder Include="Graphql\Taxonomies\" />
+  </ItemGroup>
+
 
 </Project>
