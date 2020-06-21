@@ -43,6 +43,8 @@ using TCAPP.Business.TypeData.ContentMetaValueTypes;
 using TCAPP.Business.TypeData.ContentRelationTypes;
 using TCAPP.Business.TypeData.ContentTypes;
 using TCAPP.Business.TypeData.Taxonomies;
+using TCAPP.API.Graphql.ContentTypes;
+using TCAPP.API.Graphql.Users;
 
 namespace TCAPP.API
 {
@@ -66,17 +68,17 @@ namespace TCAPP.API
                     .AddQueryType(d => d.Name("Query"))
                     .AddMutationType(d => d.Name("Mutation"))
                     .AddType<ContentQuery>()
-                    .AddType<CreateContentMutation>()
+                    .AddType<UserQuery>()
+                    .AddType<ContentTypeMutation>()
+                    .AddType<ContentMutation>()
                     .AddType<CreateTextMetaValueMutation>()
                     .AddType<CreateStringMetaValueMutation>()
                     .AddType<CreateFloatMetaValueMutation>()
                     .AddType<CreateBoolMetaValueMutation>()
+                    .AddType<UserMutation>()
                     .Create(),
                 new QueryExecutionOptions { ForceSerialExecution = true });
-            //services.AddGraphQL();
-            //services.AddGraphQLSchema(s => SchemaBuilder.New().AddQueryType<UserQuery>().AddMutationType<CreateUserMutation>().Create());
-            //services.AddGraphQLSchema(s => SchemaBuilder.New().AddQueryType<ContentQuery>().AddMutationType<CreateRootContent>().Create());
-
+            
             services.AddScoped<IAsyncCreateStrategy<Content, CreateContentInput>, CreateContentStrategy>();
             services.AddScoped<IAsyncUpdateStrategy<Content, UpdateContentInput>, UpdateContentStrategy>();
 
