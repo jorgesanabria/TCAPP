@@ -12,10 +12,18 @@ namespace TCAPP.API.Graphql.Users
     {
         public async Task<User> CreateUser(
             [Service] IAsyncCreateStrategy<User, CreateUserInput> strategy,
-            CreateUserInput inputUser
+            CreateUserInput user
         )
         {
-            var result = await strategy.CreateAsync(inputUser);
+            var result = await strategy.CreateAsync(user);
+            return result;
+        }
+        public async Task<User> UpdateUser(
+            [Service] IAsyncUpdateStrategy<User, UpdateUserInput> strategy,
+            UpdateUserInput user
+        )
+        {
+            var result = await strategy.UpdateAsync(user);
             return result;
         }
     }

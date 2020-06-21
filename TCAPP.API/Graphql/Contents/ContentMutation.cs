@@ -12,10 +12,18 @@ namespace TCAPP.API.Graphql.Contents
     {
         public async Task<Content> CreateContent(
             [Service] IAsyncCreateStrategy<Content, CreateContentInput> strategy,
-            CreateContentInput inputContent
+            CreateContentInput content
         )
         {
-            var result = await strategy.CreateAsync(inputContent);
+            var result = await strategy.CreateAsync(content);
+            return result;
+        }
+        public async Task<Content> UpdateContent(
+            [Service] IAsyncUpdateStrategy<Content, UpdateContentInput> strategy,
+            UpdateContentInput content
+        )
+        {
+            var result = await strategy.UpdateAsync(content);
             return result;
         }
     }

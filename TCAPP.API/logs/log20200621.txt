@@ -2147,3 +2147,306 @@ FROM `User` AS `u`
 2020-06-21 17:01:43.609 -03:00 [DBG] No candidates found for the request path '/'
 2020-06-21 17:01:43.609 -03:00 [DBG] Request did not match any endpoints
 2020-06-21 17:01:43.622 -03:00 [INF] Request finished in 13.785ms 200 application/json
+2020-06-21 18:16:58.901 -03:00 [DBG] Hosting starting
+2020-06-21 18:17:00.209 -03:00 [DBG] Loaded hosting startup assembly TCAPP.API
+2020-06-21 18:17:00.223 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-06-21 18:17:00.226 -03:00 [INF] Hosting environment: Development
+2020-06-21 18:17:00.226 -03:00 [INF] Content root path: C:\work\APP\TCAPP\TCAPP.API
+2020-06-21 18:17:00.227 -03:00 [DBG] Hosting started
+2020-06-21 18:17:00.262 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/weatherforecast  
+2020-06-21 18:17:00.276 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2020-06-21 18:17:00.346 -03:00 [DBG] 1 candidate(s) found for the request path '/weatherforecast'
+2020-06-21 18:17:00.361 -03:00 [DBG] Endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)' with route pattern 'WeatherForecast' is valid for the request path '/weatherforecast'
+2020-06-21 18:17:00.370 -03:00 [DBG] Request matched endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:17:00.393 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2020-06-21 18:17:00.396 -03:00 [INF] Executing endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:17:00.411 -03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2020-06-21 18:17:00.451 -03:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[TCAPP.API.WeatherForecast] Get() on controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API).
+2020-06-21 18:17:00.457 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2020-06-21 18:17:00.458 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2020-06-21 18:17:00.458 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2020-06-21 18:17:00.458 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2020-06-21 18:17:00.459 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2020-06-21 18:17:00.460 -03:00 [DBG] Executing controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-06-21 18:17:00.822 -03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2020-06-21 18:17:00.848 -03:00 [DBG] Executed controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-06-21 18:17:00.854 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2020-06-21 18:17:00.857 -03:00 [DBG] No information found on request to perform content negotiation.
+2020-06-21 18:17:00.857 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2020-06-21 18:17:00.858 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2020-06-21 18:17:00.858 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2020-06-21 18:17:00.859 -03:00 [INF] Executing ObjectResult, writing value of type 'TCAPP.API.WeatherForecast[]'.
+2020-06-21 18:17:01.074 -03:00 [INF] Executed action TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API) in 608.3361ms
+2020-06-21 18:17:01.076 -03:00 [INF] Executed endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:17:01.081 -03:00 [INF] Request finished in 826.3653ms 200 application/json; charset=utf-8
+2020-06-21 18:17:10.960 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/playground/settings.js  
+2020-06-21 18:17:10.963 -03:00 [DBG] No candidates found for the request path '/playground/settings.js'
+2020-06-21 18:17:10.964 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:17:10.988 -03:00 [INF] Request finished in 29.8622ms 200 application/javascript
+2020-06-21 18:17:12.908 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-21 18:17:12.910 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-21 18:17:12.910 -03:00 [INF] CORS policy execution successful.
+2020-06-21 18:17:12.912 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-21 18:17:12.912 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:17:13.391 -03:00 [INF] Request finished in 486.2345ms 200 application/json
+2020-06-21 18:17:13.445 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-21 18:17:13.445 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-21 18:17:13.446 -03:00 [INF] CORS policy execution successful.
+2020-06-21 18:17:13.446 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-21 18:17:13.446 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:17:13.485 -03:00 [INF] Request finished in 40.6212ms 200 application/json
+2020-06-21 18:17:14.477 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-21 18:17:14.478 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-21 18:17:14.479 -03:00 [INF] CORS policy execution successful.
+2020-06-21 18:17:14.480 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-21 18:17:14.480 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:17:14.542 -03:00 [INF] Request finished in 63.8318ms 200 application/json
+2020-06-21 18:24:56.543 -03:00 [DBG] Hosting starting
+2020-06-21 18:24:57.757 -03:00 [DBG] Loaded hosting startup assembly TCAPP.API
+2020-06-21 18:24:57.776 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-06-21 18:24:57.776 -03:00 [INF] Hosting environment: Development
+2020-06-21 18:24:57.776 -03:00 [INF] Content root path: C:\work\APP\TCAPP\TCAPP.API
+2020-06-21 18:24:57.776 -03:00 [DBG] Hosting started
+2020-06-21 18:24:57.800 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/weatherforecast  
+2020-06-21 18:24:57.808 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2020-06-21 18:24:57.842 -03:00 [DBG] 1 candidate(s) found for the request path '/weatherforecast'
+2020-06-21 18:24:57.851 -03:00 [DBG] Endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)' with route pattern 'WeatherForecast' is valid for the request path '/weatherforecast'
+2020-06-21 18:24:57.856 -03:00 [DBG] Request matched endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:24:57.876 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2020-06-21 18:24:57.878 -03:00 [INF] Executing endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:24:57.888 -03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2020-06-21 18:24:57.921 -03:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[TCAPP.API.WeatherForecast] Get() on controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API).
+2020-06-21 18:24:57.925 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2020-06-21 18:24:57.926 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2020-06-21 18:24:57.926 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2020-06-21 18:24:57.926 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2020-06-21 18:24:57.926 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2020-06-21 18:24:57.927 -03:00 [DBG] Executing controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-06-21 18:24:58.199 -03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2020-06-21 18:24:58.234 -03:00 [DBG] Executed controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-06-21 18:24:58.240 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2020-06-21 18:24:58.242 -03:00 [DBG] No information found on request to perform content negotiation.
+2020-06-21 18:24:58.243 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2020-06-21 18:24:58.243 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2020-06-21 18:24:58.244 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2020-06-21 18:24:58.244 -03:00 [INF] Executing ObjectResult, writing value of type 'TCAPP.API.WeatherForecast[]'.
+2020-06-21 18:24:58.438 -03:00 [INF] Executed action TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API) in 505.9644ms
+2020-06-21 18:24:58.440 -03:00 [INF] Executed endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:24:58.446 -03:00 [INF] Request finished in 650.8216ms 200 application/json; charset=utf-8
+2020-06-21 18:29:59.797 -03:00 [DBG] Hosting starting
+2020-06-21 18:30:01.599 -03:00 [DBG] Loaded hosting startup assembly TCAPP.API
+2020-06-21 18:30:01.615 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-06-21 18:30:01.615 -03:00 [INF] Hosting environment: Development
+2020-06-21 18:30:01.615 -03:00 [INF] Content root path: C:\work\APP\TCAPP\TCAPP.API
+2020-06-21 18:30:01.616 -03:00 [DBG] Hosting started
+2020-06-21 18:30:01.690 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/weatherforecast  
+2020-06-21 18:30:01.705 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2020-06-21 18:30:01.777 -03:00 [DBG] 1 candidate(s) found for the request path '/weatherforecast'
+2020-06-21 18:30:01.791 -03:00 [DBG] Endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)' with route pattern 'WeatherForecast' is valid for the request path '/weatherforecast'
+2020-06-21 18:30:01.804 -03:00 [DBG] Request matched endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:30:01.852 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2020-06-21 18:30:01.855 -03:00 [INF] Executing endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:30:01.878 -03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2020-06-21 18:30:01.921 -03:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[TCAPP.API.WeatherForecast] Get() on controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API).
+2020-06-21 18:30:01.932 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2020-06-21 18:30:01.933 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2020-06-21 18:30:01.933 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2020-06-21 18:30:01.934 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2020-06-21 18:30:01.934 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2020-06-21 18:30:01.937 -03:00 [DBG] Executing controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-06-21 18:30:02.371 -03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2020-06-21 18:30:02.415 -03:00 [DBG] Executed controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-06-21 18:30:02.422 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2020-06-21 18:30:02.428 -03:00 [DBG] No information found on request to perform content negotiation.
+2020-06-21 18:30:02.428 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2020-06-21 18:30:02.428 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2020-06-21 18:30:02.429 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2020-06-21 18:30:02.429 -03:00 [INF] Executing ObjectResult, writing value of type 'TCAPP.API.WeatherForecast[]'.
+2020-06-21 18:30:02.688 -03:00 [INF] Executed action TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API) in 746.4761ms
+2020-06-21 18:30:02.690 -03:00 [INF] Executed endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:30:02.703 -03:00 [INF] Request finished in 1019.4253ms 200 application/json; charset=utf-8
+2020-06-21 18:30:09.548 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/playground/settings.js  
+2020-06-21 18:30:09.551 -03:00 [DBG] No candidates found for the request path '/playground/settings.js'
+2020-06-21 18:30:09.551 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:30:09.572 -03:00 [INF] Request finished in 24.5991ms 200 application/javascript
+2020-06-21 18:30:11.569 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-21 18:30:11.571 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-21 18:30:11.571 -03:00 [INF] CORS policy execution successful.
+2020-06-21 18:30:11.576 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-21 18:30:11.576 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:30:12.117 -03:00 [INF] Request finished in 549.7955ms 200 application/json
+2020-06-21 18:30:12.183 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-21 18:30:12.183 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-21 18:30:12.183 -03:00 [INF] CORS policy execution successful.
+2020-06-21 18:30:12.184 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-21 18:30:12.184 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:30:12.255 -03:00 [INF] Request finished in 72.1767ms 200 application/json
+2020-06-21 18:30:13.038 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-21 18:30:13.039 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-21 18:30:13.040 -03:00 [INF] CORS policy execution successful.
+2020-06-21 18:30:13.042 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-21 18:30:13.044 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:30:13.089 -03:00 [INF] Request finished in 51.1518ms 200 application/json
+2020-06-21 18:39:06.565 -03:00 [DBG] Hosting starting
+2020-06-21 18:39:07.965 -03:00 [DBG] Loaded hosting startup assembly TCAPP.API
+2020-06-21 18:39:07.983 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-06-21 18:39:07.983 -03:00 [INF] Hosting environment: Development
+2020-06-21 18:39:07.983 -03:00 [INF] Content root path: C:\work\APP\TCAPP\TCAPP.API
+2020-06-21 18:39:07.983 -03:00 [DBG] Hosting started
+2020-06-21 18:39:08.011 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/weatherforecast  
+2020-06-21 18:39:08.024 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2020-06-21 18:39:08.075 -03:00 [DBG] 1 candidate(s) found for the request path '/weatherforecast'
+2020-06-21 18:39:08.087 -03:00 [DBG] Endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)' with route pattern 'WeatherForecast' is valid for the request path '/weatherforecast'
+2020-06-21 18:39:08.095 -03:00 [DBG] Request matched endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:39:08.114 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2020-06-21 18:39:08.116 -03:00 [INF] Executing endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:39:08.130 -03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2020-06-21 18:39:08.165 -03:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[TCAPP.API.WeatherForecast] Get() on controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API).
+2020-06-21 18:39:08.174 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2020-06-21 18:39:08.175 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2020-06-21 18:39:08.176 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2020-06-21 18:39:08.176 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2020-06-21 18:39:08.177 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2020-06-21 18:39:08.178 -03:00 [DBG] Executing controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-06-21 18:39:08.463 -03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2020-06-21 18:39:08.494 -03:00 [DBG] Executed controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-06-21 18:39:08.498 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2020-06-21 18:39:08.501 -03:00 [DBG] No information found on request to perform content negotiation.
+2020-06-21 18:39:08.501 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2020-06-21 18:39:08.502 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2020-06-21 18:39:08.503 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2020-06-21 18:39:08.503 -03:00 [INF] Executing ObjectResult, writing value of type 'TCAPP.API.WeatherForecast[]'.
+2020-06-21 18:39:08.724 -03:00 [INF] Executed action TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API) in 537.509ms
+2020-06-21 18:39:08.725 -03:00 [INF] Executed endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:39:08.733 -03:00 [INF] Request finished in 727.1253ms 200 application/json; charset=utf-8
+2020-06-21 18:39:15.237 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/playground/settings.js  
+2020-06-21 18:39:15.241 -03:00 [DBG] No candidates found for the request path '/playground/settings.js'
+2020-06-21 18:39:15.242 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:39:15.264 -03:00 [INF] Request finished in 30.3859ms 200 application/javascript
+2020-06-21 18:39:16.626 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-21 18:39:16.628 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-21 18:39:16.628 -03:00 [INF] CORS policy execution successful.
+2020-06-21 18:39:16.630 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-21 18:39:16.631 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:39:17.113 -03:00 [INF] Request finished in 489.3178ms 200 application/json
+2020-06-21 18:39:17.161 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-21 18:39:17.161 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-21 18:39:17.161 -03:00 [INF] CORS policy execution successful.
+2020-06-21 18:39:17.161 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-21 18:39:17.161 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:39:17.198 -03:00 [INF] Request finished in 37.4813ms 200 application/json
+2020-06-21 18:39:18.275 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-21 18:39:18.276 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-21 18:39:18.277 -03:00 [INF] CORS policy execution successful.
+2020-06-21 18:39:18.278 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-21 18:39:18.278 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:39:18.352 -03:00 [INF] Request finished in 77.0773ms 200 application/json
+2020-06-21 18:46:26.217 -03:00 [DBG] Hosting starting
+2020-06-21 18:46:27.960 -03:00 [DBG] Loaded hosting startup assembly TCAPP.API
+2020-06-21 18:46:27.997 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-06-21 18:46:27.997 -03:00 [INF] Hosting environment: Development
+2020-06-21 18:46:27.998 -03:00 [INF] Content root path: C:\work\APP\TCAPP\TCAPP.API
+2020-06-21 18:46:27.998 -03:00 [DBG] Hosting started
+2020-06-21 18:46:28.145 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/weatherforecast  
+2020-06-21 18:46:28.156 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2020-06-21 18:46:28.222 -03:00 [DBG] 1 candidate(s) found for the request path '/weatherforecast'
+2020-06-21 18:46:28.238 -03:00 [DBG] Endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)' with route pattern 'WeatherForecast' is valid for the request path '/weatherforecast'
+2020-06-21 18:46:28.247 -03:00 [DBG] Request matched endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:46:28.346 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2020-06-21 18:46:28.354 -03:00 [INF] Executing endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:46:28.375 -03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2020-06-21 18:46:28.411 -03:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[TCAPP.API.WeatherForecast] Get() on controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API).
+2020-06-21 18:46:28.418 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2020-06-21 18:46:28.419 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2020-06-21 18:46:28.420 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2020-06-21 18:46:28.421 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2020-06-21 18:46:28.421 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2020-06-21 18:46:28.423 -03:00 [DBG] Executing controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-06-21 18:46:28.742 -03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2020-06-21 18:46:28.780 -03:00 [DBG] Executed controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-06-21 18:46:28.785 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2020-06-21 18:46:28.790 -03:00 [DBG] No information found on request to perform content negotiation.
+2020-06-21 18:46:28.790 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2020-06-21 18:46:28.791 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2020-06-21 18:46:28.792 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2020-06-21 18:46:28.792 -03:00 [INF] Executing ObjectResult, writing value of type 'TCAPP.API.WeatherForecast[]'.
+2020-06-21 18:46:28.966 -03:00 [INF] Executed action TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API) in 537.53ms
+2020-06-21 18:46:28.968 -03:00 [INF] Executed endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:46:28.976 -03:00 [INF] Request finished in 844.0762ms 200 application/json; charset=utf-8
+2020-06-21 18:46:34.835 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/playground/settings.js  
+2020-06-21 18:46:34.838 -03:00 [DBG] No candidates found for the request path '/playground/settings.js'
+2020-06-21 18:46:34.839 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:46:34.862 -03:00 [INF] Request finished in 28.3309ms 200 application/javascript
+2020-06-21 18:46:36.446 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-21 18:46:36.448 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-21 18:46:36.450 -03:00 [INF] CORS policy execution successful.
+2020-06-21 18:46:36.458 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-21 18:46:36.459 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:46:36.948 -03:00 [INF] Request finished in 508.4918ms 200 application/json
+2020-06-21 18:46:37.004 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-21 18:46:37.005 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-21 18:46:37.005 -03:00 [INF] CORS policy execution successful.
+2020-06-21 18:46:37.005 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-21 18:46:37.005 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:46:37.100 -03:00 [INF] Request finished in 95.3376ms 200 application/json
+2020-06-21 18:46:37.982 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-21 18:46:37.983 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-21 18:46:37.984 -03:00 [INF] CORS policy execution successful.
+2020-06-21 18:46:37.986 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-21 18:46:37.986 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:46:38.054 -03:00 [INF] Request finished in 73.1087ms 200 application/json
+2020-06-21 18:46:40.095 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-21 18:46:40.096 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-21 18:46:40.097 -03:00 [INF] CORS policy execution successful.
+2020-06-21 18:46:40.097 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-21 18:46:40.098 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:46:40.148 -03:00 [INF] Request finished in 52.8846ms 200 application/json
+2020-06-21 18:46:42.176 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-21 18:46:42.177 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-21 18:46:42.177 -03:00 [INF] CORS policy execution successful.
+2020-06-21 18:46:42.177 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-21 18:46:42.177 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:46:42.210 -03:00 [INF] Request finished in 34.9402ms 200 application/json
+2020-06-21 18:49:02.405 -03:00 [DBG] Hosting starting
+2020-06-21 18:49:03.930 -03:00 [DBG] Loaded hosting startup assembly TCAPP.API
+2020-06-21 18:49:03.937 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-06-21 18:49:03.937 -03:00 [INF] Hosting environment: Development
+2020-06-21 18:49:03.937 -03:00 [INF] Content root path: C:\work\APP\TCAPP\TCAPP.API
+2020-06-21 18:49:03.937 -03:00 [DBG] Hosting started
+2020-06-21 18:49:04.013 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/weatherforecast  
+2020-06-21 18:49:04.023 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2020-06-21 18:49:04.073 -03:00 [DBG] 1 candidate(s) found for the request path '/weatherforecast'
+2020-06-21 18:49:04.084 -03:00 [DBG] Endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)' with route pattern 'WeatherForecast' is valid for the request path '/weatherforecast'
+2020-06-21 18:49:04.094 -03:00 [DBG] Request matched endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:49:04.117 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2020-06-21 18:49:04.120 -03:00 [INF] Executing endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:49:04.136 -03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2020-06-21 18:49:04.173 -03:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[TCAPP.API.WeatherForecast] Get() on controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API).
+2020-06-21 18:49:04.182 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2020-06-21 18:49:04.182 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2020-06-21 18:49:04.182 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2020-06-21 18:49:04.183 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2020-06-21 18:49:04.183 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2020-06-21 18:49:04.185 -03:00 [DBG] Executing controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-06-21 18:49:04.496 -03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2020-06-21 18:49:04.537 -03:00 [DBG] Executed controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-06-21 18:49:04.543 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2020-06-21 18:49:04.548 -03:00 [DBG] No information found on request to perform content negotiation.
+2020-06-21 18:49:04.548 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2020-06-21 18:49:04.548 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2020-06-21 18:49:04.549 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2020-06-21 18:49:04.549 -03:00 [INF] Executing ObjectResult, writing value of type 'TCAPP.API.WeatherForecast[]'.
+2020-06-21 18:49:04.754 -03:00 [INF] Executed action TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API) in 564.3682ms
+2020-06-21 18:49:04.756 -03:00 [INF] Executed endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-06-21 18:49:04.766 -03:00 [INF] Request finished in 761.2ms 200 application/json; charset=utf-8
+2020-06-21 18:49:09.991 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/playground/settings.js  
+2020-06-21 18:49:09.994 -03:00 [DBG] No candidates found for the request path '/playground/settings.js'
+2020-06-21 18:49:09.994 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:49:10.014 -03:00 [INF] Request finished in 24.5925ms 200 application/javascript
+2020-06-21 18:49:11.281 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-06-21 18:49:11.292 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-06-21 18:49:11.292 -03:00 [INF] CORS policy execution successful.
+2020-06-21 18:49:11.294 -03:00 [DBG] No candidates found for the request path '/'
+2020-06-21 18:49:11.294 -03:00 [DBG] Request did not match any endpoints
+2020-06-21 18:49:11.295 -03:00 [DBG] POST requests are not supported
+2020-06-21 18:49:11.328 -03:00 [INF] Request finished in 49.5329ms 404 

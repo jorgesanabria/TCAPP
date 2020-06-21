@@ -45,6 +45,13 @@ using TCAPP.Business.TypeData.ContentTypes;
 using TCAPP.Business.TypeData.Taxonomies;
 using TCAPP.API.Graphql.ContentTypes;
 using TCAPP.API.Graphql.Users;
+using TCAPP.API.Graphql.ContentRelationTypes;
+using TCAPP.API.Graphql.MetaValueTypes;
+using TCAPP.API.Graphql.Contents.ContentTaxonomies;
+using TCAPP.API.Graphql.Taxonomies;
+using TCAPP.API.Graphql.Contents.ParentContents;
+using TCAPP.API.Graphql.Taxonomies.ParentTaxonomies;
+using TCAPP.API.Graphql.Users.UserContents;
 
 namespace TCAPP.API
 {
@@ -67,15 +74,34 @@ namespace TCAPP.API
                     .AddServices(sp)
                     .AddQueryType(d => d.Name("Query"))
                     .AddMutationType(d => d.Name("Mutation"))
-                    .AddType<ContentQuery>()
                     .AddType<UserQuery>()
+                    .AddType<UserMutation>()
+                    .AddType<UserContentQuery>()
+                    .AddType<UserContentMutation>()
+                    .AddType<ContentTypeQuery>()
                     .AddType<ContentTypeMutation>()
+                    .AddType<ContentQuery>()
                     .AddType<ContentMutation>()
                     .AddType<CreateTextMetaValueMutation>()
+                    .AddType<ContentTextMetaValueQuery>()
                     .AddType<CreateStringMetaValueMutation>()
+                    .AddType<ContentStringMetaValueQuery>()
                     .AddType<CreateFloatMetaValueMutation>()
+                    .AddType<ContentFloatMetaValueQuery>()
                     .AddType<CreateBoolMetaValueMutation>()
-                    .AddType<UserMutation>()
+                    .AddType<ContentBoolMetaValueQuery>()
+                    .AddType<ContentRelationTypeQuery>()
+                    .AddType<ContentRelationTypeMutation>()
+                    .AddType<MetaValueTypeQuery>()
+                    .AddType<MetaValueTypeMutation>()
+                    .AddType<ContentTaxonomyQuery>()
+                    .AddType<ContentTaxonomyMutation>()
+                    .AddType<TaxonomyQuery>()
+                    .AddType<TaxonomyMutation>()
+                    .AddType<ParentTaxonomyQuery>()
+                    .AddType<ParentTaxonomyMutation>()
+                    .AddType<ParentContentQuery>()
+                    .AddType<ParentContentMutation>()
                     .Create(),
                 new QueryExecutionOptions { ForceSerialExecution = true });
             
@@ -139,7 +165,7 @@ namespace TCAPP.API
 
             app.UseRouting();
 
-            app.UseGraphQL();
+            app.UseGraphQL("/graphql");
             app.UsePlayground();
 
             app.UseAuthorization();
