@@ -52,6 +52,7 @@ using TCAPP.API.Graphql.Taxonomies;
 using TCAPP.API.Graphql.Contents.ParentContents;
 using TCAPP.API.Graphql.Taxonomies.ParentTaxonomies;
 using TCAPP.API.Graphql.Users.UserContents;
+using TCAPP.API.Graphql.ObjectTypes;
 
 namespace TCAPP.API
 {
@@ -74,6 +75,7 @@ namespace TCAPP.API
                     .AddServices(sp)
                     .AddQueryType(d => d.Name("Query"))
                     .AddMutationType(d => d.Name("Mutation"))
+                    .AddObjectType(d => d.Name("Type"))
                     .AddType<UserQuery>()
                     .AddType<UserMutation>()
                     .AddType<UserContentQuery>()
@@ -102,6 +104,8 @@ namespace TCAPP.API
                     .AddType<ParentTaxonomyMutation>()
                     .AddType<ParentContentQuery>()
                     .AddType<ParentContentMutation>()
+                    .AddType<UserObjectType>()
+                    //.AddObjectType<UserObjectType>()
                     .Create(),
                 new QueryExecutionOptions { ForceSerialExecution = true });
             
@@ -165,7 +169,7 @@ namespace TCAPP.API
 
             app.UseRouting();
 
-            app.UseGraphQL("/graphql");
+            app.UseGraphQL();
             app.UsePlayground();
 
             app.UseAuthorization();
