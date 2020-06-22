@@ -1,6 +1,4 @@
 ﻿using HotChocolate.Types;
-using System.Linq;
-using TCAPP.DataAccess.Context;
 using TCAPP.Domain.ConcreteData;
 
 namespace TCAPP.API.Graphql.ObjectTypes
@@ -19,13 +17,10 @@ namespace TCAPP.API.Graphql.ObjectTypes
             descriptor.Field(x => x.Enabled).Type<NonNullType<BooleanType>>();
             descriptor.Field(x => x.Created).Type<NonNullType<DateTimeType>>();
             descriptor.Field(x => x.Updated).Type<NonNullType<DateTimeType>>();
-            descriptor.Field(x => x.UserContents).Resolver(ctx =>
-            {
-                //TODO: ver como hacer que no estropee el funcionamiento de PlayGround. Mientras tanto volver a usar atributos
-                var id = ctx.Parent<User>().Id;
-                return ctx.Service<TCAPPContext>().UserContents.Where(x => x.IdUser == id);
-            });
+            descriptor.Field<UserContentResolver>(t => t.GetUserContents(default, default));
             descriptor.Field(x => x.Password).Ignore();
+            descriptor.Field(x => x.UserContents).Ignore();
+            //TODO: ver como hacer que no estropee el funcionamiento de PlayGround. Mientras tanto volver a usar atributos
         }
     }
 }
