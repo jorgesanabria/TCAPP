@@ -75,7 +75,7 @@ namespace TCAPP.API
                     .AddServices(sp)
                     .AddQueryType(d => d.Name("Query"))
                     .AddMutationType(d => d.Name("Mutation"))
-                    .AddObjectType(d => d.Name("Type"))
+                    //.AddObjectType(d => d.Name("Type"))
                     .AddType<UserQuery>()
                     .AddType<UserMutation>()
                     .AddType<UserContentQuery>()
@@ -104,8 +104,7 @@ namespace TCAPP.API
                     .AddType<ParentTaxonomyMutation>()
                     .AddType<ParentContentQuery>()
                     .AddType<ParentContentMutation>()
-                    .AddType<UserObjectType>()
-                    //.AddObjectType<UserObjectType>()
+                    //.AddType<UserObjectType>()
                     .Create(),
                 new QueryExecutionOptions { ForceSerialExecution = true });
             
