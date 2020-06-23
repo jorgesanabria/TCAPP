@@ -53,6 +53,11 @@ using TCAPP.API.Graphql.Contents.ParentContents;
 using TCAPP.API.Graphql.Taxonomies.ParentTaxonomies;
 using TCAPP.API.Graphql.Users.UserContents;
 using TCAPP.API.Graphql.ObjectTypes;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using System;
+using TCAPP.API.JWT;
 
 namespace TCAPP.API
 {
@@ -70,7 +75,7 @@ namespace TCAPP.API
         {
             services.AddControllers().AddNewtonsoftJson();
             services.AddDbContext<TCAPPContext>(o => o.UseMySql(Configuration.GetConnectionString("Test")), ServiceLifetime.Scoped);
-            services.AddGraphQL(sp => 
+            services.AddGraphQL(sp =>
                 SchemaBuilder.New()
                     .AddServices(sp)
                     .AddQueryType(d => d.Name("Query"))
@@ -107,7 +112,34 @@ namespace TCAPP.API
                     //.AddType<UserObjectType>()
                     .Create(),
                 new QueryExecutionOptions { ForceSerialExecution = true });
-            
+
+            ConfigureStrategies(services);
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                    .AddJwtBearer(options =>
+                    {
+                        options.RequireHttpsMetadata = false;
+                        options.SaveToken = true;
+                        options.TokenValidationParameters = new TokenValidationParameters
+                        {
+                            ValidateIssuer = true,
+                            ValidateAudience = true,
+                            ValidateLifetime = true,
+                            ValidateIssuerSigningKey = true,
+                            ValidIssuer = Configuration["Jwt:Issuer"],
+                            ValidAudience = Configuration["Jwt:Audience"],
+                            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:SecretKey"])),
+                            ClockSkew = TimeSpan.Zero
+                        };
+                    });
+            services.AddAuthorization(config =>
+            {
+                config.AddPolicy(Policies.Admin, Policies.AdminPolicy());
+                config.AddPolicy(Policies.User, Policies.UserPolicy());
+            });
+        }
+
+        private static void ConfigureStrategies(IServiceCollection services)
+        {
             services.AddScoped<IAsyncCreateStrategy<Content, CreateContentInput>, CreateContentStrategy>();
             services.AddScoped<IAsyncUpdateStrategy<Content, UpdateContentInput>, UpdateContentStrategy>();
 
@@ -167,6 +199,9 @@ namespace TCAPP.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseGraphQL();
             app.UsePlayground();
