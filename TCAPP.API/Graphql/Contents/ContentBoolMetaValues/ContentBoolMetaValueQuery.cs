@@ -14,6 +14,19 @@ namespace TCAPP.API.Graphql.Contents.ContentBoolMetaValues
         [UseSelection]
         [UseFiltering]
         [UseSorting]
-        public IQueryable<ContentBoolMetaValue> GetContentBoolMetaValue([Service] TCAPPContext context) => context.ContentBoolMetaValues;
+        public IQueryable<ContentBoolMetaValue> GetContentBoolMetaValue([Service] TCAPPContext context, int? skip, int? take)
+        {
+            var result = context.ContentBoolMetaValues.AsQueryable();
+            if (skip.HasValue)
+            {
+                result = result.Skip(skip.Value).AsQueryable();
+            }
+            if (take.HasValue)
+            {
+                result = result.Take(take.Value).AsQueryable();
+            }
+
+            return result;
+        }
     }
 }

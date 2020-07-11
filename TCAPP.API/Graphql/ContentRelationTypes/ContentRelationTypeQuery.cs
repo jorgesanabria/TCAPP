@@ -14,6 +14,19 @@ namespace TCAPP.API.Graphql.ContentRelationTypes
         [UseSelection]
         [UseFiltering]
         [UseSorting]
-        public IQueryable<ContentRelationType> GetContentRelationTypes([Service] TCAPPContext context) => context.ContentRelationTypes;
+        public IQueryable<ContentRelationType> GetContentRelationTypes([Service] TCAPPContext context, int? skip, int? take)
+        {
+            var result = context.ContentRelationTypes.AsQueryable();
+            if (skip.HasValue)
+            {
+                result = result.Skip(skip.Value).AsQueryable();
+            }
+            if (take.HasValue)
+            {
+                result = result.Take(take.Value).AsQueryable();
+            }
+
+            return result;
+        }
     }
 }

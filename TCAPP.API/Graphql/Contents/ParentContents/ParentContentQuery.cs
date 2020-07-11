@@ -14,6 +14,19 @@ namespace TCAPP.API.Graphql.Contents.ParentContents
         [UseSelection]
         [UseFiltering]
         [UseSorting]
-        public IQueryable<ParentContent> GetParentContents([Service] TCAPPContext context) => context.ParentContents;
+        public IQueryable<ParentContent> GetParentContents([Service] TCAPPContext context, int? skip, int? take)
+        {
+            var result = context.ParentContents.AsQueryable();
+            if (skip.HasValue)
+            {
+                result = result.Skip(skip.Value).AsQueryable();
+            }
+            if (take.HasValue)
+            {
+                result = result.Take(take.Value).AsQueryable();
+            }
+
+            return result;
+        }
     }
 }

@@ -14,6 +14,19 @@ namespace TCAPP.API.Graphql.Contents.ContentTextMetaValues
         [UseSelection]
         [UseFiltering]
         [UseSorting]
-        public IQueryable<ContentTextMetaValue> GetContentTextMetaValue([Service] TCAPPContext context) => context.ContentTextMetaValues;
+        public IQueryable<ContentTextMetaValue> GetContentTextMetaValue([Service] TCAPPContext context, int? skip, int? take)
+        {
+            var result = context.ContentTextMetaValues.AsQueryable();
+            if (skip.HasValue)
+            {
+                result = result.Skip(skip.Value).AsQueryable();
+            }
+            if (take.HasValue)
+            {
+                result = result.Take(take.Value).AsQueryable();
+            }
+
+            return result;
+        }
     }
 }

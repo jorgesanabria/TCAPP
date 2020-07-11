@@ -14,6 +14,19 @@ namespace TCAPP.API.Graphql.Taxonomies.ParentTaxonomies
         [UseSelection]
         [UseFiltering]
         [UseSorting]
-        public IQueryable<ParentTaxonomy> GetParentTaxonomies([Service] TCAPPContext context) => context.ParentTaxonomies;
+        public IQueryable<ParentTaxonomy> GetParentTaxonomies([Service] TCAPPContext context, int? skip, int? take)
+        {
+            var result = context.ParentTaxonomies.AsQueryable();
+            if (skip.HasValue)
+            {
+                result = result.Skip(skip.Value).AsQueryable();
+            }
+            if (take.HasValue)
+            {
+                result = result.Take(take.Value).AsQueryable();
+            }
+
+            return result;
+        }
     }
 }

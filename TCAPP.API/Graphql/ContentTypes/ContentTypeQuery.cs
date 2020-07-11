@@ -14,6 +14,19 @@ namespace TCAPP.API.Graphql.ContentTypes
         [UseSelection]
         [UseFiltering]
         [UseSorting]
-        public IQueryable<ContentType> GetContentTypes([Service] TCAPPContext context) => context.ContentTypes;
+        public IQueryable<ContentType> GetContentTypes([Service] TCAPPContext context, int? skip, int? take)
+        {
+            var result = context.ContentTypes.AsQueryable();
+            if (skip.HasValue)
+            {
+                result = result.Skip(skip.Value).AsQueryable();
+            }
+            if (take.HasValue)
+            {
+                result = result.Take(take.Value).AsQueryable();
+            }
+
+            return result;
+        }
     }
 }

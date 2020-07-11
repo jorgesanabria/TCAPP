@@ -14,6 +14,19 @@ namespace TCAPP.API.Graphql.MetaValueTypes
         [UseSelection]
         [UseFiltering]
         [UseSorting]
-        public IQueryable<MetaValueType> GetMetaValueTypes([Service] TCAPPContext context) => context.MetaValueTypes;
+        public IQueryable<MetaValueType> GetMetaValueTypes([Service] TCAPPContext context, int? skip, int? take)
+        {
+            var result = context.MetaValueTypes.AsQueryable();
+            if (skip.HasValue)
+            {
+                result = result.Skip(skip.Value).AsQueryable();
+            }
+            if (take.HasValue)
+            {
+                result = result.Take(take.Value).AsQueryable();
+            }
+
+            return result;
+        }
     }
 }

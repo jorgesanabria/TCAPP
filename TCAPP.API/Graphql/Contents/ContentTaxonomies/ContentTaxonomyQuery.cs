@@ -14,6 +14,19 @@ namespace TCAPP.API.Graphql.Contents.ContentTaxonomies
         [UseSelection]
         [UseFiltering]
         [UseSorting]
-        public IQueryable<ContentTaxonomy> GetContentTaxonomy([Service] TCAPPContext context) => context.ContentTaxonomies;
+        public IQueryable<ContentTaxonomy> GetContentTaxonomy([Service] TCAPPContext context, int? skip, int? take)
+        {
+            var result = context.ContentTaxonomies.AsQueryable();
+            if (skip.HasValue)
+            {
+                result = result.Skip(skip.Value).AsQueryable();
+            }
+            if (take.HasValue)
+            {
+                result = result.Take(take.Value).AsQueryable();
+            }
+
+            return result;
+        }
     }
 }

@@ -14,6 +14,19 @@ namespace TCAPP.API.Graphql.Users
         [UseSelection]
         [UseFiltering]
         [UseSorting]
-        public IQueryable<User> GetUsers([Service] TCAPPContext context) => context.Users;
+        public IQueryable<User> GetUsers([Service] TCAPPContext context, int? skip, int? take)
+        {
+            var result = context.Users.AsQueryable();
+            if (skip.HasValue)
+            {
+                result = result.Skip(skip.Value).AsQueryable();
+            }
+            if (take.HasValue)
+            {
+                result = result.Take(take.Value).AsQueryable();
+            }
+
+            return result;
+        }
     }
 }

@@ -14,6 +14,19 @@ namespace TCAPP.API.Graphql.Contents.ContentFloatMetaValues
         [UseSelection]
         [UseFiltering]
         [UseSorting]
-        public IQueryable<ContentFloatMetaValue> GetContentFloatMetaValue([Service] TCAPPContext context) => context.ContentFloatMetaValues;
+        public IQueryable<ContentFloatMetaValue> GetContentFloatMetaValue([Service] TCAPPContext context, int? skip, int? take)
+        {
+            var result = context.ContentFloatMetaValues.AsQueryable();
+            if (skip.HasValue)
+            {
+                result = result.Skip(skip.Value).AsQueryable();
+            }
+            if (take.HasValue)
+            {
+                result = result.Take(take.Value).AsQueryable();
+            }
+
+            return result;
+        }
     }
 }
