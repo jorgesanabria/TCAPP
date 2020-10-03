@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TCAPP.Domain.RelationalData;
 using TCAPP.Domain.TypeData;
+using HotChocolate.Types;
 
 namespace TCAPP.Domain.ConcreteData
 {
@@ -25,13 +26,21 @@ namespace TCAPP.Domain.ConcreteData
         public DateTime Updated { get; set; }
         public bool Enabled { get; set; }
         public ContentType ContentType { get; set; }
+        [UseFiltering]
         public ICollection<ParentContent> ParentContents { get; set; }
+        [UseFiltering]
         public ICollection<ParentContent> ChildrenContents { get; set; }
+        [UseFiltering]
         public ICollection<UserContent> UserContents { get; set; }
+        [UseFiltering]
         public ICollection<ContentTaxonomy> ContentTaxonomies { get; set; }
+        [UseFiltering]
         public ICollection<ContentFloatMetaValue> ContentFloatMetaValues { get; set; }
+        [UseFiltering]
         public ICollection<ContentStringMetaValue> ContentStringMetaValues { get; set; }
+        [UseFiltering]
         public ICollection<ContentBoolMetaValue> ContentBoolMetaValues { get; set; }
+        [UseFiltering]
         public ICollection<ContentTextMetaValue> ContentTextMetaValues { get; set; }
     }
 }
