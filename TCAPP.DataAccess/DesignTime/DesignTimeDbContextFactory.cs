@@ -9,7 +9,7 @@ namespace TCAPP.DataAccess.DesignTime
         public TCAPPContext CreateDbContext(string[] args)
         {
             var builder = new DbContextOptionsBuilder<TCAPPContext>();
-            builder.UseMySql("Server=localhost;Database=TCAPP;Uid=root;Pwd=;");
+            builder.UseMySql("Server=localhost;Database=TCAPP;Uid=root;Pwd=root;");
             return new TCAPPContext(builder.Options);
         }
     }

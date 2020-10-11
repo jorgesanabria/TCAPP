@@ -1,0 +1,148 @@
+2020-10-11 16:44:34.384 -03:00 [DBG] Hosting starting
+2020-10-11 16:44:34.626 -03:00 [INF] User profile is available. Using 'C:\Users\Usuario\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-10-11 16:44:34.638 -03:00 [DBG] Repository contains no viable default key. Caller should generate a key with immediate activation.
+2020-10-11 16:44:34.639 -03:00 [DBG] Policy resolution states that a new key should be added to the key ring.
+2020-10-11 16:44:34.643 -03:00 [INF] Creating key "f2580896-68d1-4011-b3a2-3fe953720f42" with creation date "2020-10-11T19:44:34.6391768+00:00", activation date "2020-10-11T19:44:34.6316698+00:00", and expiration date "2021-01-09T19:44:34.6316698+00:00".
+2020-10-11 16:44:34.668 -03:00 [DBG] Descriptor deserializer type for key "f2580896-68d1-4011-b3a2-3fe953720f42" is 'Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+2020-10-11 16:44:34.672 -03:00 [DBG] No key escrow sink found. Not writing key "f2580896-68d1-4011-b3a2-3fe953720f42" to escrow.
+2020-10-11 16:44:34.716 -03:00 [DBG] Encrypting to Windows DPAPI for current user account (DESKTOP-872BDJ0\Usuario).
+2020-10-11 16:44:34.731 -03:00 [INF] Writing data to file 'C:\Users\Usuario\AppData\Local\ASP.NET\DataProtection-Keys\key-f2580896-68d1-4011-b3a2-3fe953720f42.xml'.
+2020-10-11 16:44:34.733 -03:00 [DBG] Key cache expiration token triggered by 'CreateNewKey' operation.
+2020-10-11 16:44:34.735 -03:00 [DBG] Reading data from file 'C:\Users\Usuario\AppData\Local\ASP.NET\DataProtection-Keys\key-f2580896-68d1-4011-b3a2-3fe953720f42.xml'.
+2020-10-11 16:44:34.740 -03:00 [DBG] Found key "f2580896-68d1-4011-b3a2-3fe953720f42".
+2020-10-11 16:44:34.744 -03:00 [DBG] Considering key "f2580896-68d1-4011-b3a2-3fe953720f42" with expiration date "2021-01-09T19:44:34.6316698+00:00" as default key.
+2020-10-11 16:44:34.786 -03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.1.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2020-10-11 16:44:34.786 -03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2020-10-11 16:44:34.787 -03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2020-10-11 16:44:34.791 -03:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2020-10-11 16:44:34.794 -03:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2020-10-11 16:44:34.797 -03:00 [DBG] Using key "f2580896-68d1-4011-b3a2-3fe953720f42" as the default key.
+2020-10-11 16:44:34.797 -03:00 [DBG] Key ring with default key "f2580896-68d1-4011-b3a2-3fe953720f42" was loaded during application startup.
+2020-10-11 16:44:36.218 -03:00 [DBG] Loaded hosting startup assembly TCAPP.API
+2020-10-11 16:44:36.219 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-10-11 16:44:36.219 -03:00 [INF] Hosting environment: Development
+2020-10-11 16:44:36.220 -03:00 [INF] Content root path: C:\Users\Usuario\source\repos\TCAPP\TCAPP.API
+2020-10-11 16:44:36.224 -03:00 [DBG] Hosting started
+2020-10-11 16:44:36.270 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/weatherforecast  
+2020-10-11 16:44:36.273 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2020-10-11 16:44:36.303 -03:00 [DBG] 1 candidate(s) found for the request path '/weatherforecast'
+2020-10-11 16:44:36.306 -03:00 [DBG] Endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)' with route pattern 'WeatherForecast' is valid for the request path '/weatherforecast'
+2020-10-11 16:44:36.307 -03:00 [DBG] Request matched endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-10-11 16:44:36.563 -03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-10-11 16:44:36.588 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2020-10-11 16:44:36.589 -03:00 [INF] Executing endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-10-11 16:44:36.597 -03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2020-10-11 16:44:36.613 -03:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[TCAPP.API.WeatherForecast] Get() on controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API).
+2020-10-11 16:44:36.614 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2020-10-11 16:44:36.614 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2020-10-11 16:44:36.615 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2020-10-11 16:44:36.615 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2020-10-11 16:44:36.615 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2020-10-11 16:44:36.616 -03:00 [DBG] Executing controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-10-11 16:44:37.187 -03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2020-10-11 16:44:37.211 -03:00 [DBG] Executed controller factory for controller TCAPP.API.Controllers.WeatherForecastController (TCAPP.API)
+2020-10-11 16:44:37.215 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2020-10-11 16:44:37.218 -03:00 [DBG] No information found on request to perform content negotiation.
+2020-10-11 16:44:37.218 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2020-10-11 16:44:37.218 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2020-10-11 16:44:37.219 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2020-10-11 16:44:37.219 -03:00 [INF] Executing ObjectResult, writing value of type 'TCAPP.API.WeatherForecast[]'.
+2020-10-11 16:44:37.419 -03:00 [INF] Executed action TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API) in 799.1114ms
+2020-10-11 16:44:37.421 -03:00 [INF] Executed endpoint 'TCAPP.API.Controllers.WeatherForecastController.Get (TCAPP.API)'
+2020-10-11 16:44:37.425 -03:00 [INF] Request finished in 1157.0301ms 200 application/json; charset=utf-8
+2020-10-11 16:44:37.556 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/favicon.ico  
+2020-10-11 16:44:37.557 -03:00 [DBG] No candidates found for the request path '/favicon.ico'
+2020-10-11 16:44:37.557 -03:00 [DBG] Request did not match any endpoints
+2020-10-11 16:44:37.558 -03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-10-11 16:44:37.559 -03:00 [DBG] The request path  does not match the path filter
+2020-10-11 16:44:37.561 -03:00 [INF] Request finished in 4.7352ms 404 
+2020-10-11 16:44:47.700 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/playground  
+2020-10-11 16:44:47.702 -03:00 [DBG] No candidates found for the request path '/playground'
+2020-10-11 16:44:47.703 -03:00 [DBG] Request did not match any endpoints
+2020-10-11 16:44:47.706 -03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-10-11 16:44:47.728 -03:00 [INF] Request finished in 28.885ms 301 
+2020-10-11 16:44:47.733 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/playground/  
+2020-10-11 16:44:47.733 -03:00 [DBG] No candidates found for the request path '/playground/'
+2020-10-11 16:44:47.733 -03:00 [DBG] Request did not match any endpoints
+2020-10-11 16:44:47.734 -03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-10-11 16:44:47.742 -03:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'N/A'
+2020-10-11 16:44:47.742 -03:00 [INF] Request finished in 9.55ms 200 text/html
+2020-10-11 16:44:47.767 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/playground/styles.css  
+2020-10-11 16:44:47.767 -03:00 [DBG] No candidates found for the request path '/playground/styles.css'
+2020-10-11 16:44:47.768 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/playground/settings.js  
+2020-10-11 16:44:47.768 -03:00 [DBG] Request did not match any endpoints
+2020-10-11 16:44:47.768 -03:00 [DBG] No candidates found for the request path '/playground/settings.js'
+2020-10-11 16:44:47.768 -03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-10-11 16:44:47.768 -03:00 [DBG] Request did not match any endpoints
+2020-10-11 16:44:47.768 -03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-10-11 16:44:47.769 -03:00 [INF] Sending file. Request path: '/styles.css'. Physical path: 'N/A'
+2020-10-11 16:44:47.769 -03:00 [INF] Request finished in 1.7787ms 200 text/css
+2020-10-11 16:44:47.769 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/playground/middleware.js  
+2020-10-11 16:44:47.769 -03:00 [DBG] No candidates found for the request path '/playground/middleware.js'
+2020-10-11 16:44:47.770 -03:00 [DBG] Request did not match any endpoints
+2020-10-11 16:44:47.770 -03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-10-11 16:44:47.784 -03:00 [INF] Request finished in 16.5422ms 200 application/javascript
+2020-10-11 16:44:47.799 -03:00 [INF] Sending file. Request path: '/middleware.js'. Physical path: 'N/A'
+2020-10-11 16:44:47.803 -03:00 [INF] Request finished in 33.7709ms 200 application/javascript
+2020-10-11 16:44:48.373 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44305/playground/favicon.png  
+2020-10-11 16:44:48.378 -03:00 [DBG] No candidates found for the request path '/playground/favicon.png'
+2020-10-11 16:44:48.378 -03:00 [DBG] Request did not match any endpoints
+2020-10-11 16:44:48.385 -03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-10-11 16:44:48.387 -03:00 [INF] Sending file. Request path: '/favicon.png'. Physical path: 'N/A'
+2020-10-11 16:44:48.387 -03:00 [INF] Request finished in 14.4682ms 200 image/png
+2020-10-11 16:44:48.970 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-10-11 16:44:48.972 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-10-11 16:44:48.972 -03:00 [INF] CORS policy execution successful.
+2020-10-11 16:44:48.973 -03:00 [DBG] No candidates found for the request path '/'
+2020-10-11 16:44:48.973 -03:00 [DBG] Request did not match any endpoints
+2020-10-11 16:44:48.973 -03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-10-11 16:44:49.390 -03:00 [INF] Request finished in 420.1406ms 200 application/json; charset=utf-8
+2020-10-11 16:44:49.429 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-10-11 16:44:49.429 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-10-11 16:44:49.429 -03:00 [INF] CORS policy execution successful.
+2020-10-11 16:44:49.430 -03:00 [DBG] No candidates found for the request path '/'
+2020-10-11 16:44:49.430 -03:00 [DBG] Request did not match any endpoints
+2020-10-11 16:44:49.430 -03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-10-11 16:44:49.484 -03:00 [INF] Request finished in 55.2645ms 200 application/json; charset=utf-8
+2020-10-11 16:44:50.258 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-10-11 16:44:50.258 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-10-11 16:44:50.259 -03:00 [INF] CORS policy execution successful.
+2020-10-11 16:44:50.260 -03:00 [DBG] No candidates found for the request path '/'
+2020-10-11 16:44:50.260 -03:00 [DBG] Request did not match any endpoints
+2020-10-11 16:44:50.260 -03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-10-11 16:44:50.323 -03:00 [INF] Request finished in 65.3097ms 200 application/json; charset=utf-8
+2020-10-11 16:44:52.350 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-10-11 16:44:52.350 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-10-11 16:44:52.351 -03:00 [INF] CORS policy execution successful.
+2020-10-11 16:44:52.354 -03:00 [DBG] No candidates found for the request path '/'
+2020-10-11 16:44:52.355 -03:00 [DBG] Request did not match any endpoints
+2020-10-11 16:44:52.356 -03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-10-11 16:44:52.389 -03:00 [INF] Request finished in 39.0773ms 200 application/json; charset=utf-8
+2020-10-11 16:44:54.408 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-10-11 16:44:54.408 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-10-11 16:44:54.408 -03:00 [INF] CORS policy execution successful.
+2020-10-11 16:44:54.409 -03:00 [DBG] No candidates found for the request path '/'
+2020-10-11 16:44:54.409 -03:00 [DBG] Request did not match any endpoints
+2020-10-11 16:44:54.410 -03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-10-11 16:44:54.440 -03:00 [INF] Request finished in 32.2189ms 200 application/json; charset=utf-8
+2020-10-11 16:44:56.463 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-10-11 16:44:56.463 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-10-11 16:44:56.463 -03:00 [INF] CORS policy execution successful.
+2020-10-11 16:44:56.463 -03:00 [DBG] No candidates found for the request path '/'
+2020-10-11 16:44:56.463 -03:00 [DBG] Request did not match any endpoints
+2020-10-11 16:44:56.464 -03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-10-11 16:44:56.493 -03:00 [INF] Request finished in 29.8868ms 200 application/json; charset=utf-8
+2020-10-11 16:44:58.516 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-10-11 16:44:58.517 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-10-11 16:44:58.517 -03:00 [INF] CORS policy execution successful.
+2020-10-11 16:44:58.517 -03:00 [DBG] No candidates found for the request path '/'
+2020-10-11 16:44:58.517 -03:00 [DBG] Request did not match any endpoints
+2020-10-11 16:44:58.517 -03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-10-11 16:44:58.548 -03:00 [INF] Request finished in 31.6425ms 200 application/json; charset=utf-8
+2020-10-11 16:45:00.572 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44305/ application/json 1468
+2020-10-11 16:45:00.572 -03:00 [DBG] The request has an origin header: 'https://localhost:44305'.
+2020-10-11 16:45:00.572 -03:00 [INF] CORS policy execution successful.
+2020-10-11 16:45:00.572 -03:00 [DBG] No candidates found for the request path '/'
+2020-10-11 16:45:00.572 -03:00 [DBG] Request did not match any endpoints
+2020-10-11 16:45:00.572 -03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-10-11 16:45:00.604 -03:00 [INF] Request finished in 32.5891ms 200 application/json; charset=utf-8
